@@ -1,0 +1,316 @@
+/* Estilos adicionais para a página de dicas */
+.tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.tip-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing-md);
+  border-left: 4px solid var(--secondary-color);
+  transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.tip-icon {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.tip-category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Estilos para a galeria de imagens */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+
+.gallery-item {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.9rem;
+}
+
+/* Estilos para a página de dicas */
+.dicas-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.dicas-header h1 {
+  color: white;
+  margin-bottom: var(--spacing-sm);
+}
+
+.dicas-header p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dica-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.dica-section h2 {
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Estilos para as abas de categorias de dicas */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.tab-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--text-color);
+  position: relative;
+}
+
+.tab-button.active {
+  color: var(--secondary-color);
+}
+
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Estilos para o contador de visualizações de dicas */
+.view-counter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.view-counter i {
+  margin-right: var(--spacing-xs);
+  color: var(--secondary-color);
+}
+
+/* Estilos para botões de compartilhamento */
+.share-buttons {
+  display: flex;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-md);
+}
+
+.share-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.share-button:hover {
+  transform: scale(1.1);
+}
+
+.share-whatsapp {
+  background-color: #25D366;
+}
+
+.share-facebook {
+  background-color: #1877F2;
+}
+
+.share-twitter {
+  background-color: #1DA1F2;
+}
+
+.share-linkedin {
+  background-color: #0A66C2;
+}
+
+/* Estilos para a seção de comentários */
+.comments-section {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--medium-gray);
+}
+
+.comment-form {
+  margin-bottom: var(--spacing-lg);
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-sm);
+  resize: vertical;
+  min-height: 100px;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.comment {
+  background-color: var(--light-gray);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+}
+
+.comment-author {
+  font-weight: bold;
+}
+
+.comment-date {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Estilos para a página de eventos */
+.event-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+}
+
+.event-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-details {
+  padding: var(--spacing-md);
+}
+
+.event-date {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-sm);
+  font-weight: bold;
+}
+
+.event-location {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.event-location i {
+  margin-right: var(--spacing-xs);
+  color: var(--secondary-color);
+}
+
+/* Calendário de eventos */
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--spacing-lg);
+}
+
+.calendar th, .calendar td {
+  border: 1px solid var(--medium-gray);
+  padding: var(--spacing-sm);
+  text-align: center;
+}
+
+.calendar th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.calendar .has-event {
+  background-color: var(--highlight);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.calendar .today {
+  border: 2px solid var(--secondary-color);
+}

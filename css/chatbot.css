@@ -1,0 +1,175 @@
+/* 
+* MEI em Foco - Estilos do Chatbot
+* Desenvolvido para o projeto de extensão da Universidade de Vassouras - Campus Maricá
+* Criado por: Diogo Santana Cardoso
+*/
+
+/* Container do chatbot */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+/* Cabeçalho do chatbot */
+.chatbot-header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.chatbot-header button {
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Corpo do chatbot */
+.chatbot-body {
+  padding: var(--spacing-sm);
+  height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  background-color: var(--light-gray);
+}
+
+.chatbot-body.hidden {
+  display: none;
+}
+
+/* Mensagens */
+.message {
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message.bot {
+  background-color: var(--white);
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+.message.user {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+/* Opções de mensagens predefinidas */
+.message-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-xs);
+}
+
+.message-option {
+  background-color: var(--white);
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.message-option:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+/* Área de input */
+.chatbot-input {
+  display: flex;
+  padding: var(--spacing-xs);
+  border-top: 1px solid var(--light-gray);
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  margin-right: var(--spacing-xs);
+}
+
+.chatbot-input button {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0 var(--spacing-sm);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chatbot-input button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Botão de iniciar chat (versão minimizada) */
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  font-size: 1.5rem;
+}
+
+/* Responsividade para o chatbot */
+@media (max-width: 768px) {
+  .chatbot-container {
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatbot-container {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+  
+  .chat-button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
