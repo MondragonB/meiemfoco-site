@@ -59,6 +59,8 @@ Este site serve como **ponte entre o conhecimento acadêmico e o público real**
 
 ## 🗂 Organização de Arquivos
 
+<pre>
+```
 mei-em-foco/
 ├── css/
 │   ├── variables.css
@@ -74,6 +76,9 @@ mei-em-foco/
 ├── images/
 ├── index.html
 └── [outras páginas].html
+```
+</pre>
+
 
 ---
 
