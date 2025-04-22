@@ -3,403 +3,703 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apps Úteis para MEI | MEI em Foco</title>
-  <meta name="description" content="Conheça os melhores aplicativos para facilitar a gestão do seu MEI. Ferramentas para finanças, emissão de notas fiscais, marketing e muito mais.">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Apps Úteis | MEI em Foco</title>
+  <meta name="description" content="Conheça os melhores aplicativos para facilitar a gestão do seu MEI, desde emissão de notas fiscais até controle financeiro.">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utils.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/chatbot.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#990000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+<!-- Proteção de Autoria - Desenvolvido por Diogo Santana Cardoso | 3º Período Direito UV Maricá -->
+  <meta name="author" content="Diogo Santana Cardoso">
+  <meta name="copyright" content="© 2025 Universidade de Vassouras - Campus Maricá">
+  <meta name="rights" content="Todos os direitos reservados à Universidade de Vassouras - Campus Maricá">
+  <link rel="stylesheet" href="css/autoria-protecao.css">
 </head>
 <body>
-  <header>
+  <!-- Skip Link para acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  
+  <!-- Header -->
+  <header class="header">
     <div class="container header-content">
       <div class="logo">
-        <a href="index.html">MEI em Foco</a>
+        <a href="index.html" aria-label="Página inicial do MEI em Foco">
+          <!-- Logotipo do MEI em Foco removido temporariamente -->
+          
+        </a>
       </div>
-      <button class="menu-toggle" id="menuToggle">
+      <div class="logo-univassouras">
+        <a href="https://univassouras.edu.br/campus-marica/" target="_blank" rel="noopener" aria-label="Site da Universidade de Vassouras - Campus Maricá">
+          <img src="images/logos/universidade-de-vassouras-seeklogo.svg" alt="Universidade de Vassouras" width="160" height="40">
+        </a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir menu de navegação">
         <i class="fas fa-bars"></i>
       </button>
     </div>
   </header>
-
-  <nav>
-    <div class="container">
-      <ul id="mainMenu">
-        <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
-        <li><a href="cadastro.html"><i class="fas fa-user-plus"></i> Como Abrir um MEI</a></li>
-        <li><a href="consulta.html"><i class="fas fa-search"></i> Consultar Situação</a></li>
-        <li><a href="faq.html"><i class="fas fa-question-circle"></i> Tira-Dúvidas</a></li>
-        <li><a href="apps.html" class="active"><i class="fas fa-mobile-alt"></i> Apps Úteis</a></li>
-        <li><a href="blog.html"><i class="fas fa-newspaper"></i> Conteúdos</a></li>
-        <li><a href="eventos.html"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
-        <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+  
+  <!-- Navegação -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <ul class="nav-menu" id="mainMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+        <li class="nav-item"><a href="o-que-e-mei.html" class="nav-link"><i class="fas fa-info-circle"></i> O que é MEI</a></li>
+        <li class="nav-item"><a href="como-abrir-mei.html" class="nav-link"><i class="fas fa-user-plus"></i> Como Abrir MEI</a></li>
+        <li class="nav-item"><a href="consulta.html" class="nav-link"><i class="fas fa-search"></i> Consulta MEI</a></li>
+        <li class="nav-item"><a href="das-obrigacoes.html" class="nav-link"><i class="fas fa-file-invoice-dollar"></i> DAS e Obrigações</a></li>
+        <li class="nav-item"><a href="calendario-fiscal.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Calendário Fiscal</a></li>
+        <li class="nav-item"><a href="modelos-documentos.html" class="nav-link"><i class="fas fa-file-alt"></i> Modelos</a></li>
+        <li class="nav-item"><a href="apps.html" class="nav-link active"><i class="fas fa-mobile-alt"></i> Apps Úteis</a></li>
+        <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> Tira-Dúvidas</a></li>
+        <li class="nav-item"><a href="dicas.html" class="nav-link"><i class="fas fa-lightbulb"></i> Dicas</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link"><i class="fas fa-newspaper"></i> Blog</a></li>
+        <li class="nav-item"><a href="eventos.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+        <li class="nav-item"><a href="glossario.html" class="nav-link"><i class="fas fa-book"></i> Glossário</a></li>
+        <li class="nav-item"><a href="sobre.html" class="nav-link"><i class="fas fa-users"></i> Sobre</a></li>
       </ul>
     </div>
   </nav>
-
-  <main>
-    <section class="page-header">
+  
+  <!-- Conteúdo Principal -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="page-header bg-primary">
       <div class="container">
-        <h1><i class="fas fa-mobile-alt"></i> Aplicativos Úteis para MEI</h1>
-        <p>Ferramentas digitais para facilitar a gestão do seu negócio</p>
+        <h1 class="text-white">Apps Úteis</h1>
+        <p class="text-white">Aplicativos que facilitam a gestão do seu MEI</p>
       </div>
     </section>
-
+    
+    <!-- Introdução -->
     <section>
       <div class="container">
-        <div class="highlight-box">
-          <h2><i class="fas fa-info-circle"></i> Por que usar aplicativos?</h2>
-          <p>Os aplicativos certos podem transformar a gestão do seu MEI, economizando tempo e evitando dores de cabeça. Selecionamos as melhores opções em diversas categorias para ajudar você a:</p>
-          <ul>
-            <li>Organizar suas finanças</li>
-            <li>Emitir notas fiscais facilmente</li>
-            <li>Controlar vendas e estoque</li>
-            <li>Criar conteúdo para redes sociais</li>
-            <li>Gerenciar seu tempo e tarefas</li>
-          </ul>
-          <p class="mt-2">A maioria dos apps possui versões gratuitas ou com preços acessíveis para pequenos negócios.</p>
-        </div>
-
-        <h2 class="section-title">Gestão Financeira</h2>
-        
-        <div class="grid">
-          <div class="card app-card">
-            <div class="app-icon">
-              <i class="fas fa-calculator"></i>
-            </div>
-            <h3 class="card-title">Mobills</h3>
-            <p><strong>Função:</strong> Controle financeiro completo</p>
-            <p><strong>Destaque:</strong> Interface simples e intuitiva, ideal para separar gastos pessoais dos empresariais.</p>
-            <p><strong>Preço:</strong> Versão gratuita com recursos limitados. Planos pagos a partir de R$ 9,99/mês.</p>
-            <div class="app-links">
-              <a href="https://www.mobills.com.br/" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=br.com.gerenciadorfinanceiro.controller" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/mobills-controle-financeiro/id921840341" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
+        <div class="row">
+          <div class="col">
+            <h2 class="section-title">Tecnologia a <span>Favor do MEI</span></h2>
+            <p>A tecnologia pode ser uma grande aliada na gestão do seu negócio. Existem diversos aplicativos que podem ajudar o Microempreendedor Individual a organizar suas finanças, emitir notas fiscais, controlar estoque, gerenciar clientes e muito mais.</p>
+            
+            <p>Nesta página, selecionamos os melhores aplicativos para MEI, divididos por categorias. Todos os apps mencionados possuem versões gratuitas ou planos acessíveis para pequenos negócios.</p>
+            
+            <div class="alert alert-primary mt-4">
+              <i class="fas fa-info-circle"></i> Dica: Comece com aplicativos básicos e gratuitos. À medida que seu negócio cresce, você pode avaliar a necessidade de ferramentas mais avançadas.
             </div>
           </div>
-          
-          <div class="card app-card">
-            <div class="app-icon">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <h3 class="card-title">QuickBooks</h3>
-            <p><strong>Função:</strong> Gestão financeira para pequenas empresas</p>
-            <p><strong>Destaque:</strong> Relatórios detalhados, controle de fluxo de caixa e faturamento.</p>
-            <p><strong>Preço:</strong> Planos a partir de R$ 29,90/mês com teste gratuito.</p>
-            <div class="app-links">
-              <a href="https://quickbooks.intuit.com/br/" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=com.intuit.qbse" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/quickbooks-contabilidade/id1448691073" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
-            </div>
-          </div>
-          
-          <div class="card app-card">
-            <div class="app-icon">
-              <i class="fas fa-hand-holding-usd"></i>
-            </div>
-            <h3 class="card-title">ZeroPanel</h3>
-            <p><strong>Função:</strong> Gestão financeira específica para MEI</p>
-            <p><strong>Destaque:</strong> Desenvolvido especialmente para microempreendedores, com foco na simplicidade.</p>
-            <p><strong>Preço:</strong> Versão gratuita com recursos básicos. Plano completo a partir de R$ 14,90/mês.</p>
-            <div class="app-links">
-              <a href="https://zeropanel.com.br/" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=com.zeropanel.app" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/zeropanel/id1481555646" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
-            </div>
+          <div class="col d-none-md">
+            <img src="images/apps-mei.webp" alt="Apps para MEI" class="img-fluid rounded">
           </div>
         </div>
-
-        <h2 class="section-title mt-5">Emissão de Notas Fiscais</h2>
-        
-        <div class="grid">
-          <div class="card app-card">
-            <div class="app-icon">
-              <i class="fas fa-file-invoice-dollar"></i>
-            </div>
-            <h3 class="card-title">NotasFiscais.app</h3>
-            <p><strong>Função:</strong> Emissão de notas fiscais eletrônicas</p>
-            <p><strong>Destaque:</strong> Interface simples, emissão rápida e integração com prefeituras.</p>
-            <p><strong>Preço:</strong> Planos a partir de R$ 19,90/mês com teste gratuito.</p>
-            <div class="app-links">
-              <a href="https://notasfiscais.app/" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=app.notasfiscais.android" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/notasfiscais-app/id1469248345" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
-            </div>
-          </div>
-          
-          <div class="card app-card">
-            <div class="app-icon">
-              <i class="fas fa-receipt"></i>
-            </div>
-            <h3 class="card-title">NFe.io</h3>
-            <p><strong>Função:</strong> Emissão de NF-e, NFC-e e NFS-e</p>
-            <p><strong>Destaque:</strong> Suporte a diversos tipos de notas fiscais e integração com sistemas de gestão.</p>
-            <p><strong>Preço:</strong> Planos a partir de R$ 29,90/mês.</p>
-            <div class="app-links">
-              <a href="https://nfe.io/" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=io.nfe.app" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/nfe-io/id1462352962" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
-            </div>
-          </div>
-          
-          <div class="card app-card">
-            <div class="app-icon">
-              <i class="fas fa-file-alt"></i>
-            </div>
-            <h3 class="card-title">MEI Fácil</h3>
-            <p><strong>Função:</strong> Gestão completa do MEI, incluindo emissão de notas</p>
-            <p><strong>Destaque:</strong> Além de notas fiscais, permite emitir DAS, consultar CNPJ e fazer declaração anual.</p>
-            <p><strong>Preço:</strong> Versão gratuita com recursos básicos. Planos pagos a partir de R$ 9,90/mês.</p>
-            <div class="app-links">
-              <a href="https://meifacil.com/" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=br.com.meifacil" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/mei-f%C3%A1cil-cnpj-e-nota-fiscal/id1137761073" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
-            </div>
-          </div>
+      </div>
+    </section>
+    
+    <!-- Navegação por Categorias -->
+    <section class="bg-light py-3">
+      <div class="container">
+        <div class="page-nav">
+          <a href="#oficiais" class="page-nav-item">Apps Oficiais</a>
+          <a href="#financeiros" class="page-nav-item">Gestão Financeira</a>
+          <a href="#notas" class="page-nav-item">Notas Fiscais</a>
+          <a href="#vendas" class="page-nav-item">Vendas</a>
+          <a href="#produtividade" class="page-nav-item">Produtividade</a>
         </div>
-
-        <h2 class="section-title mt-5">Marketing e Design</h2>
+      </div>
+    </section>
+    
+    <!-- Apps Oficiais -->
+    <section id="oficiais">
+      <div class="container">
+        <h2 class="section-title">Apps <span>Oficiais</span></h2>
+        <p class="text-center mb-4">Aplicativos desenvolvidos por órgãos governamentais para facilitar a vida do MEI:</p>
         
-        <div class="grid">
+        <div class="grid-container">
+          <!-- App MEI -->
           <div class="card app-card">
             <div class="app-icon">
-              <i class="fas fa-paint-brush"></i>
+              <img src="images/apps/app-mei.webp" alt="Ícone do App MEI" class="img-fluid">
             </div>
-            <h3 class="card-title">Canva</h3>
-            <p><strong>Função:</strong> Criação de designs para redes sociais, cartões, flyers, etc.</p>
-            <p><strong>Destaque:</strong> Templates prontos e fáceis de personalizar, mesmo sem conhecimento em design.</p>
-            <p><strong>Preço:</strong> Versão gratuita com muitos recursos. Plano Pro a partir de R$ 34,90/mês.</p>
-            <div class="app-links">
-              <a href="https://www.canva.com/pt_br/" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=com.canva.editor" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/canva-editor-de-fotos-e-v%C3%ADdeo/id897446215" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
+            <div class="card-body">
+              <h3 class="card-title">App MEI</h3>
+              <p class="card-text">Aplicativo oficial da Receita Federal para MEIs. Permite emitir DAS, consultar situação cadastral, verificar pendências e acessar outros serviços.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+                <span class="badge bg-success">Oficial</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://play.google.com/store/apps/details?id=br.gov.fazenda.receita.mei" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/mei/id1040521803" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
             </div>
           </div>
           
+          <!-- e-CAC -->
           <div class="card app-card">
             <div class="app-icon">
-              <i class="fas fa-camera"></i>
+              <img src="images/apps/ecac.webp" alt="Ícone do e-CAC" class="img-fluid">
             </div>
-            <h3 class="card-title">Lightroom</h3>
-            <p><strong>Função:</strong> Edição profissional de fotos para produtos</p>
-            <p><strong>Destaque:</strong> Ferramentas avançadas de edição com interface intuitiva.</p>
-            <p><strong>Preço:</strong> Versão gratuita com recursos limitados. Plano completo a partir de R$ 24,90/mês.</p>
-            <div class="app-links">
-              <a href="https://www.adobe.com/br/products/photoshop-lightroom.html" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=com.adobe.lrmobile" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/adobe-lightroom-foto-editor/id878783582" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
+            <div class="card-body">
+              <h3 class="card-title">e-CAC</h3>
+              <p class="card-text">Centro virtual de atendimento da Receita Federal. Permite consultar situação fiscal, declarações, pendências e outros serviços.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+                <span class="badge bg-success">Oficial</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://play.google.com/store/apps/details?id=br.gov.economia.receita.rfb&hl=pt_BR" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/receita-federal/id1558883724" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
             </div>
           </div>
           
+          <!-- SEBRAE -->
           <div class="card app-card">
             <div class="app-icon">
-              <i class="fas fa-bullhorn"></i>
+              <img src="images/apps/sebrae.webp" alt="Ícone do SEBRAE" class="img-fluid">
             </div>
-            <h3 class="card-title">Later</h3>
-            <p><strong>Função:</strong> Agendamento e planejamento de posts para redes sociais</p>
-            <p><strong>Destaque:</strong> Programação visual de conteúdo e análise de desempenho.</p>
-            <p><strong>Preço:</strong> Plano gratuito limitado. Planos pagos a partir de R$ 18/mês.</p>
-            <div class="app-links">
-              <a href="https://later.com/" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=com.latergram.latergramme" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/later-post-for-instagram/id917579902" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
-            </div>
-          </div>
-        </div>
-
-        <h2 class="section-title mt-5">Vendas e Atendimento</h2>
-        
-        <div class="grid">
-          <div class="card app-card">
-            <div class="app-icon">
-              <i class="fab fa-whatsapp"></i>
-            </div>
-            <h3 class="card-title">WhatsApp Business</h3>
-            <p><strong>Função:</strong> Comunicação com clientes e gestão de atendimento</p>
-            <p><strong>Destaque:</strong> Catálogo de produtos, mensagens automáticas e etiquetas para organizar conversas.</p>
-            <p><strong>Preço:</strong> Gratuito</p>
-            <div class="app-links">
-              <a href="https://business.whatsapp.com/" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=com.whatsapp.w4b" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/whatsapp-business/id1386412985" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
-            </div>
-          </div>
-          
-          <div class="card app-card">
-            <div class="app-icon">
-              <i class="fas fa-shopping-cart"></i>
-            </div>
-            <h3 class="card-title">Bling</h3>
-            <p><strong>Função:</strong> Sistema de gestão completo para vendas</p>
-            <p><strong>Destaque:</strong> Controle de estoque, vendas, financeiro e integração com marketplaces.</p>
-            <p><strong>Preço:</strong> Planos a partir de R$ 39,90/mês com teste gratuito.</p>
-            <div class="app-links">
-              <a href="https://www.bling.com.br/" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=br.com.bling" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/bling-erp/id1453411089" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
-            </div>
-          </div>
-          
-          <div class="card app-card">
-            <div class="app-icon">
-              <i class="fas fa-credit-card"></i>
-            </div>
-            <h3 class="card-title">Mercado Pago</h3>
-            <p><strong>Função:</strong> Recebimento de pagamentos</p>
-            <p><strong>Destaque:</strong> Aceite cartões, Pix e boletos com taxas competitivas para MEI.</p>
-            <p><strong>Preço:</strong> Gratuito para baixar, cobra taxas por transação.</p>
-            <div class="app-links">
-              <a href="https://www.mercadopago.com.br/" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=com.mercadopago.wallet" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/mercado-pago/id925436649" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
-            </div>
-          </div>
-        </div>
-
-        <h2 class="section-title mt-5">Produtividade</h2>
-        
-        <div class="grid">
-          <div class="card app-card">
-            <div class="app-icon">
-              <i class="fas fa-tasks"></i>
-            </div>
-            <h3 class="card-title">Trello</h3>
-            <p><strong>Função:</strong> Organização de tarefas e projetos</p>
-            <p><strong>Destaque:</strong> Sistema visual de quadros e cartões para acompanhar o progresso das atividades.</p>
-            <p><strong>Preço:</strong> Versão gratuita com recursos essenciais. Planos pagos a partir de R$ 24,90/mês.</p>
-            <div class="app-links">
-              <a href="https://trello.com/pt-BR" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=com.trello" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/trello-organize-anything/id461504587" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
-            </div>
-          </div>
-          
-          <div class="card app-card">
-            <div class="app-icon">
-              <i class="far fa-calendar-alt"></i>
-            </div>
-            <h3 class="card-title">Google Agenda</h3>
-            <p><strong>Função:</strong> Gerenciamento de compromissos e horários</p>
-            <p><strong>Destaque:</strong> Sincronização entre dispositivos e lembretes personalizados.</p>
-            <p><strong>Preço:</strong> Gratuito</p>
-            <div class="app-links">
-              <a href="https://calendar.google.com/" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=com.google.android.calendar" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/google-agenda/id909319292" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
-            </div>
-          </div>
-          
-          <div class="card app-card">
-            <div class="app-icon">
-              <i class="fas fa-clipboard-list"></i>
-            </div>
-            <h3 class="card-title">Evernote</h3>
-            <p><strong>Função:</strong> Anotações e organização de ideias</p>
-            <p><strong>Destaque:</strong> Captura de notas em texto, áudio, imagens e documentos digitalizados.</p>
-            <p><strong>Preço:</strong> Versão gratuita com limites. Planos pagos a partir de R$ 19,99/mês.</p>
-            <div class="app-links">
-              <a href="https://evernote.com/pt-br" target="_blank" class="button button-secondary"><i class="fas fa-globe"></i> Site</a>
-              <a href="https://play.google.com/store/apps/details?id=com.evernote" target="_blank" class="button button-secondary"><i class="fab fa-android"></i> Android</a>
-              <a href="https://apps.apple.com/br/app/evernote/id281796108" target="_blank" class="button button-secondary"><i class="fab fa-apple"></i> iOS</a>
+            <div class="card-body">
+              <h3 class="card-title">SEBRAE</h3>
+              <p class="card-text">Oferece cursos, consultoria, conteúdos educativos e ferramentas para ajudar na gestão do seu negócio.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+                <span class="badge bg-success">Oficial</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://sebrae.com.br/sites/PortalSebrae" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=br.com.sebrae.napalmadamao&hl=pt_BR" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/sebrae/id1482839375" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="bg-light">
+    
+    <!-- Apps de Gestão Financeira -->
+    <section id="financeiros" class="bg-light">
       <div class="container">
-        <h2 class="section-title">Dicas para Escolher os Melhores Apps</h2>
+        <h2 class="section-title">Gestão <span>Financeira</span></h2>
+        <p class="text-center mb-4">Aplicativos para controlar suas finanças, fluxo de caixa e contabilidade:</p>
         
-        <div class="grid">
-          <div class="card">
-            <h3 class="card-title"><i class="fas fa-check-circle"></i> Avalie suas necessidades</h3>
-            <p>Antes de baixar vários aplicativos, identifique quais são as áreas do seu negócio que mais precisam de ajuda. Comece pelos apps que resolvem seus maiores problemas.</p>
+        <div class="grid-container">
+          <!-- Conta Azul -->
+          <div class="card app-card">
+            <div class="app-icon">
+              <img src="images/apps/contaazul.webp" alt="Ícone do Conta Azul" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Conta Azul</h3>
+              <p class="card-text">Sistema completo de gestão financeira, emissão de notas fiscais, controle de estoque e clientes.</p>
+              <div class="app-features">
+                <span class="badge bg-warning">Pago</span>
+                <span class="badge bg-info">Plano MEI</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://ca.contaazul.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.contaazul.mobile.pro.ca_mobile_pro&hl=pt_BR" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/conta-azul-de-bolso/id1567614314" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
+            </div>
           </div>
           
-          <div class="card">
-            <h3 class="card-title"><i class="fas fa-mobile-alt"></i> Teste antes de pagar</h3>
-            <p>Aproveite as versões gratuitas ou períodos de teste para verificar se o aplicativo realmente atende às suas necessidades antes de investir em planos pagos.</p>
+          <!-- Neon -->
+          <div class="card app-card">
+            <div class="app-icon">
+              <img src="images/apps/neon.webp" alt="Ícone do Neon" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">MEI Fácil (Neon)</h3>
+              <p class="card-text">Conta digital com funcionalidades para MEI, incluindo o antigo MEI Fácil integrado. Permite separar finanças pessoais e do negócio.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+                <span class="badge bg-info">Conta Digital</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://neon.com.br/mei/" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=br.com.neon" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/neon-cart%C3%A3o-de-cr%C3%A9dito/id1127996388" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
+            </div>
           </div>
           
-          <div class="card">
-            <h3 class="card-title"><i class="fas fa-sync-alt"></i> Busque integrações</h3>
-            <p>Prefira aplicativos que se integram entre si. Por exemplo, um app de vendas que se conecta com seu sistema de emissão de notas fiscais economiza tempo e reduz erros.</p>
+          <!-- Mobills -->
+          <div class="card app-card">
+            <div class="app-icon">
+              <img src="images/apps/mobills.webp" alt="Ícone do Mobills" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Mobills</h3>
+              <p class="card-text">Aplicativo de controle financeiro que ajuda a organizar receitas, despesas e fluxo de caixa do seu negócio.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+                <span class="badge bg-warning">Premium Pago</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://www.mobills.com.br/" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=br.com.gerenciadorfinanceiro.controller" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/mobills-controle-de-gastos/id921838244" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Organizze -->
+          <div class="card app-card">
+            <div class="app-icon">
+              <img src="images/apps/organizze.webp" alt="Ícone do Organizze" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Organizze</h3>
+              <p class="card-text">Controle financeiro com categorização automática, relatórios detalhados e planejamento orçamentário.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+                <span class="badge bg-warning">Premium Pago</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://www.organizze.com.br/" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.organizze.android" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/organizze-finan%C3%A7as-pessoais/id677699286" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
+    
+    <!-- Apps de Notas Fiscais -->
+    <section id="notas">
+      <div class="container">
+        <h2 class="section-title">Notas <span>Fiscais</span></h2>
+        <p class="text-center mb-4">Aplicativos para emissão e gestão de notas fiscais:</p>
         
-        <div class="highlight-box mt-4">
-          <h3><i class="fas fa-lightbulb"></i> Você sabia?</h3>
-          <p>Muitos aplicativos oferecem descontos especiais para MEIs e pequenos negócios. Não deixe de perguntar sobre condições especiais antes de assinar um plano!</p>
+        <div class="grid-container">
+          <!-- NFe Fácil -->
+          <div class="card app-card">
+            <div class="app-icon">
+              <img src="images/apps/nfe-facil.webp" alt="Ícone do NFe Fácil" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">NFe Fácil</h3>
+              <p class="card-text">Aplicativo para emissão de notas fiscais eletrônicas de forma simples e rápida, ideal para MEIs que precisam emitir NF-e.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+                <span class="badge bg-warning">Premium Pago</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://www.nfe.fazenda.gov.br/portal/principal.aspx" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=br.gov.rs.procergs.nff&hl=pt_BR" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/nota-fiscal-f%C3%A1cil-nff/id1531717982" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Meu DANFE -->
+          <div class="card app-card">
+            <div class="app-icon">
+              <img src="images/apps/meu-danfe.webp" alt="Ícone do Meu DANFE" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Meu DANFE</h3>
+              <p class="card-text">Ferramenta para consulta e validação de notas fiscais eletrônicas através da leitura do QR Code ou chave de acesso.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://meudanfe.com.br/" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bling -->
+          <div class="card app-card">
+            <div class="app-icon">
+              <img src="images/apps/bling.webp" alt="Ícone do Bling" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Bling</h3>
+              <p class="card-text">Sistema de gestão completo com emissão de notas fiscais, controle de estoque, financeiro e integração com marketplaces.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+                <span class="badge bg-warning">Premium Pago</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://www.bling.com.br/" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.organisyssoftware.bling&hl=pt_BR" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Apps de Vendas -->
+    <section id="vendas" class="bg-light">
+      <div class="container">
+        <h2 class="section-title">Vendas <span>Online</span></h2>
+        <p class="text-center mb-4">Aplicativos para vender produtos e serviços pela internet:</p>
+        
+        <div class="grid-container">
+          <!-- Shopee -->
+          <div class="card app-card">
+            <div class="app-icon">
+              <img src="images/apps/shopee.webp" alt="Ícone do Shopee" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Shopee</h3>
+              <p class="card-text">Marketplace popular para venda de produtos online, com baixas taxas e grande alcance de público.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+                <span class="badge bg-info">Taxa por Venda</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://shopee.com.br/seller/login" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.shopee.br" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/shopee-compre-de-tudo-online/id1481812175" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Olist -->
+          <div class="card app-card">
+            <div class="app-icon">
+              <img src="images/apps/olist.webp" alt="Ícone do Olist" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Olist</h3>
+              <p class="card-text">Plataforma que conecta vendedores a diversos marketplaces, permitindo vender em vários canais ao mesmo tempo.</p>
+              <div class="app-features">
+                <span class="badge bg-warning">Pago</span>
+                <span class="badge bg-info">Taxa por Venda</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://olist.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.olist.appseller&hl=pt_BR" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/olist-store-vendas-online/id1459419573" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Mercado Livre -->
+          <div class="card app-card">
+            <div class="app-icon">
+              <img src="images/apps/mercado-livre.webp" alt="Ícone do Mercado Livre" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Mercado Livre</h3>
+              <p class="card-text">Maior marketplace da América Latina, com milhões de usuários ativos e sistema de pagamento integrado.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+                <span class="badge bg-info">Taxa por Venda</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://www.mercadolivre.com.br/vender" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.mercadolibre" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/mercado-livre-compras-online/id463624852" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Apps de Produtividade -->
+    <section id="produtividade">
+      <div class="container">
+        <h2 class="section-title">Produtividade e <span>Organização</span></h2>
+        <p class="text-center mb-4">Aplicativos para organizar tarefas, agenda e documentos:</p>
+        
+        <div class="grid-container">
+          <!-- Trello -->
+          <div class="card app-card">
+            <div class="app-icon">
+              <img src="images/apps/trello.webp" alt="Ícone do Trello" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Trello</h3>
+              <p class="card-text">Ferramenta visual para organização de tarefas e projetos em quadros, listas e cartões.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+                <span class="badge bg-warning">Premium Pago</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://trello.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.trello" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/trello-organize-anything/id461504587" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Google Drive -->
+          <div class="card app-card">
+            <div class="app-icon">
+              <img src="images/apps/drive.webp" alt="Ícone do Google Drive" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Google Drive</h3>
+              <p class="card-text">Armazenamento em nuvem para documentos, planilhas, apresentações e arquivos importantes do seu negócio.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+                <span class="badge bg-warning">Premium Pago</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://drive.google.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/google-drive/id507874739" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Canva -->
+          <div class="card app-card">
+            <div class="app-icon">
+              <img src="images/apps/canva.webp" alt="Ícone do Canva" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Canva</h3>
+              <p class="card-text">Ferramenta de design gráfico para criar posts para redes sociais, cartões de visita, logotipos e materiais de marketing.</p>
+              <div class="app-features">
+                <span class="badge bg-primary">Gratuito</span>
+                <span class="badge bg-warning">Premium Pago</span>
+              </div>
+              <div class="app-links mt-3">
+                <a href="https://www.canva.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fas fa-globe"></i> Site
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.canva.editor" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-android"></i> Android
+                </a>
+                <a href="https://apps.apple.com/br/app/canva-design-gr%C3%A1fico-e-v%C3%ADdeo/id897446215" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-apple"></i> iOS
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Dicas de Uso -->
+    <section class="bg-light">
+      <div class="container">
+        <h2 class="section-title">Dicas de <span>Uso</span></h2>
+        
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="mb-4">Como aproveitar melhor os aplicativos:</h3>
+                
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success mr-3 fa-lg mt-1"></i>
+                    <span><strong>Comece com o básico:</strong> Não tente usar todos os aplicativos de uma vez. Comece com os essenciais para seu negócio.</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success mr-3 fa-lg mt-1"></i>
+                    <span><strong>Integre suas ferramentas:</strong> Procure aplicativos que se integram entre si para evitar trabalho duplicado.</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success mr-3 fa-lg mt-1"></i>
+                    <span><strong>Faça backups regulares:</strong> Mantenha seus dados seguros fazendo backups periódicos das informações importantes.</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success mr-3 fa-lg mt-1"></i>
+                    <span><strong>Aproveite os tutoriais:</strong> A maioria dos aplicativos oferece tutoriais gratuitos. Dedique tempo para aprender a usar as ferramentas.</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success mr-3 fa-lg mt-1"></i>
+                    <span><strong>Avalie periodicamente:</strong> Revise se os aplicativos que você usa ainda atendem às necessidades do seu negócio.</span>
+                  </li>
+                </ul>
+                
+                <div class="alert alert-warning mt-4">
+                  <i class="fas fa-exclamation-triangle"></i> Atenção: Sempre verifique a reputação dos aplicativos antes de instalar. Dê preferência para aplicativos com boas avaliações e de empresas conhecidas.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="bg-primary">
+      <div class="container text-center py-5">
+        <h2 class="text-white mb-3">Tecnologia para impulsionar seu negócio!</h2>
+        <p class="text-white mb-4">Utilize as ferramentas certas para facilitar a gestão do seu MEI.</p>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+          <a href="dicas.html" class="btn btn-light btn-lg"><i class="fas fa-lightbulb"></i> Ver Mais Dicas</a>
+          <a href="faq.html" class="btn btn-outline btn-lg text-white"><i class="fas fa-question-circle"></i> Tire suas Dúvidas</a>
         </div>
       </div>
     </section>
   </main>
-
-  <!-- Chatbot -->
-  <div class="chatbot-container" id="chatbot">
-    <div class="chatbot-header">
-      <h3><i class="fas fa-robot"></i> Assistente MEI</h3>
-      <button id="chatbot-toggle"><i class="fas fa-minus"></i></button>
-    </div>
-    <div class="chatbot-body" id="chatbot-body">
-      <div class="message bot">
-        Olá! Sou o assistente virtual do MEI em Foco. Como posso ajudar você hoje?
-      </div>
-      <div class="message-options">
-        <button class="message-option" onclick="sendPredefinedMessage('Como abrir MEI?')">Como abrir MEI?</button>
-        <button class="message-option" onclick="sendPredefinedMessage('Valor do DAS')">Valor do DAS</button>
-        <button class="message-option" onclick="sendPredefinedMessage('Declaração anual')">Declaração anual</button>
-      </div>
-    </div>
-    <div class="chatbot-input">
-      <input type="text" id="chatbot-message" placeholder="Digite sua mensagem...">
-      <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
-    </div>
-  </div>
-
-  <footer>
+  
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-column">
-          <h3>MEI em Foco</h3>
-          <p>Projeto de extensão da Universidade de Vassouras - Campus Maricá, desenvolvido pelos alunos do curso de Direito.</p>
+        <div>
+          <div class="footer-logo">
+            <!-- Logotipo do MEI em Foco removido temporariamente -->
+            
+          </div>
+          <p>MEI em Foco é uma prática extensionista da Universidade de Vassouras - Campus Maricá, desenvolvida por alunos do curso de Direito sob orientação da professora Maria Carolina Carelli de Oliveira.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram do MEI em Foco">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <span class="social-icon" aria-label="Facebook do MEI em Foco">
+              <i class="fab fa-facebook-f"></i>
+            </span>
+            <span class="social-icon" aria-label="YouTube do MEI em Foco">
+              <i class="fab fa-youtube"></i>
+            </span>
+          </div>
         </div>
         
-        <div class="footer-column">
-          <h3>Links Rápidos</h3>
-          <ul>
+        <div>
+          <h3 class="footer-title">Links Rápidos</h3>
+          <ul class="footer-links">
             <li><a href="index.html">Início</a></li>
-            <li><a href="cadastro.html">Como Abrir um MEI</a></li>
-            <li><a href="consulta.html">Consultar Situação</a></li>
+            <li><a href="o-que-e-mei.html">O que é MEI</a></li>
+            <li><a href="como-abrir-mei.html">Como Abrir MEI</a></li>
+            <li><a href="consulta.html">Consulta MEI</a></li>
+            <li><a href="das-obrigacoes.html">DAS e Obrigações</a></li>
             <li><a href="faq.html">Tira-Dúvidas</a></li>
           </ul>
         </div>
         
-        <div class="footer-column">
-          <h3>Links Oficiais</h3>
-          <ul>
-            <li><a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank">Portal do Empreendedor</a></li>
-            <li><a href="https://www.gov.br/receitafederal/pt-br" target="_blank">Receita Federal</a></li>
-            <li><a href="https://www.sebrae.com.br/" target="_blank">SEBRAE</a></li>
+        <div>
+          <h3 class="footer-title">Links Oficiais</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank" rel="noopener">Portal do Empreendedor</a></li>
+            <li><a href="https://www.gov.br/receitafederal/pt-br" target="_blank" rel="noopener">Receita Federal</a></li>
+            <li><a href="https://www.sebrae.com.br/" target="_blank" rel="noopener">SEBRAE</a></li>
+            <li><a href="https://univassouras.edu.br/campus-marica/" target="_blank" rel="noopener">Univassouras - Campus Maricá</a></li>
           </ul>
         </div>
         
-        <div class="footer-column">
-          <h3>Contato</h3>
-          <ul>
-            <li><a href="https://www.instagram.com/meiemfoco.univassouras/" target="_blank"><i class="fab fa-instagram"></i> @meiemfoco.univassouras</a></li>
-            <li><a href="sobre.html">Sobre o Projeto</a></li>
+        <div>
+          <h3 class="footer-title">Contato</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Av. Governador Roberto Silveira, 437 - Flamengo, Maricá/RJ</li>
+            <li><i class="fas fa-phone"></i> (21) 2637-2784</li>
+            <li><i class="fas fa-envelope"></i> contato@meiemfoco.com.br</li>
+            <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener">@meiemfoco.univassouras</a></li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2025 MEI em Foco | Univassouras – Campus Maricá | Criado por Diogo Santana Cardoso</p>
+        <div class="creditos">Projeto desenvolvido por Diogo Santana Cardoso | 3º Período Direito UV Maricá © 2025</div>
+        <p>&copy; 2025 MEI em Foco - Todos os direitos reservados</p>
+        <p>Projeto de Extensão da Universidade de Vassouras - Campus Maricá</p>
+        <p>Disciplina: Prática Extensionista Integradora – Regularização Empresarial</p>
+        <p>Professora: Maria Carolina Carelli de Oliveira</p>
       </div>
     </div>
   </footer>
-
+  
+  <!-- Botão Voltar ao Topo -->
+  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <!-- Scripts -->
   <script src="js/main.js"></script>
 </body>
 </html>

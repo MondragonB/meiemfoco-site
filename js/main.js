@@ -1,164 +1,280 @@
 // MEI em Foco - JavaScript Principal
-// Desenvolvido para o projeto de extensão da Universidade de Vassouras - Campus Maricá
-// Criado por: Diogo Santana Cardoso
+// Projeto de extensão da Universidade de Vassouras - Campus Maricá
+// Desenvolvido por: Diogo Santana Cardoso
 
-// Funcionalidade do menu mobile
 document.addEventListener('DOMContentLoaded', function() {
+  // Menu de navegação responsivo
   const menuToggle = document.getElementById('menuToggle');
   const mainMenu = document.getElementById('mainMenu');
   
   if (menuToggle && mainMenu) {
     menuToggle.addEventListener('click', function() {
       mainMenu.classList.toggle('show');
-      
-      // Alterna o ícone do botão
-      const icon = menuToggle.querySelector('i');
-      if (icon.classList.contains('fa-bars')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-      } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-      }
+      menuToggle.setAttribute('aria-expanded', 
+        menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+      );
     });
   }
   
-  // Inicializa o chatbot
-  initChatbot();
+  // Adicionar classe 'active' ao link de navegação atual
+  const currentLocation = window.location.pathname;
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (currentLocation.includes(linkPath) && linkPath !== 'index.html') {
+      link.classList.add('active');
+    } else if (currentLocation.endsWith('/') && linkPath === 'index.html') {
+      link.classList.add('active');
+    }
+  });
+  
+  // Funcionalidade de acordeão para FAQ
+  const accordionButtons = document.querySelectorAll('.accordion-button');
+  
+  accordionButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const target = document.querySelector(this.getAttribute('data-target'));
+      
+      if (!target) return;
+      
+      // Fechar todos os outros painéis
+      const allPanels = document.querySelectorAll('.accordion-collapse');
+      const allButtons = document.querySelectorAll('.accordion-button');
+      
+      allPanels.forEach(panel => {
+        if (panel !== target) {
+          panel.classList.remove('show');
+        }
+      });
+      
+      allButtons.forEach(btn => {
+        if (btn !== this) {
+          btn.classList.add('collapsed');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+      
+      // Alternar o painel atual
+      target.classList.toggle('show');
+      this.classList.toggle('collapsed');
+      
+      const isExpanded = target.classList.contains('show');
+      this.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+    });
+  });
+  
+  // Animação de rolagem suave para links de âncora
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 100,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+  
+  // Validação de formulários
+  const forms = document.querySelectorAll('form.needs-validation');
+  
+  forms.forEach(form => {
+    form.addEventListener('submit', function(event) {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      
+      form.classList.add('was-validated');
+    });
+  });
+  
+  // Botão de voltar ao topo
+  const backToTopButton = document.getElementById('backToTop');
+  
+  if (backToTopButton) {
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+  
+  // Inicializar tooltips
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  if (tooltipTriggerList.length > 0) {
+    tooltipTriggerList.forEach(tooltipTriggerEl => {
+      new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+  }
+  
+  // Inicializar popovers
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+  if (popoverTriggerList.length > 0) {
+    popoverTriggerList.forEach(popoverTriggerEl => {
+      new bootstrap.Popover(popoverTriggerEl);
+    });
+  }
+  
+  // Contador de estatísticas
+  const statCounters = document.querySelectorAll('.stat-counter');
+  
+  if (statCounters.length > 0) {
+    const options = {
+      threshold: 0.5
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.getAttribute('data-target'));
+          const duration = 2000; // 2 segundos
+          const step = Math.ceil(target / (duration / 16)); // 60fps
+          
+          let current = 0;
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+              counter.textContent = target.toLocaleString();
+              clearInterval(timer);
+            } else {
+              counter.textContent = current.toLocaleString();
+            }
+          }, 16);
+          
+          observer.unobserve(counter);
+        }
+      });
+    }, options);
+    
+    statCounters.forEach(counter => {
+      observer.observe(counter);
+    });
+  }
+  
+  // Filtro para galeria ou blog
+  const filterButtons = document.querySelectorAll('.filter-button');
+  
+  if (filterButtons.length > 0) {
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filterValue = this.getAttribute('data-filter');
+        const items = document.querySelectorAll('.filter-item');
+        
+        // Remover classe ativa de todos os botões
+        filterButtons.forEach(btn => {
+          btn.classList.remove('active');
+        });
+        
+        // Adicionar classe ativa ao botão clicado
+        this.classList.add('active');
+        
+        // Filtrar itens
+        items.forEach(item => {
+          if (filterValue === 'all' || item.classList.contains(filterValue)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+  
+  // Pesquisa no FAQ
+  const faqSearch = document.getElementById('faqSearch');
+  
+  if (faqSearch) {
+    faqSearch.addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+      const faqItems = document.querySelectorAll('.accordion-item');
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector('.accordion-button').textContent.toLowerCase();
+        const answer = item.querySelector('.accordion-body').textContent.toLowerCase();
+        
+        if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  }
+  
+  // Inicializar PWA se disponível
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(registration => {
+          console.log('Service Worker registrado com sucesso:', registration);
+        })
+        .catch(error => {
+          console.log('Falha ao registrar Service Worker:', error);
+        });
+    });
+  }
 });
 
-// Função para inicializar o chatbot
-function initChatbot() {
-  const chatbot = document.getElementById('chatbot');
-  const chatbotToggle = document.getElementById('chatbot-toggle');
-  const chatbotBody = document.getElementById('chatbot-body');
-  const chatbotSend = document.getElementById('chatbot-send');
-  const chatbotMessage = document.getElementById('chatbot-message');
-  
-  if (chatbotToggle && chatbotBody) {
-    // Minimizar/maximizar o chatbot
-    chatbotToggle.addEventListener('click', function() {
-      chatbotBody.classList.toggle('hidden');
-      const icon = chatbotToggle.querySelector('i');
-      
-      if (icon.classList.contains('fa-minus')) {
-        icon.classList.remove('fa-minus');
-        icon.classList.add('fa-plus');
-      } else {
-        icon.classList.remove('fa-plus');
-        icon.classList.add('fa-minus');
+// Função para compartilhar conteúdo
+function shareContent(title, text, url) {
+  if (navigator.share) {
+    navigator.share({
+      title: title,
+      text: text,
+      url: url || window.location.href
+    })
+    .then(() => console.log('Conteúdo compartilhado com sucesso'))
+    .catch(error => console.log('Erro ao compartilhar:', error));
+  } else {
+    // Fallback para navegadores que não suportam a API Web Share
+    const shareDialog = document.getElementById('shareDialog');
+    
+    if (shareDialog) {
+      const shareUrl = document.getElementById('shareUrl');
+      if (shareUrl) {
+        shareUrl.value = url || window.location.href;
+        shareDialog.classList.add('show');
+        
+        // Copiar URL para a área de transferência
+        shareUrl.select();
+        document.execCommand('copy');
+        
+        // Mostrar mensagem de sucesso
+        const copyMessage = document.getElementById('copyMessage');
+        if (copyMessage) {
+          copyMessage.classList.add('show');
+          setTimeout(() => {
+            copyMessage.classList.remove('show');
+          }, 3000);
+        }
       }
-    });
-  }
-  
-  if (chatbotSend && chatbotMessage) {
-    // Enviar mensagem ao pressionar Enter
-    chatbotMessage.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        sendMessage();
-      }
-    });
-    
-    // Enviar mensagem ao clicar no botão
-    chatbotSend.addEventListener('click', sendMessage);
+    }
   }
 }
 
-// Função para enviar mensagem do usuário para o chatbot
-function sendMessage() {
-  const chatbotBody = document.getElementById('chatbot-body');
-  const chatbotMessage = document.getElementById('chatbot-message');
-  const message = chatbotMessage.value.trim();
-  
-  if (message && chatbotBody) {
-    // Adiciona a mensagem do usuário
-    const userMessageDiv = document.createElement('div');
-    userMessageDiv.className = 'message user';
-    userMessageDiv.textContent = message;
-    chatbotBody.appendChild(userMessageDiv);
-    
-    // Limpa o campo de entrada
-    chatbotMessage.value = '';
-    
-    // Simula resposta do bot (em uma aplicação real, isso seria uma chamada de API)
-    setTimeout(function() {
-      getBotResponse(message);
-    }, 600);
-    
-    // Rola para a mensagem mais recente
-    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+// Função para fechar diálogos
+function closeDialog(dialogId) {
+  const dialog = document.getElementById(dialogId);
+  if (dialog) {
+    dialog.classList.remove('show');
   }
-}
-
-// Função para enviar mensagem predefinida
-function sendPredefinedMessage(message) {
-  const chatbotMessage = document.getElementById('chatbot-message');
-  chatbotMessage.value = message;
-  sendMessage();
-}
-
-// Função para obter resposta do bot
-function getBotResponse(message) {
-  const chatbotBody = document.getElementById('chatbot-body');
-  let response = '';
-  
-  // Respostas simples baseadas em palavras-chave
-  const messageLower = message.toLowerCase();
-  
-  if (messageLower.includes('abrir mei') || messageLower.includes('como ser mei')) {
-    response = 'Para abrir seu MEI, acesse o Portal do Empreendedor (gov.br/mei), clique em "Quero ser MEI" e siga o passo a passo. É gratuito e leva apenas alguns minutos! Veja nosso guia completo na seção "Como Abrir um MEI".';
-  } 
-  else if (messageLower.includes('das') || messageLower.includes('boleto') || messageLower.includes('pagamento')) {
-    response = 'O DAS é o boleto mensal do MEI. Em 2025, o valor é de R$ 75,90 (MEI geral) + R$ 1,00 (ICMS) para comércio ou R$ 5,00 (ISS) para serviços. O pagamento deve ser feito até o dia 20 de cada mês. Acesse a seção "Consultar Situação" para emitir seu boleto.';
-  }
-  else if (messageLower.includes('declaração') || messageLower.includes('dasn')) {
-    response = 'A Declaração Anual do MEI (DASN-SIMEI) deve ser entregue até 31 de maio de cada ano. É uma obrigação simples que pode ser feita pelo Portal do Empreendedor. Não deixe de fazer para evitar multas!';
-  }
-  else if (messageLower.includes('nota fiscal') || messageLower.includes('nf')) {
-    response = 'Como MEI, você é obrigado a emitir nota fiscal apenas nas vendas para outras empresas (PJ). Para pessoas físicas, a emissão é opcional. Consulte a prefeitura da sua cidade para saber como emitir suas notas fiscais.';
-  }
-  else if (messageLower.includes('limite') || messageLower.includes('faturamento')) {
-    response = 'O limite de faturamento do MEI é de R$ 81.000,00 por ano (ou R$ 6.750,00 por mês). Se ultrapassar esse valor, você precisará migrar para ME (Microempresa).';
-  }
-  else if (messageLower.includes('funcionário') || messageLower.includes('contratar')) {
-    response = 'O MEI pode contratar apenas 1 funcionário que receba o salário mínimo ou o piso da categoria. Você precisará pagar FGTS e INSS sobre o salário dele.';
-  }
-  else if (messageLower.includes('app') || messageLower.includes('aplicativo')) {
-    response = 'Temos várias recomendações de aplicativos úteis para MEI! Confira nossa seção "Apps Úteis" para conhecer ferramentas que vão facilitar sua gestão financeira, emissão de notas fiscais e marketing.';
-  }
-  else if (messageLower.includes('olá') || messageLower.includes('oi') || messageLower.includes('bom dia') || messageLower.includes('boa tarde') || messageLower.includes('boa noite')) {
-    response = 'Olá! Em que posso ajudar você hoje? Estou aqui para tirar suas dúvidas sobre o MEI.';
-  }
-  else {
-    response = 'Não entendi sua pergunta. Pode reformular ou escolher um dos tópicos abaixo?';
-    
-    // Adiciona a resposta do bot
-    const botMessageDiv = document.createElement('div');
-    botMessageDiv.className = 'message bot';
-    botMessageDiv.textContent = response;
-    chatbotBody.appendChild(botMessageDiv);
-    
-    // Adiciona opções de mensagens predefinidas
-    const optionsDiv = document.createElement('div');
-    optionsDiv.className = 'message-options';
-    optionsDiv.innerHTML = `
-      <button class="message-option" onclick="sendPredefinedMessage('Como abrir MEI?')">Como abrir MEI?</button>
-      <button class="message-option" onclick="sendPredefinedMessage('Valor do DAS')">Valor do DAS</button>
-      <button class="message-option" onclick="sendPredefinedMessage('Declaração anual')">Declaração anual</button>
-    `;
-    chatbotBody.appendChild(optionsDiv);
-    
-    // Rola para a mensagem mais recente
-    chatbotBody.scrollTop = chatbotBody.scrollHeight;
-    return;
-  }
-  
-  // Adiciona a resposta do bot
-  const botMessageDiv = document.createElement('div');
-  botMessageDiv.className = 'message bot';
-  botMessageDiv.textContent = response;
-  chatbotBody.appendChild(botMessageDiv);
-  
-  // Rola para a mensagem mais recente
-  chatbotBody.scrollTop = chatbotBody.scrollHeight;
 }

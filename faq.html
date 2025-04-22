@@ -3,1348 +3,657 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tira-Dúvidas MEI | MEI em Foco</title>
-  <meta name="description" content="Encontre respostas para as dúvidas mais comuns sobre o Microempreendedor Individual (MEI). Tudo que você precisa saber sobre abertura, obrigações, direitos e benefícios.">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Tira-Dúvidas (FAQ) | MEI em Foco</title>
+  <meta name="description" content="Encontre respostas para as perguntas mais frequentes sobre o MEI. Tire suas dúvidas sobre abertura, obrigações, benefícios e muito mais.">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utils.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/chatbot.css">
-  <link rel="stylesheet" href="css/additional.css">
-  <link rel="stylesheet" href="css/print.css" media="print">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/custom-fixes.css">
+  <link rel="stylesheet" href="css/botoes-melhorados.css">
+  <link rel="stylesheet" href="css/glossario.css">
+  <link rel="stylesheet" href="css/tutorial.css">
+  <link rel="stylesheet" href="css/contraste-correcoes.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#990000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+<!-- Proteção de Autoria - Desenvolvido por Diogo Santana Cardoso | 3º Período Direito UV Maricá -->
+  <meta name="author" content="Diogo Santana Cardoso">
+  <meta name="copyright" content="© 2025 Universidade de Vassouras - Campus Maricá">
+  <meta name="rights" content="Todos os direitos reservados à Universidade de Vassouras - Campus Maricá">
+  <link rel="stylesheet" href="css/autoria-protecao.css">
 </head>
 <body>
-  <header>
+  <!-- Skip Link para acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  
+  <!-- Header -->
+  <header class="header">
     <div class="container header-content">
       <div class="logo">
-        <a href="index.html">MEI em Foco</a>
+        <a href="index.html" aria-label="Página inicial do MEI em Foco">
+          <!-- Logotipo do MEI em Foco removido temporariamente -->
+          
+        </a>
       </div>
-      <button class="menu-toggle" id="menuToggle">
+      <div class="logo-univassouras">
+        <a href="https://univassouras.edu.br/campus-marica/" target="_blank" rel="noopener" aria-label="Site da Universidade de Vassouras - Campus Maricá">
+          <img src="images/logos/universidade-de-vassouras-seeklogo.svg" alt="Universidade de Vassouras" width="160" height="40">
+        </a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir menu de navegação">
         <i class="fas fa-bars"></i>
       </button>
     </div>
   </header>
-
-  <nav>
-    <div class="container">
-      <ul id="mainMenu">
-        <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
-        <li><a href="cadastro.html"><i class="fas fa-user-plus"></i> Como Abrir um MEI</a></li>
-        <li><a href="consulta.html"><i class="fas fa-search"></i> Consultar Situação</a></li>
-        <li><a href="faq.html" class="active"><i class="fas fa-question-circle"></i> Tira-Dúvidas</a></li>
-        <li><a href="apps.html"><i class="fas fa-mobile-alt"></i> Apps Úteis</a></li>
-        <li><a href="dicas.html"><i class="fas fa-lightbulb"></i> Dicas</a></li>
-        <li><a href="eventos.html"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
-        <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+  
+  <!-- Navegação -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <ul class="nav-menu" id="mainMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+        <li class="nav-item"><a href="o-que-e-mei.html" class="nav-link"><i class="fas fa-info-circle"></i> O que é MEI</a></li>
+        <li class="nav-item"><a href="como-abrir-mei.html" class="nav-link"><i class="fas fa-user-plus"></i> Como Abrir MEI</a></li>
+        <li class="nav-item"><a href="consulta.html" class="nav-link"><i class="fas fa-search"></i> Consulta MEI</a></li>
+        <li class="nav-item"><a href="das-obrigacoes.html" class="nav-link"><i class="fas fa-file-invoice-dollar"></i> DAS e Obrigações</a></li>
+        <li class="nav-item"><a href="calendario-fiscal.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Calendário Fiscal</a></li>
+        <li class="nav-item"><a href="modelos-documentos.html" class="nav-link"><i class="fas fa-file-alt"></i> Modelos</a></li>
+        <li class="nav-item"><a href="apps.html" class="nav-link"><i class="fas fa-mobile-alt"></i> Apps Úteis</a></li>
+        <li class="nav-item"><a href="faq.html" class="nav-link active"><i class="fas fa-question-circle"></i> Tira-Dúvidas</a></li>
+        <li class="nav-item"><a href="dicas.html" class="nav-link"><i class="fas fa-lightbulb"></i> Dicas</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link"><i class="fas fa-newspaper"></i> Blog</a></li>
+        <li class="nav-item"><a href="eventos.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+        <li class="nav-item"><a href="glossario.html" class="nav-link"><i class="fas fa-book"></i> Glossário</a></li>
+        <li class="nav-item"><a href="sobre.html" class="nav-link"><i class="fas fa-users"></i> Sobre</a></li>
       </ul>
     </div>
   </nav>
-
-  <main>
-    <section class="page-header">
+  
+  <!-- Conteúdo Principal -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="page-header bg-primary">
       <div class="container">
-        <h1><i class="fas fa-question-circle"></i> Tira-Dúvidas MEI</h1>
-        <p>Respostas para as perguntas mais frequentes sobre o Microempreendedor Individual</p>
+        <h1 class="text-white">Tira-Dúvidas (FAQ)</h1>
+        <p class="text-white">Respostas para as perguntas mais frequentes sobre o MEI</p>
       </div>
     </section>
-
+    
+    <!-- Pesquisa e Filtros -->
+    <section class="bg-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="search-box">
+              <input type="text" id="faqSearch" class="form-control" placeholder="Pesquisar dúvidas..." aria-label="Pesquisar dúvidas">
+              <button class="search-btn" aria-label="Buscar">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <div id="faqNoResults" class="alert alert-info mt-3" style="display: none;">
+              <i class="fas fa-info-circle"></i> Nenhum resultado encontrado para sua pesquisa. Tente outros termos ou navegue pelas categorias abaixo.
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-categories mt-4">
+          <button class="faq-category-filter active" data-category="all">Todas as Dúvidas</button>
+          <button class="faq-category-filter" data-category="abertura">Abertura</button>
+          <button class="faq-category-filter" data-category="obrigacoes">Obrigações</button>
+          <button class="faq-category-filter" data-category="beneficios">Benefícios</button>
+          <button class="faq-category-filter" data-category="financeiro">Financeiro</button>
+          <button class="faq-category-filter" data-category="funcionario">Funcionário</button>
+          <button class="faq-category-filter" data-category="encerramento">Encerramento</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Perguntas e Respostas -->
     <section>
       <div class="container">
-        <div class="search-container">
-          <input type="text" id="faqSearch" placeholder="Pesquisar dúvidas..." class="search-input">
-          <button id="searchButton" class="search-button"><i class="fas fa-search"></i></button>
-        </div>
-
-        <div class="tabs">
-          <button class="tab-button active" data-tab="geral">Geral</button>
-          <button class="tab-button" data-tab="abertura">Abertura</button>
-          <button class="tab-button" data-tab="obrigacoes">Obrigações</button>
-          <button class="tab-button" data-tab="beneficios">Benefícios</button>
-          <button class="tab-button" data-tab="financeiro">Financeiro</button>
-          <button class="tab-button" data-tab="encerramento">Encerramento</button>
-        </div>
-
-        <!-- Aba Geral -->
-        <div class="tab-content active" id="geral">
-          <h2 class="section-title">Dúvidas Gerais sobre o MEI</h2>
+        <div class="faq-container">
+          <!-- Abertura -->
+          <div class="faq-item" data-category="abertura">
+            <div class="faq-question">
+              <h2>O que é preciso para ser MEI?</h2>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Para ser MEI (Microempreendedor Individual), você precisa atender aos seguintes requisitos:</p>
+              <ul>
+                <li>Faturar até R$ 81.000,00 por ano (ou R$ 6.750,00 por mês)</li>
+                <li>Não ser sócio, administrador ou titular de outra empresa</li>
+                <li>Ter no máximo um empregado contratado que receba o salário-mínimo ou o piso da categoria</li>
+                <li>Exercer uma das atividades permitidas para o MEI (consulte a lista completa no Portal do Empreendedor)</li>
+                <li>Não possuir filial</li>
+              </ul>
+              <p>Se você atende a todos esses requisitos, pode se formalizar como MEI gratuitamente pelo <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank" rel="noopener">Portal do Empreendedor</a>.</p>
+            </div>
+          </div>
           
-          <div class="accordion" id="accordionGeral">
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingG1">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseG1" aria-expanded="true" aria-controls="collapseG1">
-                  O que é o MEI?
-                </button>
-              </h3>
-              <div id="collapseG1" class="accordion-collapse collapse show" aria-labelledby="headingG1">
-                <div class="accordion-body">
-                  <p>O MEI (Microempreendedor Individual) é uma figura jurídica criada pela Lei Complementar nº 128/2008, que permite a formalização de pequenos negócios com faturamento anual de até R$ 81.000,00 (valor para 2025).</p>
-                  <p>Ao se tornar MEI, o empreendedor passa a ter CNPJ, pode emitir notas fiscais, tem acesso a benefícios previdenciários e paga impostos de forma simplificada através do DAS (Documento de Arrecadação do Simples Nacional).</p>
-                </div>
-              </div>
+          <div class="faq-item" data-category="abertura">
+            <div class="faq-question">
+              <h2>Quanto custa para abrir um MEI?</h2>
+              <i class="fas fa-chevron-down"></i>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingG2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseG2" aria-expanded="false" aria-controls="collapseG2">
-                  Quem pode ser MEI?
-                </button>
-              </h3>
-              <div id="collapseG2" class="accordion-collapse collapse" aria-labelledby="headingG2">
-                <div class="accordion-body">
-                  <p>Para se tornar MEI, é necessário atender aos seguintes requisitos:</p>
-                  <ul>
-                    <li>Faturar até R$ 81.000,00 por ano (ou R$ 6.750,00 por mês)</li>
-                    <li>Não ser sócio, administrador ou titular de outra empresa</li>
-                    <li>Ter no máximo um empregado contratado que receba o salário mínimo ou o piso da categoria</li>
-                    <li>Exercer uma das atividades permitidas para o MEI (consulte a lista completa no Portal do Empreendedor)</li>
-                  </ul>
-                  <p>Além disso, é necessário ser maior de 18 anos (ou 16 anos se emancipado) e não ser servidor público federal em atividade.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingG3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseG3" aria-expanded="false" aria-controls="collapseG3">
-                  Quais atividades podem ser exercidas como MEI?
-                </button>
-              </h3>
-              <div id="collapseG3" class="accordion-collapse collapse" aria-labelledby="headingG3">
-                <div class="accordion-body">
-                  <p>Existem mais de 500 atividades permitidas para o MEI, incluindo:</p>
-                  <ul>
-                    <li>Comércio e varejo (roupas, alimentos, artesanato, etc.)</li>
-                    <li>Serviços de beleza (cabeleireiro, manicure, barbeiro)</li>
-                    <li>Serviços domésticos (diarista, jardineiro, pintor)</li>
-                    <li>Alimentação (cozinheiro, doceiro, churrasqueiro)</li>
-                    <li>Artesanato e trabalhos manuais</li>
-                    <li>Serviços de reparação e manutenção</li>
-                    <li>Transporte de passageiros e cargas</li>
-                    <li>Entre muitas outras</li>
-                  </ul>
-                  <p>A lista completa está disponível no <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/quero-ser-mei/atividades-permitidas" target="_blank">Portal do Empreendedor</a>.</p>
-                  <p><strong>Importante:</strong> Algumas atividades não podem ser exercidas como MEI, como profissões regulamentadas que exigem registro em conselhos de classe (médicos, advogados, engenheiros, etc.).</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingG4">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseG4" aria-expanded="false" aria-controls="collapseG4">
-                  Qual a diferença entre MEI, ME e EPP?
-                </button>
-              </h3>
-              <div id="collapseG4" class="accordion-collapse collapse" aria-labelledby="headingG4">
-                <div class="accordion-body">
-                  <p>As principais diferenças entre essas categorias empresariais são:</p>
-                  
-                  <p><strong>MEI (Microempreendedor Individual):</strong></p>
-                  <ul>
-                    <li>Faturamento anual de até R$ 81.000,00</li>
-                    <li>Pode ter apenas um empregado</li>
-                    <li>Tributação simplificada (valor fixo mensal)</li>
-                    <li>Dispensa de contador para a maioria das obrigações</li>
-                    <li>Declaração anual simplificada</li>
-                  </ul>
-                  
-                  <p><strong>ME (Microempresa):</strong></p>
-                  <ul>
-                    <li>Faturamento anual de até R$ 360.000,00</li>
-                    <li>Sem limite de funcionários</li>
-                    <li>Tributação pelo Simples Nacional (percentual sobre o faturamento)</li>
-                    <li>Necessidade de contador</li>
-                    <li>Mais obrigações fiscais e contábeis</li>
-                  </ul>
-                  
-                  <p><strong>EPP (Empresa de Pequeno Porte):</strong></p>
-                  <ul>
-                    <li>Faturamento anual entre R$ 360.000,01 e R$ 4.800.000,00</li>
-                    <li>Sem limite de funcionários</li>
-                    <li>Tributação pelo Simples Nacional com alíquotas maiores</li>
-                    <li>Necessidade de contador</li>
-                    <li>Obrigações fiscais e contábeis mais complexas</li>
-                  </ul>
-                  
-                  <p>A escolha entre essas categorias depende do tamanho do seu negócio, faturamento e perspectivas de crescimento.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingG5">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseG5" aria-expanded="false" aria-controls="collapseG5">
-                  Posso ter mais de uma atividade como MEI?
-                </button>
-              </h3>
-              <div id="collapseG5" class="accordion-collapse collapse" aria-labelledby="headingG5">
-                <div class="accordion-body">
-                  <p>Sim, o MEI pode exercer até 15 atividades simultaneamente, sendo uma principal e até 14 secundárias, desde que todas estejam na lista de ocupações permitidas.</p>
-                  <p>Por exemplo, você pode ser cabeleireiro (atividade principal) e também trabalhar com venda de produtos de beleza (atividade secundária).</p>
-                  <p>As atividades podem ser registradas no momento da formalização ou adicionadas posteriormente através de alteração cadastral no Portal do Empreendedor.</p>
-                  <p><strong>Importante:</strong> Mesmo com várias atividades, o limite de faturamento continua sendo R$ 81.000,00 por ano para o conjunto de todas as atividades.</p>
-                </div>
+            <div class="faq-answer">
+              <p>A formalização como MEI é <strong>totalmente gratuita</strong>. Não há custos para abrir o MEI quando feito diretamente pelo <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank" rel="noopener">Portal do Empreendedor</a>.</p>
+              <p>Você só começará a pagar o DAS (Documento de Arrecadação do Simples Nacional) no mês seguinte à formalização. Em 2025, o valor do DAS varia entre R$ 76,90 e R$ 81,90, dependendo da sua atividade.</p>
+              <div class="alert alert-warning mt-3">
+                <i class="fas fa-exclamation-triangle"></i> Atenção: Desconfie de sites ou pessoas que cobram para abrir seu MEI. O processo é gratuito quando feito pelos canais oficiais do governo.
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Aba Abertura -->
-        <div class="tab-content" id="abertura">
-          <h2 class="section-title">Dúvidas sobre Abertura do MEI</h2>
           
-          <div class="accordion" id="accordionAbertura">
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingA1">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA1" aria-expanded="true" aria-controls="collapseA1">
-                  Como abrir um MEI?
-                </button>
-              </h3>
-              <div id="collapseA1" class="accordion-collapse collapse show" aria-labelledby="headingA1">
-                <div class="accordion-body">
-                  <p>Abrir um MEI é um processo simples e gratuito que pode ser feito pela internet. Siga estes passos:</p>
-                  <ol>
-                    <li>Acesse o <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank">Portal do Empreendedor</a></li>
-                    <li>Clique em "Quero ser MEI"</li>
-                    <li>Faça login com sua conta gov.br (nível prata ou ouro)</li>
-                    <li>Preencha o formulário com seus dados pessoais</li>
-                    <li>Informe sua atividade principal e secundárias (se houver)</li>
-                    <li>Declare que não possui outro CNPJ e que está dentro do limite de faturamento</li>
-                    <li>Confirme os dados e finalize o cadastro</li>
-                  </ol>
-                  <p>Após a conclusão, você receberá imediatamente seu CNPJ e poderá emitir o Certificado da Condição de Microempreendedor Individual (CCMEI).</p>
-                  <p>Para um passo a passo detalhado, consulte nossa página <a href="cadastro.html">Como Abrir um MEI</a>.</p>
-                </div>
-              </div>
+          <div class="faq-item" data-category="abertura">
+            <div class="faq-question">
+              <h2>Posso abrir MEI se tiver nome sujo?</h2>
+              <i class="fas fa-chevron-down"></i>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingA2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA2" aria-expanded="false" aria-controls="collapseA2">
-                  Quanto custa para abrir um MEI?
-                </button>
-              </h3>
-              <div id="collapseA2" class="accordion-collapse collapse" aria-labelledby="headingA2">
-                <div class="accordion-body">
-                  <p><strong>A abertura do MEI é totalmente gratuita!</strong> Não há nenhuma taxa para se formalizar como Microempreendedor Individual.</p>
-                  <p>Cuidado com sites ou pessoas que cobram para fazer seu cadastro como MEI. Todo o processo pode ser feito gratuitamente pelo Portal do Empreendedor.</p>
-                  <p>Os únicos custos relacionados ao MEI são os pagamentos mensais do DAS (Documento de Arrecadação do Simples Nacional), que começam a ser pagos após a formalização.</p>
-                  <div class="alert alert-warning">
-                    <p><strong>Atenção!</strong> Algumas prefeituras podem cobrar taxas para emissão de alvarás ou licenças específicas, dependendo da atividade e localidade. Consulte a prefeitura da sua cidade para mais informações.</p>
-                  </div>
-                </div>
-              </div>
+            <div class="faq-answer">
+              <p><strong>Sim</strong>. Restrições no CPF como nome negativado em órgãos de proteção ao crédito (SPC/Serasa) não impedem a abertura do MEI.</p>
+              <p>No entanto, pendências com a Receita Federal podem dificultar o processo. É recomendável regularizar sua situação fiscal antes de solicitar a abertura do MEI.</p>
+              <p>Além disso, mesmo podendo abrir o MEI com o nome sujo, isso pode dificultar a obtenção de crédito e a abertura de conta bancária empresarial posteriormente.</p>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingA3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA3" aria-expanded="false" aria-controls="collapseA3">
-                  Preciso de alvará para funcionar como MEI?
-                </button>
-              </h3>
-              <div id="collapseA3" class="accordion-collapse collapse" aria-labelledby="headingA3">
-                <div class="accordion-body">
-                  <p>Sim, na maioria dos casos você precisará de alvará de funcionamento, mas isso depende da sua atividade e do local onde vai exercê-la:</p>
-                  
-                  <p><strong>Atividades de baixo risco:</strong> Muitas atividades são consideradas de baixo risco e podem funcionar com dispensa de alvará, desde que exercidas em local apropriado. Exemplos: costureira, artesão, vendedor ambulante.</p>
-                  
-                  <p><strong>Atividades com restrições:</strong> Algumas atividades exigem alvará e licenças específicas por envolverem questões de saúde, segurança ou meio ambiente. Exemplos: comércio de alimentos, salão de beleza, oficina mecânica.</p>
-                  
-                  <p>Para saber se sua atividade precisa de alvará:</p>
-                  <ol>
-                    <li>Consulte a prefeitura da sua cidade</li>
-                    <li>Verifique se sua atividade está na lista de dispensa de alvará</li>
-                    <li>Informe-se sobre as exigências específicas para o seu tipo de negócio</li>
-                  </ol>
-                  
-                  <p><strong>Importante:</strong> Mesmo com dispensa de alvará, você deve respeitar as normas de zoneamento urbano, condominiais (se for o caso) e sanitárias.</p>
-                </div>
-              </div>
+          </div>
+          
+          <div class="faq-item" data-category="abertura">
+            <div class="faq-question">
+              <h2>Posso abrir MEI se for funcionário de empresa privada?</h2>
+              <i class="fas fa-chevron-down"></i>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingA4">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA4" aria-expanded="false" aria-controls="collapseA4">
-                  Posso abrir MEI se tiver nome sujo ou dívidas?
-                </button>
-              </h3>
-              <div id="collapseA4" class="accordion-collapse collapse" aria-labelledby="headingA4">
-                <div class="accordion-body">
-                  <p><strong>Sim, você pode abrir um MEI mesmo com o nome negativado ou com dívidas pessoais.</strong></p>
-                  <p>Restrições no CPF como SERASA, SPC ou protestos não impedem a abertura do MEI, pois o cadastro como Microempreendedor Individual gera um CNPJ separado do seu CPF.</p>
-                  <p>No entanto, é importante saber que:</p>
-                  <ul>
-                    <li>Dívidas relacionadas a empresas anteriores podem impedir a abertura do MEI</li>
-                    <li>Se você tiver débitos com a Receita Federal, pode haver restrições</li>
-                    <li>Ter o nome "limpo" facilita a obtenção de crédito para o seu negócio</li>
-                  </ul>
-                  <p>Recomendamos regularizar suas pendências financeiras pessoais para ter mais facilidade na gestão do seu negócio, mesmo que isso não seja um impedimento para a formalização.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingA5">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA5" aria-expanded="false" aria-controls="collapseA5">
-                  Posso abrir MEI se recebo seguro-desemprego?
-                </button>
-              </h3>
-              <div id="collapseA5" class="accordion-collapse collapse" aria-labelledby="headingA5">
-                <div class="accordion-body">
-                  <p><strong>Não é recomendado abrir um MEI enquanto recebe seguro-desemprego.</strong></p>
-                  <p>De acordo com a legislação, o seguro-desemprego é destinado a trabalhadores que estão involuntariamente desempregados. Ao se formalizar como MEI, você passa a exercer atividade remunerada, o que pode caracterizar fraude ao seguro-desemprego.</p>
-                  <p>Consequências possíveis:</p>
-                  <ul>
-                    <li>Cancelamento imediato do benefício</li>
-                    <li>Devolução de valores já recebidos</li>
-                    <li>Possíveis penalidades legais</li>
-                  </ul>
-                  <p>O recomendado é aguardar o término do recebimento do seguro-desemprego para então se formalizar como MEI, ou abrir mão do benefício caso queira se formalizar imediatamente.</p>
-                </div>
+            <div class="faq-answer">
+              <p><strong>Sim</strong>. Você pode ser MEI mesmo sendo funcionário CLT de uma empresa privada.</p>
+              <p>No entanto, é importante verificar se não há cláusulas no seu contrato de trabalho que impeçam atividades paralelas. Algumas empresas possuem cláusulas de exclusividade ou de não concorrência.</p>
+              <p>Além disso, é recomendável que a atividade do seu MEI não seja a mesma que você exerce como funcionário CLT, para evitar possíveis conflitos de interesse.</p>
+              <div class="alert alert-info mt-3">
+                <i class="fas fa-info-circle"></i> Dica: Se você é funcionário público, verifique as regras específicas do seu órgão, pois podem existir restrições adicionais.
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Aba Obrigações -->
-        <div class="tab-content" id="obrigacoes">
-          <h2 class="section-title">Dúvidas sobre Obrigações do MEI</h2>
           
-          <div class="accordion" id="accordionObrigacoes">
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingO1">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseO1" aria-expanded="true" aria-controls="collapseO1">
-                  Quais são as obrigações do MEI?
-                </button>
-              </h3>
-              <div id="collapseO1" class="accordion-collapse collapse show" aria-labelledby="headingO1">
-                <div class="accordion-body">
-                  <p>As principais obrigações do MEI são:</p>
-                  
-                  <p><strong>1. Pagamento mensal do DAS</strong></p>
-                  <ul>
-                    <li>Valor fixo mensal (R$ 75,90 a R$ 81,90 em 2025, dependendo da atividade)</li>
-                    <li>Vencimento todo dia 20 de cada mês</li>
-                    <li>Deve ser pago mesmo sem faturamento no mês</li>
-                  </ul>
-                  
-                  <p><strong>2. Declaração Anual (DASN-SIMEI)</strong></p>
-                  <ul>
-                    <li>Entrega até 31 de maio do ano seguinte</li>
-                    <li>Informar faturamento total do ano anterior</li>
-                    <li>Declarar se teve ou não empregado</li>
-                  </ul>
-                  
-                  <p><strong>3. Emissão de notas fiscais</strong></p>
-                  <ul>
-                    <li>Obrigatória para vendas a outras empresas (PJ)</li>
-                    <li>Opcional para vendas a pessoas físicas</li>
-                  </ul>
-                  
-                  <p><strong>4. Controle de receitas</strong></p>
-                  <ul>
-                    <li>Manter relatório mensal de receitas brutas</li>
-                    <li>Guardar notas fiscais de compras e vendas</li>
-                  </ul>
-                  
-                  <p><strong>5. Se tiver funcionário:</strong></p>
-                  <ul>
-                    <li>Recolher FGTS (8%) e INSS (3%) do empregado</li>
-                    <li>Entregar GFIP mensalmente</li>
-                    <li>Entregar eSocial</li>
-                  </ul>
-                  
-                  <p>O não cumprimento dessas obrigações pode gerar multas, juros e até o desenquadramento do MEI.</p>
-                </div>
-              </div>
+          <div class="faq-item" data-category="abertura">
+            <div class="faq-question">
+              <h2>Preciso de contador para abrir MEI?</h2>
+              <i class="fas fa-chevron-down"></i>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingO2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseO2" aria-expanded="false" aria-controls="collapseO2">
-                  O MEI é obrigado a emitir nota fiscal?
-                </button>
-              </h3>
-              <div id="collapseO2" class="accordion-collapse collapse" aria-labelledby="headingO2">
-                <div class="accordion-body">
-                  <p>A obrigatoriedade de emissão de nota fiscal pelo MEI depende do tipo de cliente:</p>
-                  
-                  <p><strong>Vendas para Pessoas Jurídicas (empresas):</strong></p>
-                  <ul>
-                    <li>É <strong>obrigatória</strong> a emissão de nota fiscal</li>
-                    <li>A empresa que compra precisa da nota para sua contabilidade</li>
-                    <li>A não emissão pode gerar problemas fiscais para ambas as partes</li>
-                  </ul>
-                  
-                  <p><strong>Vendas para Pessoas Físicas (consumidores):</strong></p>
-                  <ul>
-                    <li>A emissão é <strong>opcional</strong></li>
-                    <li>O MEI deve emitir nota se o cliente solicitar</li>
-                    <li>Mesmo sendo opcional, é uma boa prática emitir notas para controle</li>
-                  </ul>
-                  
-                  <p><strong>Como emitir notas fiscais:</strong></p>
-                  <ul>
-                    <li>Para serviços: cadastre-se na prefeitura da sua cidade para emitir NFS-e (Nota Fiscal de Serviços eletrônica)</li>
-                    <li>Para produtos: cadastre-se na Secretaria da Fazenda do seu estado para emitir NF-e (Nota Fiscal eletrônica)</li>
-                  </ul>
-                  
-                  <p>Consulte nossa página de <a href="apps.html">Apps Úteis</a> para conhecer ferramentas que facilitam a emissão de notas fiscais.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingO3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseO3" aria-expanded="false" aria-controls="collapseO3">
-                  O MEI precisa de contador?
-                </button>
-              </h3>
-              <div id="collapseO3" class="accordion-collapse collapse" aria-labelledby="headingO3">
-                <div class="accordion-body">
-                  <p><strong>Legalmente, o MEI está dispensado da contratação de contador para a maioria das obrigações.</strong></p>
-                  
-                  <p>O MEI pode fazer sozinho:</p>
-                  <ul>
-                    <li>Abertura e formalização do MEI</li>
-                    <li>Pagamento mensal do DAS</li>
-                    <li>Declaração Anual (DASN-SIMEI)</li>
-                    <li>Controle simplificado de receitas</li>
-                    <li>Alterações cadastrais básicas</li>
-                  </ul>
-                  
-                  <p>Situações em que um contador pode ser útil:</p>
-                  <ul>
-                    <li>Se você tiver um funcionário (obrigações trabalhistas são mais complexas)</li>
-                    <li>Para orientação sobre planejamento tributário</li>
-                    <li>Quando estiver próximo do limite de faturamento e precisar migrar para ME</li>
-                    <li>Para resolver pendências ou regularizar situações específicas</li>
-                  </ul>
-                  
-                  <p>Muitos MEIs optam por contratar serviços contábeis para ter mais segurança e tempo para focar no negócio, mesmo não sendo obrigatório.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingO4">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseO4" aria-expanded="false" aria-controls="collapseO4">
-                  Como fazer a Declaração Anual do MEI (DASN-SIMEI)?
-                </button>
-              </h3>
-              <div id="collapseO4" class="accordion-collapse collapse" aria-labelledby="headingO4">
-                <div class="accordion-body">
-                  <p>A Declaração Anual do MEI (DASN-SIMEI) é uma obrigação simples que deve ser entregue até 31 de maio de cada ano, referente ao ano anterior. Siga estes passos:</p>
-                  
-                  <ol>
-                    <li>Acesse o <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank">Portal do Empreendedor</a></li>
-                    <li>Faça login com sua conta gov.br</li>
-                    <li>Clique em "Já sou MEI"</li>
-                    <li>Selecione "Declaração Anual de Faturamento (DASN-SIMEI)"</li>
-                    <li>Escolha o ano-calendário da declaração</li>
-                    <li>Informe o valor total do faturamento do ano (soma de todas as receitas)</li>
-                    <li>Indique se teve ou não empregado durante o ano</li>
-                    <li>Confira as informações e clique em "Transmitir"</li>
-                  </ol>
-                  
-                  <p><strong>Dicas importantes:</strong></p>
-                  <ul>
-                    <li>Tenha em mãos seu relatório mensal de receitas para somar o faturamento total</li>
-                    <li>Mesmo sem faturamento no ano, você deve entregar a declaração (informando valor zero)</li>
-                    <li>Guarde o recibo de entrega da declaração</li>
-                    <li>O atraso na entrega gera multa mínima de R$ 50,00</li>
-                  </ul>
-                  
-                  <p>Para um passo a passo detalhado, consulte nossa página <a href="consulta.html">Consultar Situação</a>.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingO5">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseO5" aria-expanded="false" aria-controls="collapseO5">
-                  O MEI precisa ter conta bancária empresarial?
-                </button>
-              </h3>
-              <div id="collapseO5" class="accordion-collapse collapse" aria-labelledby="headingO5">
-                <div class="accordion-body">
-                  <p><strong>Legalmente, o MEI não é obrigado a ter uma conta bancária empresarial</strong>, mas é altamente recomendado por vários motivos:</p>
-                  
-                  <p><strong>Vantagens da conta empresarial:</strong></p>
-                  <ul>
-                    <li>Separação clara entre finanças pessoais e do negócio</li>
-                    <li>Facilidade para controle financeiro e prestação de contas</li>
-                    <li>Maior credibilidade com fornecedores e clientes</li>
-                    <li>Acesso a produtos financeiros específicos para empresas</li>
-                    <li>Possibilidade de aceitar pagamentos com maquininhas de cartão em nome da empresa</li>
-                  </ul>
-                  
-                  <p><strong>Opções disponíveis:</strong></p>
-                  <ul>
-                    <li>Bancos tradicionais: muitos oferecem contas MEI com isenção de tarifas ou valores reduzidos</li>
-                    <li>Bancos digitais: geralmente têm tarifas menores ou zero e processos mais simples</li>
-                    <li>Fintechs: oferecem soluções específicas para pequenos empreendedores</li>
-                  </ul>
-                  
-                  <p>Pesquise as opções disponíveis e escolha a que melhor atende às necessidades do seu negócio. Muitos bancos oferecem condições especiais para MEI.</p>
-                </div>
+            <div class="faq-answer">
+              <p><strong>Não</strong>. O MEI é dispensado da contabilidade formal, portanto, não é necessário contratar um contador para abrir ou manter um MEI.</p>
+              <p>Você pode fazer todo o processo de abertura gratuitamente pelo <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank" rel="noopener">Portal do Empreendedor</a>.</p>
+              <p>No entanto, é recomendável manter um controle simples das receitas e despesas do seu negócio. Você pode fazer isso com planilhas ou aplicativos específicos para MEI.</p>
+              <div class="alert alert-info mt-3">
+                <i class="fas fa-info-circle"></i> Dica: Mesmo não sendo obrigatório, consultar um contador pode ser útil para orientações específicas sobre sua atividade ou para planejar a transição para ME (Microempresa) quando seu faturamento se aproximar do limite.
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Aba Benefícios -->
-        <div class="tab-content" id="beneficios">
-          <h2 class="section-title">Dúvidas sobre Benefícios do MEI</h2>
           
-          <div class="accordion" id="accordionBeneficios">
-            <!-- Conteúdo da aba Benefícios -->
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingB1">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseB1" aria-expanded="true" aria-controls="collapseB1">
-                  Quais são os benefícios previdenciários do MEI?
-                </button>
-              </h3>
-              <div id="collapseB1" class="accordion-collapse collapse show" aria-labelledby="headingB1">
-                <div class="accordion-body">
-                  <p>O MEI tem direito aos seguintes benefícios previdenciários, desde que esteja com os pagamentos do DAS em dia:</p>
-                  
-                  <p><strong>1. Aposentadoria por idade</strong></p>
-                  <ul>
-                    <li>Mulheres: 62 anos de idade + 15 anos de contribuição</li>
-                    <li>Homens: 65 anos de idade + 20 anos de contribuição</li>
-                    <li>Valor: um salário mínimo</li>
-                  </ul>
-                  
-                  <p><strong>2. Auxílio-doença (Auxílio por Incapacidade Temporária)</strong></p>
-                  <ul>
-                    <li>Carência: 12 meses de contribuição</li>
-                    <li>Necessária perícia médica que comprove a incapacidade temporária</li>
-                    <li>Valor: um salário mínimo</li>
-                  </ul>
-                  
-                  <p><strong>3. Salário-maternidade</strong></p>
-                  <ul>
-                    <li>Carência: 10 meses de contribuição</li>
-                    <li>Duração: 120 dias</li>
-                    <li>Valor: um salário mínimo</li>
-                    <li>Válido para parto, adoção ou guarda judicial para fins de adoção</li>
-                  </ul>
-                  
-                  <p><strong>4. Pensão por morte</strong></p>
-                  <ul>
-                    <li>Para dependentes em caso de falecimento do MEI</li>
-                    <li>Não há carência se o MEI estava em dia com os pagamentos</li>
-                    <li>Valor: um salário mínimo</li>
-                  </ul>
-                  
-                  <p><strong>5. Auxílio-reclusão</strong></p>
-                  <ul>
-                    <li>Para dependentes em caso de prisão do MEI</li>
-                    <li>Carência: 24 meses de contribuição</li>
-                    <li>Válido apenas para segurados de baixa renda</li>
-                  </ul>
-                  
-                  <p><strong>Importante:</strong> Para ter direito aos benefícios, é fundamental manter os pagamentos do DAS em dia.</p>
-                </div>
-              </div>
+          <!-- Obrigações -->
+          <div class="faq-item" data-category="obrigacoes">
+            <div class="faq-question">
+              <h2>Quais são as obrigações do MEI?</h2>
+              <i class="fas fa-chevron-down"></i>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingB2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseB2" aria-expanded="false" aria-controls="collapseB2">
-                  Como o MEI se aposenta?
-                </button>
-              </h3>
-              <div id="collapseB2" class="accordion-collapse collapse" aria-labelledby="headingB2">
-                <div class="accordion-body">
-                  <p>O MEI pode se aposentar por idade, seguindo estas regras:</p>
-                  
-                  <p><strong>Requisitos para aposentadoria por idade:</strong></p>
-                  <ul>
-                    <li>Mulheres: 62 anos de idade + 15 anos de contribuição</li>
-                    <li>Homens: 65 anos de idade + 20 anos de contribuição</li>
-                  </ul>
-                  
-                  <p><strong>Valor da aposentadoria:</strong></p>
-                  <ul>
-                    <li>O valor padrão é de um salário mínimo</li>
-                    <li>Para receber mais que o salário mínimo, é necessário complementar o INSS mensalmente (contribuição complementar)</li>
-                  </ul>
-                  
-                  <p><strong>Como solicitar a aposentadoria:</strong></p>
-                  <ol>
-                    <li>Acesse o portal ou aplicativo Meu INSS</li>
-                    <li>Faça login com sua conta gov.br</li>
-                    <li>Clique em "Novo Pedido"</li>
-                    <li>Selecione "Aposentadoria por Idade"</li>
-                    <li>Siga as instruções e anexe os documentos solicitados</li>
-                    <li>Acompanhe o andamento pelo Meu INSS</li>
-                  </ol>
-                  
-                  <p><strong>Dicas importantes:</strong></p>
-                  <ul>
-                    <li>Verifique seu tempo de contribuição no Meu INSS antes de solicitar</li>
-                    <li>Contribuições anteriores ao MEI (como CLT) contam para o tempo total</li>
-                    <li>Mantenha todos os pagamentos do DAS em dia para não perder a qualidade de segurado</li>
-                  </ul>
-                </div>
-              </div>
+            <div class="faq-answer">
+              <p>As principais obrigações do MEI são:</p>
+              <ul>
+                <li><strong>Pagamento mensal do DAS:</strong> Deve ser pago até o dia 20 de cada mês</li>
+                <li><strong>Declaração Anual (DASN-SIMEI):</strong> Deve ser entregue até 31 de maio de cada ano, referente ao ano anterior</li>
+                <li><strong>Emissão de notas fiscais:</strong> Obrigatória para vendas e serviços prestados a pessoas jurídicas</li>
+                <li><strong>Controle de receitas:</strong> Manter registro mensal do faturamento</li>
+                <li><strong>Guarda de documentos:</strong> Notas fiscais de compras, vendas e serviços devem ser guardadas por pelo menos 5 anos</li>
+              </ul>
+              <p>Se o MEI tiver um funcionário, também terá obrigações trabalhistas como:</p>
+              <ul>
+                <li>Recolhimento do FGTS (8% sobre o salário)</li>
+                <li>Recolhimento do INSS patronal (3% sobre o salário)</li>
+                <li>Entrega da GFIP e do eSocial</li>
+              </ul>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingB3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseB3" aria-expanded="false" aria-controls="collapseB3">
-                  O MEI tem direito a auxílio-doença?
-                </button>
-              </h3>
-              <div id="collapseB3" class="accordion-collapse collapse" aria-labelledby="headingB3">
-                <div class="accordion-body">
-                  <p><strong>Sim, o MEI tem direito ao auxílio-doença</strong> (atualmente chamado de Auxílio por Incapacidade Temporária), desde que cumpra os requisitos:</p>
-                  
-                  <p><strong>Requisitos para receber o auxílio-doença:</strong></p>
-                  <ul>
-                    <li>Ter pelo menos 12 meses de contribuição (carência)</li>
-                    <li>Estar com os pagamentos do DAS em dia</li>
-                    <li>Comprovar incapacidade temporária para o trabalho através de perícia médica do INSS</li>
-                  </ul>
-                  
-                  <p><strong>Valor do benefício:</strong> Um salário mínimo</p>
-                  
-                  <p><strong>Como solicitar:</strong></p>
-                  <ol>
-                    <li>Acesse o portal ou aplicativo Meu INSS</li>
-                    <li>Faça login com sua conta gov.br</li>
-                    <li>Clique em "Novo Pedido"</li>
-                    <li>Selecione "Benefício por Incapacidade"</li>
-                    <li>Anexe atestado médico e documentos solicitados</li>
-                    <li>Aguarde a marcação da perícia médica</li>
-                    <li>Compareça à perícia na data agendada</li>
-                  </ol>
-                  
-                  <p><strong>Importante:</strong></p>
-                  <ul>
-                    <li>O benefício é temporário e dura enquanto persistir a incapacidade para o trabalho</li>
-                    <li>Perícias periódicas podem ser solicitadas para verificar a continuidade da incapacidade</li>
-                    <li>Durante o recebimento do auxílio-doença, você continua obrigado a pagar o DAS mensal</li>
-                  </ul>
-                </div>
-              </div>
+          </div>
+          
+          <div class="faq-item" data-category="obrigacoes">
+            <div class="faq-question">
+              <h2>O que acontece se eu não pagar o DAS?</h2>
+              <i class="fas fa-chevron-down"></i>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingB4">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseB4" aria-expanded="false" aria-controls="collapseB4">
-                  O MEI tem direito a salário-maternidade?
-                </button>
-              </h3>
-              <div id="collapseB4" class="accordion-collapse collapse" aria-labelledby="headingB4">
-                <div class="accordion-body">
-                  <p><strong>Sim, a MEI do sexo feminino tem direito ao salário-maternidade</strong>, assim como o MEI do sexo masculino que adote uma criança. Confira os detalhes:</p>
-                  
-                  <p><strong>Requisitos para receber o salário-maternidade:</strong></p>
-                  <ul>
-                    <li>Ter pelo menos 10 meses de contribuição antes do parto ou adoção (carência)</li>
-                    <li>Estar com os pagamentos do DAS em dia</li>
-                  </ul>
-                  
-                  <p><strong>Situações que dão direito ao benefício:</strong></p>
-                  <ul>
-                    <li>Parto (nascimento de filho)</li>
-                    <li>Adoção de criança de até 12 anos</li>
-                    <li>Guarda judicial para fins de adoção</li>
-                    <li>Aborto espontâneo ou previsto em lei (neste caso, o benefício dura 14 dias)</li>
-                  </ul>
-                  
-                  <p><strong>Duração do benefício:</strong> 120 dias, podendo começar até 28 dias antes do parto</p>
-                  
-                  <p><strong>Valor do benefício:</strong> Um salário mínimo</p>
-                  
-                  <p><strong>Como solicitar:</strong></p>
-                  <ol>
-                    <li>Acesse o portal ou aplicativo Meu INSS</li>
-                    <li>Faça login com sua conta gov.br</li>
-                    <li>Clique em "Novo Pedido"</li>
-                    <li>Selecione "Salário-Maternidade"</li>
-                    <li>Anexe certidão de nascimento da criança ou termo de adoção</li>
-                    <li>Anexe outros documentos solicitados</li>
-                    <li>Envie o pedido e aguarde análise</li>
-                  </ol>
-                  
-                  <p><strong>Importante:</strong> Durante o recebimento do salário-maternidade, você continua obrigada a pagar o DAS mensal.</p>
-                </div>
-              </div>
+            <div class="faq-answer">
+              <p>O não pagamento do DAS pode gerar diversas consequências:</p>
+              <ul>
+                <li><strong>Perda dos benefícios previdenciários:</strong> Sem o pagamento em dia, você não terá direito a aposentadoria, auxílio-doença, salário-maternidade, entre outros benefícios do INSS</li>
+                <li><strong>Acúmulo de dívidas:</strong> O valor em atraso será acrescido de juros e multa</li>
+                <li><strong>Inclusão na Dívida Ativa da União:</strong> Após um período de inadimplência, seu CNPJ pode ser inscrito na Dívida Ativa</li>
+                <li><strong>Dificuldade para obter certidões negativas:</strong> Necessárias para participar de licitações e obter empréstimos</li>
+                <li><strong>Possível exclusão do Simples Nacional:</strong> Após um período prolongado de inadimplência</li>
+              </ul>
+              <p>Se você estiver com DAS em atraso, é possível parcelar os débitos através do <a href="https://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/ParcelamentoMei.app/Default.aspx" target="_blank" rel="noopener">sistema de parcelamento</a> da Receita Federal.</p>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingB5">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseB5" aria-expanded="false" aria-controls="collapseB5">
-                  Quais são as vantagens de ser MEI?
-                </button>
-              </h3>
-              <div id="collapseB5" class="accordion-collapse collapse" aria-labelledby="headingB5">
-                <div class="accordion-body">
-                  <p>Ser MEI oferece diversas vantagens em comparação com trabalhar na informalidade:</p>
-                  
-                  <p><strong>1. Formalização e legalidade</strong></p>
-                  <ul>
-                    <li>CNPJ próprio</li>
-                    <li>Possibilidade de emitir notas fiscais</li>
-                    <li>Comprovação de renda como empresário</li>
-                  </ul>
-                  
-                  <p><strong>2. Benefícios previdenciários</strong></p>
-                  <ul>
-                    <li>Aposentadoria por idade</li>
-                    <li>Auxílio-doença</li>
-                    <li>Salário-maternidade</li>
-                    <li>Pensão por morte para dependentes</li>
-                  </ul>
-                  
-                  <p><strong>3. Vantagens financeiras</strong></p>
-                  <ul>
-                    <li>Tributação reduzida e simplificada (valor fixo mensal)</li>
-                    <li>Isenção de taxas para registro</li>
-                    <li>Acesso a serviços bancários empresariais</li>
-                    <li>Possibilidade de obter crédito com condições especiais</li>
-                  </ul>
-                  
-                  <p><strong>4. Oportunidades de negócio</strong></p>
-                  <ul>
-                    <li>Vender para outras empresas e para o governo</li>
-                    <li>Participar de licitações públicas</li>
-                    <li>Formar parcerias com empresas maiores</li>
-                    <li>Contratar um funcionário com carteira assinada</li>
-                  </ul>
-                  
-                  <p><strong>5. Simplificação burocrática</strong></p>
-                  <ul>
-                    <li>Processo simplificado de abertura e baixa</li>
-                    <li>Dispensa de contabilidade formal</li>
-                    <li>Declaração anual simplificada</li>
-                    <li>Menos obrigações acessórias</li>
-                  </ul>
-                  
-                  <p>Essas vantagens tornam o MEI uma excelente opção para quem deseja empreender com segurança e dentro da lei.</p>
-                </div>
+          </div>
+          
+          <div class="faq-item" data-category="obrigacoes">
+            <div class="faq-question">
+              <h2>O que é a Declaração Anual do MEI (DASN-SIMEI)?</h2>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>A <strong>Declaração Anual do Simples Nacional para o Microempreendedor Individual (DASN-SIMEI)</strong> é uma obrigação fiscal que deve ser cumprida anualmente por todos os MEIs, mesmo que não tenha tido faturamento no período.</p>
+              <p>Nesta declaração, você informa:</p>
+              <ul>
+                <li>O faturamento total do ano anterior (receita bruta)</li>
+                <li>O faturamento por tipo de atividade (comércio, indústria ou serviços)</li>
+                <li>Se teve ou não funcionário durante o ano</li>
+              </ul>
+              <p>A declaração deve ser entregue até o dia <strong>31 de maio</strong> de cada ano, referente ao ano-calendário anterior. Por exemplo, a declaração referente ao ano de 2024 deve ser entregue até 31 de maio de 2025.</p>
+              <div class="alert alert-danger mt-3">
+                <i class="fas fa-exclamation-circle"></i> A não entrega da declaração anual no prazo gera multa mínima de R$ 50,00, que pode aumentar conforme o tempo de atraso.
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Aba Financeiro -->
-        <div class="tab-content" id="financeiro">
-          <h2 class="section-title">Dúvidas Financeiras do MEI</h2>
           
-          <div class="accordion" id="accordionFinanceiro">
-            <!-- Conteúdo da aba Financeiro -->
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingF1">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseF1" aria-expanded="true" aria-controls="collapseF1">
-                  Qual o valor do DAS do MEI em 2025?
-                </button>
-              </h3>
-              <div id="collapseF1" class="accordion-collapse collapse show" aria-labelledby="headingF1">
-                <div class="accordion-body">
-                  <p>Em 2025, o valor do DAS (Documento de Arrecadação do Simples Nacional) para o MEI varia de acordo com a atividade exercida:</p>
-                  
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Tipo de Atividade</th>
-                          <th>Composição</th>
-                          <th>Valor Total</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Comércio e Indústria</td>
-                          <td>R$ 75,90 (INSS) + R$ 1,00 (ICMS)</td>
-                          <td>R$ 76,90</td>
-                        </tr>
-                        <tr>
-                          <td>Serviços</td>
-                          <td>R$ 75,90 (INSS) + R$ 5,00 (ISS)</td>
-                          <td>R$ 80,90</td>
-                        </tr>
-                        <tr>
-                          <td>Comércio e Serviços</td>
-                          <td>R$ 75,90 (INSS) + R$ 1,00 (ICMS) + R$ 5,00 (ISS)</td>
-                          <td>R$ 81,90</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  
-                  <p><strong>Detalhamento dos valores:</strong></p>
-                  <ul>
-                    <li><strong>INSS:</strong> R$ 75,90 (5% do salário mínimo de 2025)</li>
-                    <li><strong>ICMS:</strong> R$ 1,00 (para atividades de comércio e indústria)</li>
-                    <li><strong>ISS:</strong> R$ 5,00 (para atividades de serviços)</li>
-                  </ul>
-                  
-                  <p><strong>Importante:</strong></p>
-                  <ul>
-                    <li>O pagamento deve ser feito até o dia 20 de cada mês</li>
-                    <li>O DAS deve ser pago mesmo em meses sem faturamento</li>
-                    <li>O atraso gera multa e juros, além de comprometer os benefícios previdenciários</li>
-                  </ul>
-                </div>
-              </div>
+          <div class="faq-item" data-category="obrigacoes">
+            <div class="faq-question">
+              <h2>Quando devo emitir nota fiscal como MEI?</h2>
+              <i class="fas fa-chevron-down"></i>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingF2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseF2" aria-expanded="false" aria-controls="collapseF2">
-                  Qual o limite de faturamento do MEI?
-                </button>
-              </h3>
-              <div id="collapseF2" class="accordion-collapse collapse" aria-labelledby="headingF2">
-                <div class="accordion-body">
-                  <p><strong>O limite de faturamento do MEI em 2025 é de R$ 81.000,00 por ano</strong>, o que corresponde a uma média mensal de R$ 6.750,00.</p>
-                  
-                  <p><strong>O que acontece se ultrapassar o limite:</strong></p>
-                  
-                  <p>1. <strong>Ultrapassar em até 20% (até R$ 97.200,00):</strong></p>
-                  <ul>
-                    <li>Você pode continuar como MEI até o final do ano</li>
-                    <li>Pagará um imposto adicional sobre o valor excedente (mesmo percentual das microempresas do Simples Nacional)</li>
-                    <li>No ano seguinte, será obrigatoriamente desenquadrado e deverá migrar para Microempresa (ME)</li>
-                  </ul>
-                  
-                  <p>2. <strong>Ultrapassar em mais de 20% (acima de R$ 97.200,00):</strong></p>
-                  <ul>
-                    <li>Desenquadramento retroativo a janeiro do ano corrente</li>
-                    <li>Necessidade de migrar imediatamente para ME ou EPP</li>
-                    <li>Pagamento de todos os impostos como ME, retroativamente</li>
-                  </ul>
-                  
-                  <p><strong>Como controlar o faturamento:</strong></p>
-                  <ul>
-                    <li>Mantenha um relatório mensal de receitas</li>
-                    <li>Guarde todas as notas fiscais emitidas</li>
-                    <li>Utilize aplicativos de gestão financeira (veja nossa página de <a href="apps.html">Apps Úteis</a>)</li>
-                    <li>Monitore mensalmente para evitar surpresas no final do ano</li>
-                  </ul>
-                  
-                  <p><strong>Dica:</strong> Se você está se aproximando do limite, consulte um contador para planejar a transição para ME de forma organizada.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingF3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseF3" aria-expanded="false" aria-controls="collapseF3">
-                  O MEI pode ter funcionário?
-                </button>
-              </h3>
-              <div id="collapseF3" class="accordion-collapse collapse" aria-labelledby="headingF3">
-                <div class="accordion-body">
-                  <p><strong>Sim, o MEI pode ter um único funcionário contratado</strong>, desde que siga algumas regras específicas:</p>
-                  
-                  <p><strong>Regras para contratação:</strong></p>
-                  <ul>
-                    <li>Limite de apenas um funcionário</li>
-                    <li>O funcionário deve receber o salário mínimo ou o piso da categoria profissional</li>
-                    <li>Contratação com carteira assinada (regime CLT)</li>
-                    <li>Jornada de até 8 horas diárias e 44 horas semanais</li>
-                  </ul>
-                  
-                  <p><strong>Custos e encargos:</strong></p>
-                  <ul>
-                    <li>FGTS: 8% sobre o salário</li>
-                    <li>INSS patronal: 3% sobre o salário</li>
-                    <li>13º salário e férias + 1/3</li>
-                    <li>Outros benefícios previstos em convenção coletiva da categoria</li>
-                  </ul>
-                  
-                  <p><strong>Obrigações adicionais:</strong></p>
-                  <ul>
-                    <li>Entregar GFIP mensalmente</li>
-                    <li>Cadastrar e manter atualizado o eSocial</li>
-                    <li>Realizar exames médicos admissionais, periódicos e demissionais</li>
-                    <li>Fornecer EPI (Equipamento de Proteção Individual) se necessário</li>
-                  </ul>
-                  
-                  <p><strong>Dica:</strong> Devido à complexidade das obrigações trabalhistas, é recomendável contar com o apoio de um contador ao contratar um funcionário, mesmo não sendo obrigatório para o MEI.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingF4">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseF4" aria-expanded="false" aria-controls="collapseF4">
-                  O MEI pode comprar e vender para outras empresas?
-                </button>
-              </h3>
-              <div id="collapseF4" class="accordion-collapse collapse" aria-labelledby="headingF4">
-                <div class="accordion-body">
-                  <p><strong>Sim, o MEI pode comprar e vender para outras empresas (pessoas jurídicas)</strong>, sejam elas MEI, ME, EPP ou empresas de grande porte.</p>
-                  
-                  <p><strong>Vendendo para outras empresas:</strong></p>
-                  <ul>
-                    <li>É obrigatória a emissão de nota fiscal</li>
-                    <li>A nota deve ser emitida pelo sistema da sua cidade (serviços) ou estado (produtos)</li>
-                    <li>Algumas empresas podem reter impostos na fonte (IRRF, PIS, COFINS, CSLL)</li>
-                    <li>Mantenha controle das notas emitidas para a declaração anual</li>
-                  </ul>
-                  
-                  <p><strong>Comprando de outras empresas:</strong></p>
-                  <ul>
-                    <li>Sempre exija nota fiscal em nome do seu CNPJ</li>
-                    <li>Guarde as notas fiscais de compra por pelo menos 5 anos</li>
-                    <li>Utilize as notas para comprovar despesas e origem de mercadorias</li>
-                  </ul>
-                  
-                  <p><strong>Vantagens de negociar com outras empresas:</strong></p>
-                  <ul>
-                    <li>Acesso a preços de atacado e condições especiais</li>
-                    <li>Possibilidade de fornecer para empresas maiores como terceirizado</li>
-                    <li>Participação em licitações públicas</li>
-                    <li>Maior credibilidade no mercado</li>
-                  </ul>
-                  
-                  <p><strong>Dica:</strong> Ao negociar com empresas maiores, esteja preparado para cumprir prazos e exigências de qualidade. Tenha um portfólio organizado e referências de outros clientes.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingF5">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseF5" aria-expanded="false" aria-controls="collapseF5">
-                  O MEI pode participar de licitações?
-                </button>
-              </h3>
-              <div id="collapseF5" class="accordion-collapse collapse" aria-labelledby="headingF5">
-                <div class="accordion-body">
-                  <p><strong>Sim, o MEI pode participar de licitações públicas</strong> e tem tratamento diferenciado garantido por lei. A Lei Complementar 123/2006 estabelece benefícios para microempresas e empresas de pequeno porte, incluindo o MEI.</p>
-                  
-                  <p><strong>Benefícios do MEI em licitações:</strong></p>
-                  <ul>
-                    <li>Preferência em caso de empate (até 5% acima do melhor preço em pregões)</li>
-                    <li>Prazo estendido para regularização fiscal (5 dias úteis, prorrogáveis)</li>
-                    <li>Licitações exclusivas para ME/EPP/MEI em compras de até R$ 80.000,00</li>
-                    <li>Possibilidade de subcontratação em obras e serviços</li>
-                  </ul>
-                  
-                  <p><strong>Documentos geralmente exigidos:</strong></p>
-                  <ul>
-                    <li>CCMEI (Certificado da Condição de Microempreendedor Individual)</li>
-                    <li>Certidões negativas (Federal, Estadual, Municipal, FGTS, Trabalhista)</li>
-                    <li>Declaração de enquadramento como ME/EPP/MEI</li>
-                    <li>Atestados de capacidade técnica (quando aplicável)</li>
-                  </ul>
-                  
-                  <p><strong>Como participar:</strong></p>
-                  <ol>
-                    <li>Cadastre-se no sistema de compras do órgão público (ex: Comprasnet para governo federal)</li>
-                    <li>Busque editais compatíveis com sua atividade</li>
-                    <li>Leia atentamente o edital e prepare a documentação necessária</li>
-                    <li>Mantenha suas certidões sempre em dia</li>
-                    <li>Prepare uma proposta competitiva</li>
-                  </ol>
-                  
-                  <p><strong>Dica:</strong> Muitas prefeituras realizam licitações exclusivas para pequenos negócios locais. Fique atento às oportunidades na sua cidade.</p>
-                </div>
+            <div class="faq-answer">
+              <p>Como MEI, você deve emitir nota fiscal nas seguintes situações:</p>
+              <ul>
+                <li><strong>Vendas ou serviços para pessoas jurídicas (empresas):</strong> É sempre obrigatória a emissão de nota fiscal</li>
+                <li><strong>Quando o cliente (pessoa física) solicitar:</strong> Mesmo que não seja obrigatório, você deve emitir se o cliente pedir</li>
+                <li><strong>Em operações interestaduais:</strong> Quando vender produtos para outros estados</li>
+              </ul>
+              <p>Para vendas a consumidores finais (pessoas físicas) dentro do seu estado, a emissão de nota fiscal é facultativa, a menos que o cliente solicite.</p>
+              <p>Para emitir notas fiscais, você precisará fazer um cadastro:</p>
+              <ul>
+                <li><strong>Para serviços:</strong> No sistema da sua prefeitura (NFS-e)</li>
+                <li><strong>Para produtos:</strong> Na Secretaria da Fazenda do seu estado (NF-e)</li>
+              </ul>
+              <div class="alert alert-info mt-3">
+                <i class="fas fa-info-circle"></i> Dica: Mesmo quando não é obrigatório emitir nota fiscal, manter um controle das suas vendas é importante para o gerenciamento do seu negócio e para comprovar seu faturamento na declaração anual.
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Aba Encerramento -->
-        <div class="tab-content" id="encerramento">
-          <h2 class="section-title">Dúvidas sobre Encerramento do MEI</h2>
           
-          <div class="accordion" id="accordionEncerramento">
-            <!-- Conteúdo da aba Encerramento -->
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingE1">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseE1" aria-expanded="true" aria-controls="collapseE1">
-                  Como encerrar o MEI?
-                </button>
-              </h3>
-              <div id="collapseE1" class="accordion-collapse collapse show" aria-labelledby="headingE1">
-                <div class="accordion-body">
-                  <p>O encerramento (baixa) do MEI é um processo gratuito que pode ser feito pela internet. Siga estes passos:</p>
-                  
-                  <ol>
-                    <li>Acesse o <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank">Portal do Empreendedor</a></li>
-                    <li>Faça login com sua conta gov.br</li>
-                    <li>Clique em "Já sou MEI"</li>
-                    <li>Selecione "Baixar MEI"</li>
-                    <li>Preencha o motivo do encerramento</li>
-                    <li>Informe a data de encerramento das atividades</li>
-                    <li>Confira os dados e confirme a solicitação</li>
-                  </ol>
-                  
-                  <p><strong>Após o encerramento, você ainda precisa:</strong></p>
-                  <ul>
-                    <li>Entregar a Declaração Anual de Extinção (DASN-SIMEI de extinção) até o último dia de junho do ano seguinte</li>
-                    <li>Pagar eventuais DAS pendentes até a data do encerramento</li>
-                    <li>Cancelar alvarás e licenças junto aos órgãos municipais e estaduais</li>
-                  </ul>
-                  
-                  <p><strong>Recomendações antes de encerrar:</strong></p>
-                  <ul>
-                    <li>Verifique se não há débitos pendentes</li>
-                    <li>Emita todas as notas fiscais pendentes</li>
-                    <li>Informe seus clientes e fornecedores</li>
-                    <li>Guarde toda a documentação por pelo menos 5 anos</li>
-                  </ul>
-                  
-                  <p><strong>Importante:</strong> O encerramento do MEI não cancela automaticamente eventuais débitos existentes. Eles continuarão sendo cobrados mesmo após a baixa.</p>
-                </div>
+          <!-- Benefícios -->
+          <div class="faq-item" data-category="beneficios">
+            <div class="faq-question">
+              <h2>Quais são os benefícios previdenciários do MEI?</h2>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Ao pagar o DAS em dia, o MEI tem direito aos seguintes benefícios previdenciários:</p>
+              <ul>
+                <li><strong>Aposentadoria por idade:</strong> Mulheres aos 62 anos e homens aos 65 anos, com carência mínima de 180 meses de contribuição</li>
+                <li><strong>Aposentadoria por invalidez:</strong> Em caso de incapacidade permanente para o trabalho, com carência de 12 meses (exceto em casos de acidente)</li>
+                <li><strong>Auxílio-doença:</strong> Em caso de incapacidade temporária para o trabalho, com carência de 12 meses</li>
+                <li><strong>Salário-maternidade:</strong> Para gestantes, com carência de 10 meses</li>
+                <li><strong>Pensão por morte:</strong> Para dependentes, sem carência</li>
+                <li><strong>Auxílio-reclusão:</strong> Para dependentes de baixa renda, sem carência</li>
+              </ul>
+              <div class="alert alert-warning mt-3">
+                <i class="fas fa-exclamation-triangle"></i> Importante: O MEI contribui com apenas 5% do salário mínimo para o INSS, o que garante o direito aos benefícios previdenciários, mas o valor dos benefícios será de apenas um salário mínimo.
+              </div>
+              <p>Se você deseja se aposentar com um valor maior, pode fazer a complementação da contribuição previdenciária através do Plano de Benefícios Complementares do INSS.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item" data-category="beneficios">
+            <div class="faq-question">
+              <h2>Quais são as vantagens de ser MEI?</h2>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Ser MEI traz diversas vantagens para o empreendedor:</p>
+              <ul>
+                <li><strong>Formalização simplificada e gratuita:</strong> Processo rápido e sem custos</li>
+                <li><strong>CNPJ próprio:</strong> Facilita a abertura de conta bancária empresarial, emissão de notas fiscais e compras com fornecedores</li>
+                <li><strong>Baixo custo mensal:</strong> Pagamento único do DAS com valor reduzido</li>
+                <li><strong>Isenção de impostos federais:</strong> Como Imposto de Renda, PIS, Cofins, IPI e CSLL</li>
+                <li><strong>Contabilidade simplificada:</strong> Dispensa de contabilidade formal</li>
+                <li><strong>Benefícios previdenciários:</strong> Aposentadoria, auxílio-doença, salário-maternidade, etc.</li>
+                <li><strong>Acesso a crédito facilitado:</strong> Linhas de crédito específicas para MEI em bancos públicos e privados</li>
+                <li><strong>Possibilidade de vender para o governo:</strong> Participação em licitações públicas</li>
+                <li><strong>Possibilidade de contratar um funcionário:</strong> Com custo reduzido</li>
+                <li><strong>Comprovação de renda:</strong> O MEI pode usar o pró-labore como comprovante de renda</li>
+              </ul>
+              <p>Além disso, ao se formalizar, o empreendedor ganha mais credibilidade no mercado e pode expandir seu negócio de forma legal e segura.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item" data-category="beneficios">
+            <div class="faq-question">
+              <h2>MEI tem direito a seguro-desemprego?</h2>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p><strong>Não</strong>. O MEI, por ser considerado um empresário, não tem direito ao seguro-desemprego pelo seu trabalho como microempreendedor.</p>
+              <p>No entanto, existem algumas situações específicas em que o MEI pode ter direito ao seguro-desemprego:</p>
+              <ul>
+                <li>Se foi demitido sem justa causa de um emprego com carteira assinada antes de se tornar MEI e ainda não recebeu o benefício</li>
+                <li>Se trabalha como empregado com carteira assinada paralelamente à atividade como MEI e for demitido sem justa causa desse emprego</li>
+              </ul>
+              <p>Nesses casos, o direito ao seguro-desemprego vem do vínculo empregatício anterior ou paralelo, e não da condição de MEI.</p>
+              <div class="alert alert-info mt-3">
+                <i class="fas fa-info-circle"></i> Dica: Se você está saindo de um emprego com carteira assinada para se tornar MEI, verifique se tem direito ao seguro-desemprego antes de formalizar seu MEI, pois a abertura do MEI pode impedir o recebimento do benefício.
               </div>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingE2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseE2" aria-expanded="false" aria-controls="collapseE2">
-                  O que acontece se eu não pagar o DAS?
-                </button>
-              </h3>
-              <div id="collapseE2" class="accordion-collapse collapse" aria-labelledby="headingE2">
-                <div class="accordion-body">
-                  <p>O não pagamento do DAS (Documento de Arrecadação do Simples Nacional) traz diversas consequências negativas:</p>
-                  
-                  <p><strong>Consequências imediatas:</strong></p>
-                  <ul>
-                    <li>Incidência de multa (0,33% por dia de atraso, limitada a 20%)</li>
-                    <li>Juros com base na taxa Selic</li>
-                    <li>Perda temporária da qualidade de segurado do INSS após 3 meses de atraso</li>
-                  </ul>
-                  
-                  <p><strong>Consequências a médio prazo:</strong></p>
-                  <ul>
-                    <li>Impossibilidade de emitir certidões negativas</li>
-                    <li>Dificuldade para obter crédito e financiamentos</li>
-                    <li>Perda do direito aos benefícios previdenciários (auxílio-doença, salário-maternidade, etc.)</li>
-                  </ul>
-                  
-                  <p><strong>Consequências a longo prazo:</strong></p>
-                  <ul>
-                    <li>Inscrição em dívida ativa</li>
-                    <li>Cobrança judicial dos débitos</li>
-                    <li>Possível bloqueio de bens e contas bancárias</li>
-                    <li>Comprometimento do tempo de contribuição para aposentadoria</li>
-                  </ul>
-                  
-                  <p><strong>Como regularizar:</strong></p>
-                  <ul>
-                    <li>Emita os DAS atrasados pelo Portal do Empreendedor</li>
-                    <li>Pague os débitos o quanto antes para minimizar juros e multas</li>
-                    <li>Se houver muitos débitos, verifique a possibilidade de parcelamento</li>
-                  </ul>
-                  
-                  <p><strong>Dica:</strong> Se você está passando por dificuldades financeiras, é melhor encerrar o MEI do que acumular dívidas. Você pode se formalizar novamente quando sua situação melhorar.</p>
-                </div>
+          </div>
+          
+          <!-- Financeiro -->
+          <div class="faq-item" data-category="financeiro">
+            <div class="faq-question">
+              <h2>Qual o valor do DAS em 2025?</h2>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Com o salário mínimo de <strong>R$ 1.518,00</strong> em 2025, o valor do DAS para MEIs ficou entre <strong>R$ 76,90</strong> e <strong>R$ 81,90</strong>, dependendo da atividade:</p>
+              <ul>
+                <li><strong>Comércio e Indústria:</strong> R$ 76,90 (R$ 75,90 de INSS + R$ 1,00 de ICMS)</li>
+                <li><strong>Prestação de Serviços:</strong> R$ 80,90 (R$ 75,90 de INSS + R$ 5,00 de ISS)</li>
+                <li><strong>Comércio e Serviços:</strong> R$ 81,90 (R$ 75,90 de INSS + R$ 1,00 de ICMS + R$ 5,00 de ISS)</li>
+              </ul>
+              <p>O valor do INSS corresponde a 5% do salário mínimo vigente, por isso o valor do DAS é reajustado anualmente quando há aumento do salário mínimo.</p>
+              <div class="alert alert-primary mt-3">
+                <i class="fas fa-info-circle"></i> O pagamento deve ser feito até o dia 20 de cada mês. Se o dia 20 cair em final de semana ou feriado, o pagamento deve ser antecipado para o dia útil anterior.
               </div>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingE3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseE3" aria-expanded="false" aria-controls="collapseE3">
-                  Como transformar MEI em ME (Microempresa)?
-                </button>
-              </h3>
-              <div id="collapseE3" class="accordion-collapse collapse" aria-labelledby="headingE3">
-                <div class="accordion-body">
-                  <p>A transformação de MEI para ME (Microempresa) é necessária quando o faturamento se aproxima do limite de R$ 81.000,00 por ano. O processo envolve algumas etapas:</p>
-                  
-                  <p><strong>Passo a passo para a transformação:</strong></p>
-                  <ol>
-                    <li><strong>Desenquadramento do MEI:</strong>
-                      <ul>
-                        <li>Acesse o Portal do Empreendedor</li>
-                        <li>Faça login com sua conta gov.br</li>
-                        <li>Selecione "Já sou MEI" e depois "Desenquadramento"</li>
-                        <li>Escolha a opção "Desenquadramento por comunicação do contribuinte"</li>
-                      </ul>
-                    </li>
-                    <li><strong>Alteração do contrato social:</strong>
-                      <ul>
-                        <li>Elabore um contrato social (recomendável auxílio de contador)</li>
-                        <li>Registre na Junta Comercial do seu estado</li>
-                      </ul>
-                    </li>
-                    <li><strong>Opção pelo Simples Nacional:</strong>
-                      <ul>
-                        <li>Faça a opção pelo Simples Nacional em até 30 dias após o desenquadramento</li>
-                        <li>Acesse o Portal do Simples Nacional para fazer a opção</li>
-                      </ul>
-                    </li>
-                  </ol>
-                  
-                  <p><strong>Principais mudanças ao se tornar ME:</strong></p>
-                  <ul>
-                    <li>Tributação: passa a ser um percentual sobre o faturamento (não mais valor fixo)</li>
-                    <li>Contabilidade: passa a ser obrigatória a contratação de contador</li>
-                    <li>Obrigações acessórias: aumentam significativamente</li>
-                    <li>Limite de faturamento: aumenta para R$ 360.000,00 por ano</li>
-                    <li>Funcionários: não há mais limite de apenas um funcionário</li>
-                  </ul>
-                  
-                  <p><strong>Recomendação:</strong> Devido à complexidade do processo e das novas obrigações, é altamente recomendável contratar um contador para auxiliar na transição de MEI para ME.</p>
-                </div>
+          </div>
+          
+          <div class="faq-item" data-category="financeiro">
+            <div class="faq-question">
+              <h2>MEI pode ter conta PJ (Pessoa Jurídica)?</h2>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p><strong>Sim</strong>. O MEI, por ter CNPJ, pode e deve abrir uma conta bancária de Pessoa Jurídica (PJ).</p>
+              <p>Ter uma conta PJ traz diversas vantagens para o MEI:</p>
+              <ul>
+                <li>Separação das finanças pessoais e do negócio</li>
+                <li>Maior organização financeira</li>
+                <li>Facilidade para receber pagamentos de clientes</li>
+                <li>Acesso a maquininhas de cartão com taxas empresariais</li>
+                <li>Possibilidade de emitir boletos</li>
+                <li>Acesso a linhas de crédito específicas para empresas</li>
+              </ul>
+              <p>Muitos bancos oferecem contas PJ específicas para MEI, com isenção de tarifas ou valores reduzidos. Além dos bancos tradicionais, existem também as fintechs (bancos digitais) que oferecem contas PJ gratuitas ou com custos baixos.</p>
+              <div class="alert alert-info mt-3">
+                <i class="fas fa-info-circle"></i> Dica: Pesquise as opções disponíveis no mercado antes de escolher onde abrir sua conta PJ. Compare tarifas, serviços oferecidos e facilidade de uso.
               </div>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingE4">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseE4" aria-expanded="false" aria-controls="collapseE4">
-                  O que acontece com o CNPJ se eu encerrar o MEI?
-                </button>
-              </h3>
-              <div id="collapseE4" class="accordion-collapse collapse" aria-labelledby="headingE4">
-                <div class="accordion-body">
-                  <p>Quando você encerra (baixa) o seu MEI, o CNPJ não é excluído do sistema, mas sim marcado como "baixado" ou "inativo". Entenda o que acontece:</p>
-                  
-                  <p><strong>Situação do CNPJ após o encerramento:</strong></p>
+          </div>
+          
+          <div class="faq-item" data-category="financeiro">
+            <div class="faq-question">
+              <h2>MEI pode pedir empréstimo?</h2>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p><strong>Sim</strong>. O MEI pode solicitar empréstimos tanto como pessoa física quanto como pessoa jurídica.</p>
+              <p>Como pessoa jurídica, o MEI tem acesso a linhas de crédito específicas para pequenos negócios, com taxas de juros geralmente mais atrativas do que as de empréstimos pessoais.</p>
+              <p>Existem diversas opções de crédito para MEI:</p>
+              <ul>
+                <li><strong>Bancos públicos:</strong> Caixa Econômica Federal, Banco do Brasil e BNDES oferecem linhas específicas para MEI</li>
+                <li><strong>Bancos privados:</strong> A maioria dos bancos comerciais possui linhas de crédito para pequenas empresas</li>
+                <li><strong>Fintechs:</strong> Empresas como Mercado Pago, PagSeguro e outras oferecem crédito para MEI</li>
+                <li><strong>Cooperativas de crédito:</strong> Geralmente com taxas mais atrativas</li>
+                <li><strong>Microcrédito:</strong> Programas específicos para pequenos empreendedores</li>
+              </ul>
+              <div class="alert alert-warning mt-3">
+                <i class="fas fa-exclamation-triangle"></i> Importante: Para ter acesso a melhores condições de crédito, é fundamental manter o MEI regularizado, com o DAS em dia e a declaração anual entregue no prazo.
+              </div>
+              <p>Antes de solicitar um empréstimo, faça um planejamento financeiro para garantir que conseguirá pagar as parcelas sem comprometer a saúde financeira do seu negócio.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item" data-category="financeiro">
+            <div class="faq-question">
+              <h2>O que acontece se o MEI ultrapassar o limite de faturamento?</h2>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>O limite de faturamento anual do MEI é de <strong>R$ 81.000,00</strong> (ou R$ 6.750,00 por mês). Se esse limite for ultrapassado, as consequências dependem do valor excedido:</p>
+              <ul>
+                <li><strong>Excesso de até 20% (até R$ 97.200,00):</strong>
                   <ul>
-                    <li>O número do CNPJ continua existindo nos sistemas governamentais</li>
-                    <li>A situação cadastral muda para "baixada"</li>
-                    <li>O CNPJ não pode mais ser utilizado para emitir notas fiscais ou realizar operações comerciais</li>
-                    <li>O histórico do CNPJ permanece nos sistemas da Receita Federal</li>
+                    <li>O MEI deverá pagar um DAS complementar, calculado sobre o valor excedente</li>
+                    <li>Poderá continuar como MEI no ano seguinte</li>
                   </ul>
-                  
-                  <p><strong>Implicações práticas:</strong></p>
+                </li>
+                <li><strong>Excesso acima de 20% (acima de R$ 97.200,00):</strong>
                   <ul>
-                    <li>Você não poderá mais utilizar o CNPJ para compras, vendas ou contratos</li>
-                    <li>Contas bancárias empresariais vinculadas ao CNPJ deverão ser encerradas</li>
-                    <li>Cartões de crédito empresariais deverão ser cancelados</li>
-                    <li>Registros em órgãos municipais e estaduais deverão ser cancelados</li>
+                    <li>O MEI será desenquadrado retroativamente a janeiro do ano em que ocorreu o excesso</li>
+                    <li>Deverá migrar para Microempresa (ME)</li>
+                    <li>Terá que pagar todos os impostos como ME, retroativamente</li>
                   </ul>
-                  
-                  <p><strong>Possibilidade de reativação:</strong></p>
-                  <p>Não é possível "reativar" um CNPJ baixado. Se você quiser voltar a empreender formalmente, precisará abrir um novo MEI, que terá um novo número de CNPJ.</p>
-                  
-                  <p><strong>Importante:</strong> Mesmo após o encerramento, você continua responsável por eventuais débitos e obrigações pendentes relacionados ao CNPJ baixado. Por isso, é fundamental regularizar tudo antes de encerrar.</p>
-                </div>
+                </li>
+              </ul>
+              <p>Além disso, se o MEI iniciar suas atividades no decorrer do ano, o limite de faturamento será proporcional aos meses de atividade. Por exemplo, se abrir o MEI em julho, o limite para aquele ano será de R$ 40.500,00 (6 meses x R$ 6.750,00).</p>
+              <div class="alert alert-info mt-3">
+                <i class="fas fa-info-circle"></i> Dica: Se você perceber que seu faturamento está se aproximando do limite, comece a planejar a transição para Microempresa (ME). Consulte um contador para orientações específicas sobre esse processo.
               </div>
             </div>
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingE5">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseE5" aria-expanded="false" aria-controls="collapseE5">
-                  Posso reabrir um MEI que foi encerrado?
-                </button>
-              </h3>
-              <div id="collapseE5" class="accordion-collapse collapse" aria-labelledby="headingE5">
-                <div class="accordion-body">
-                  <p><strong>Não é possível "reabrir" ou "reativar" um MEI que foi encerrado.</strong> Uma vez baixado, o CNPJ permanece com a situação "baixada" nos sistemas da Receita Federal.</p>
-                  
-                  <p><strong>O que fazer se quiser voltar a empreender como MEI:</strong></p>
-                  <ol>
-                    <li>Abrir um novo MEI, que terá um novo número de CNPJ</li>
-                    <li>Seguir todo o processo de formalização novamente pelo Portal do Empreendedor</li>
-                    <li>Obter novos alvarás e licenças necessários para sua atividade</li>
-                    <li>Abrir nova conta bancária empresarial, se necessário</li>
-                  </ol>
-                  
-                  <p><strong>Restrições importantes:</strong></p>
+          </div>
+          
+          <!-- Funcionário -->
+          <div class="faq-item" data-category="funcionario">
+            <div class="faq-question">
+              <h2>MEI pode contratar funcionário?</h2>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p><strong>Sim</strong>. O MEI pode contratar <strong>apenas um funcionário</strong> que receba o salário mínimo ou o piso da categoria.</p>
+              <p>A contratação deve seguir as regras da CLT (Consolidação das Leis do Trabalho), incluindo:</p>
+              <ul>
+                <li>Registro na Carteira de Trabalho</li>
+                <li>Pagamento do salário até o 5º dia útil do mês</li>
+                <li>Recolhimento de 3% de INSS patronal sobre o salário</li>
+                <li>Recolhimento de 8% de FGTS sobre o salário</li>
+                <li>Desconto e recolhimento do INSS do funcionário (de 7,5% a 14%, conforme a faixa salarial)</li>
+                <li>Entrega da GFIP (Guia de Recolhimento do FGTS e Informações à Previdência Social)</li>
+                <li>Entrega do eSocial mensalmente</li>
+                <li>Pagamento de férias, 13º salário e outros direitos trabalhistas</li>
+              </ul>
+              <div class="alert alert-warning mt-3">
+                <i class="fas fa-exclamation-triangle"></i> Atenção: Se você contratar mais de um funcionário ou pagar salário superior ao permitido, perderá a condição de MEI e será desenquadrado para Microempresa (ME).
+              </div>
+              <p>Considerando o salário mínimo de R$ 1.518,00 em 2025, o custo total mensal aproximado de um funcionário para o MEI seria de cerca de R$ 1.980,15, incluindo encargos e provisões.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item" data-category="funcionario">
+            <div class="faq-question">
+              <h2>Como contratar um funcionário sendo MEI?</h2>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Para contratar um funcionário como MEI, siga estes passos:</p>
+              <ol>
+                <li><strong>Verificar se o MEI está regular:</strong> Com DAS em dia e declaração anual entregue</li>
+                <li><strong>Exame admissional:</strong> O funcionário deve passar por exame médico admissional</li>
+                <li><strong>Registro na Carteira de Trabalho:</strong> Pode ser feito na versão física ou digital (CTPS Digital)</li>
+                <li><strong>Cadastro no eSocial:</strong> Fazer o cadastro do empregador e do empregado no sistema</li>
+                <li><strong>Informar a admissão:</strong> Enviar os eventos de admissão pelo eSocial</li>
+                <li><strong>Recolher os encargos mensais:</strong>
                   <ul>
-                    <li>Se você tiver débitos pendentes do MEI anterior, isso pode dificultar a abertura de um novo MEI</li>
-                    <li>Se o encerramento foi por ultrapassar o limite de faturamento, você só poderá abrir novo MEI no ano-calendário seguinte</li>
-                    <li>Se você já teve mais de um MEI encerrado, pode haver restrições para abertura de um novo</li>
+                    <li>3% de INSS patronal sobre o salário</li>
+                    <li>8% de FGTS sobre o salário</li>
+                    <li>INSS do funcionário (de 7,5% a 14%, conforme a faixa salarial)</li>
                   </ul>
-                  
-                  <p><strong>Recomendação:</strong> Antes de encerrar seu MEI, avalie bem se é realmente necessário. Se for apenas uma pausa temporária nas atividades, pode ser mais vantajoso manter o MEI ativo e continuar pagando o DAS, especialmente se você já tem um histórico de contribuições para fins previdenciários.</p>
-                </div>
+                </li>
+                <li><strong>Cumprir as obrigações acessórias:</strong> Entregar a GFIP e o eSocial mensalmente</li>
+              </ol>
+              <div class="alert alert-info mt-3">
+                <i class="fas fa-info-circle"></i> Dica: Mesmo não sendo obrigatório para o MEI, neste caso específico, pode ser interessante contar com o auxílio de um contador para garantir que todos os procedimentos sejam realizados corretamente, evitando problemas trabalhistas futuros.
+              </div>
+              <p>Lembre-se que o funcionário contratado deve receber no máximo o salário mínimo ou o piso da categoria, e você só pode ter um único funcionário como MEI.</p>
+            </div>
+          </div>
+          
+          <!-- Encerramento -->
+          <div class="faq-item" data-category="encerramento">
+            <div class="faq-question">
+              <h2>Como encerrar o MEI?</h2>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Para encerrar (baixar) o MEI, siga estes passos:</p>
+              <ol>
+                <li><strong>Regularize pendências:</strong> Certifique-se de que não há DAS em atraso e que a declaração anual está em dia</li>
+                <li><strong>Acesse o Portal do Empreendedor:</strong> Entre no <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank" rel="noopener">Portal do Empreendedor</a> e faça login com sua conta gov.br</li>
+                <li><strong>Selecione a opção de baixa:</strong> Clique em "Já sou MEI" e depois em "Baixa do MEI"</li>
+                <li><strong>Preencha o formulário:</strong> Informe a data de encerramento e o motivo da baixa</li>
+                <li><strong>Confirme a solicitação:</strong> Revise as informações e confirme a baixa</li>
+                <li><strong>Guarde o comprovante:</strong> Salve ou imprima o Certificado da Condição de Microempreendedor Individual com a situação "BAIXADO"</li>
+              </ol>
+              <p>Após a baixa, você ainda precisará:</p>
+              <ul>
+                <li>Entregar a Declaração Anual (DASN-SIMEI) de extinção até o último dia do mês de junho do ano seguinte ao da baixa</li>
+                <li>Pagar eventuais DAS pendentes até a data da baixa</li>
+              </ul>
+              <div class="alert alert-warning mt-3">
+                <i class="fas fa-exclamation-triangle"></i> Importante: Se você tinha funcionário, será necessário fazer a rescisão do contrato de trabalho antes de solicitar a baixa do MEI.
+              </div>
+              <p>A baixa do MEI é gratuita quando feita pelos canais oficiais do governo.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item" data-category="encerramento">
+            <div class="faq-question">
+              <h2>O que acontece se eu não fizer a baixa do MEI?</h2>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Se você parar de exercer a atividade como MEI mas não fizer a baixa formal, diversas consequências podem ocorrer:</p>
+              <ul>
+                <li><strong>Acúmulo de dívidas:</strong> O DAS continuará sendo gerado mensalmente, mesmo que você não esteja mais atuando como MEI</li>
+                <li><strong>Multas por atraso:</strong> A não entrega da declaração anual gerará multas</li>
+                <li><strong>Inclusão na Dívida Ativa da União:</strong> Após um período de inadimplência</li>
+                <li><strong>Restrições de crédito:</strong> Dificuldade para obter empréstimos e financiamentos</li>
+                <li><strong>Problemas para abrir nova empresa:</strong> Dificuldade para se formalizar novamente no futuro</li>
+                <li><strong>Impossibilidade de receber seguro-desemprego:</strong> Caso seja contratado como CLT e posteriormente demitido</li>
+              </ul>
+              <p>Além disso, o CNPJ continuará ativo e você permanecerá responsável por todas as obrigações fiscais e tributárias do MEI.</p>
+              <div class="alert alert-danger mt-3">
+                <i class="fas fa-exclamation-circle"></i> Se você já está com dívidas acumuladas por não ter feito a baixa do MEI, é importante regularizar sua situação o quanto antes. Procure a Receita Federal para verificar as possibilidades de parcelamento e negociação dos débitos.
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
+    
+    <!-- Não Encontrou sua Dúvida -->
     <section class="bg-light">
       <div class="container">
-        <h2 class="section-title">Ainda tem dúvidas?</h2>
-        <p class="text-center mb-4">Se sua dúvida não foi respondida, você pode:</p>
-        
-        <div class="grid">
-          <div class="card">
-            <div class="card-icon">
-              <i class="fas fa-comments fa-3x"></i>
-            </div>
-            <h3 class="card-title">Usar nosso Chatbot</h3>
-            <p>Nosso assistente virtual está disponível 24h para responder suas dúvidas mais comuns sobre o MEI.</p>
-            <button class="button" onclick="openChatbot()">Abrir Chatbot</button>
+        <h2 class="section-title">Não Encontrou sua <span>Dúvida</span>?</h2>
+        <div class="text-center">
+          <p class="mb-4">Entre em contato conosco ou consulte os canais oficiais:</p>
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a href="sobre.html#contato" class="btn btn-primary"><i class="fas fa-envelope"></i> Entre em Contato</a>
+            <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/perguntas-frequentes" target="_blank" rel="noopener" class="btn btn-outline"><i class="fas fa-external-link-alt"></i> Portal do Empreendedor</a>
+            <a href="https://www.sebrae.com.br/sites/PortalSebrae/artigos/perguntas-e-respostas-sobre-o-microempreendedor-individual,b0e1d455e8d08710VgnVCM100000d701210aRCRD" target="_blank" rel="noopener" class="btn btn-outline"><i class="fas fa-external-link-alt"></i> SEBRAE</a>
           </div>
-          
-          <div class="card">
-            <div class="card-icon">
-              <i class="fas fa-phone-alt fa-3x"></i>
-            </div>
-            <h3 class="card-title">Ligar para o SEBRAE</h3>
-            <p>O SEBRAE oferece orientação gratuita para microempreendedores. Ligue para 0800 570 0800.</p>
-            <a href="tel:08005700800" class="button">Ligar Agora</a>
-          </div>
-          
-          <div class="card">
-            <div class="card-icon">
-              <i class="fab fa-instagram fa-3x"></i>
-            </div>
-            <h3 class="card-title">Perguntar no Instagram</h3>
-            <p>Envie sua dúvida por mensagem direta no nosso Instagram e responderemos o mais breve possível.</p>
-            <a href="https://www.instagram.com/meiemfoco.univassouras/" target="_blank" class="button">Acessar Instagram</a>
-          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="bg-primary">
+      <div class="container text-center py-5">
+        <h2 class="text-white mb-3">Conhecimento é o primeiro passo para o sucesso!</h2>
+        <p class="text-white mb-4">Mantenha-se informado sobre seus direitos e obrigações como MEI.</p>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+          <a href="dicas.html" class="btn btn-light btn-lg"><i class="fas fa-lightbulb"></i> Ver Dicas para MEI</a>
+          <a href="blog.html" class="btn btn-outline btn-lg text-white"><i class="fas fa-newspaper"></i> Acessar o Blog</a>
         </div>
       </div>
     </section>
   </main>
-
-  <!-- Chatbot -->
-  <div class="chatbot-container" id="chatbot">
-    <div class="chatbot-header">
-      <h3><i class="fas fa-robot"></i> Assistente MEI</h3>
-      <button id="chatbot-toggle"><i class="fas fa-minus"></i></button>
-    </div>
-    <div class="chatbot-body" id="chatbot-body">
-      <div class="message bot">
-        Olá! Sou o assistente virtual do MEI em Foco. Como posso ajudar você hoje?
-      </div>
-      <div class="message-options">
-        <button class="message-option" onclick="sendPredefinedMessage('Como abrir MEI?')">Como abrir MEI?</button>
-        <button class="message-option" onclick="sendPredefinedMessage('Valor do DAS')">Valor do DAS</button>
-        <button class="message-option" onclick="sendPredefinedMessage('Declaração anual')">Declaração anual</button>
-      </div>
-    </div>
-    <div class="chatbot-input">
-      <input type="text" id="chatbot-message" placeholder="Digite sua mensagem...">
-      <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
-    </div>
-  </div>
-
-  <footer>
+  
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-column">
-          <h3>MEI em Foco</h3>
-          <p>Projeto de extensão da Universidade de Vassouras - Campus Maricá, desenvolvido pelos alunos do curso de Direito.</p>
+        <div>
+          <div class="footer-logo">
+            <img src="images/logos/MEI_em_Foco_AltaResolucao_1.png" alt="MEI em Foco" width="240" height="60">
+          </div>
+          <p>MEI em Foco é uma prática extensionista da Universidade de Vassouras - Campus Maricá, desenvolvida por alunos do curso de Direito sob orientação da professora Maria Carolina Carelli de Oliveira.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram do MEI em Foco">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <span class="social-icon" aria-label="Facebook do MEI em Foco">
+              <i class="fab fa-facebook-f"></i>
+            </span>
+            <span class="social-icon" aria-label="YouTube do MEI em Foco">
+              <i class="fab fa-youtube"></i>
+            </span>
+          </div>
         </div>
         
-        <div class="footer-column">
-          <h3>Links Rápidos</h3>
-          <ul>
+        <div>
+          <h3 class="footer-title">Links Rápidos</h3>
+          <ul class="footer-links">
             <li><a href="index.html">Início</a></li>
-            <li><a href="cadastro.html">Como Abrir um MEI</a></li>
-            <li><a href="consulta.html">Consultar Situação</a></li>
+            <li><a href="o-que-e-mei.html">O que é MEI</a></li>
+            <li><a href="como-abrir-mei.html">Como Abrir MEI</a></li>
+            <li><a href="consulta.html">Consulta MEI</a></li>
+            <li><a href="das-obrigacoes.html">DAS e Obrigações</a></li>
             <li><a href="faq.html">Tira-Dúvidas</a></li>
           </ul>
         </div>
         
-        <div class="footer-column">
-          <h3>Links Oficiais</h3>
-          <ul>
-            <li><a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank">Portal do Empreendedor</a></li>
-            <li><a href="https://www.gov.br/receitafederal/pt-br" target="_blank">Receita Federal</a></li>
-            <li><a href="https://www.sebrae.com.br/" target="_blank">SEBRAE</a></li>
+        <div>
+          <h3 class="footer-title">Links Oficiais</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank" rel="noopener">Portal do Empreendedor</a></li>
+            <li><a href="https://www.gov.br/receitafederal/pt-br" target="_blank" rel="noopener">Receita Federal</a></li>
+            <li><a href="https://www.sebrae.com.br/" target="_blank" rel="noopener">SEBRAE</a></li>
+            <li><a href="https://univassouras.edu.br/campus-marica/" target="_blank" rel="noopener">Univassouras - Campus Maricá</a></li>
           </ul>
         </div>
         
-        <div class="footer-column">
-          <h3>Contato</h3>
-          <ul>
-            <li><a href="https://www.instagram.com/meiemfoco.univassouras/" target="_blank"><i class="fab fa-instagram"></i> @meiemfoco.univassouras</a></li>
-            <li><a href="sobre.html">Sobre o Projeto</a></li>
+        <div>
+          <h3 class="footer-title">Contato</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Av. Governador Roberto Silveira, 437 - Flamengo, Maricá/RJ</li>
+            <li><i class="fas fa-phone"></i> (21) 2637-2784</li>
+            <li><i class="fas fa-envelope"></i> contato@meiemfoco.com.br</li>
+            <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener">@meiemfoco.univassouras</a></li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2025 MEI em Foco | Univassouras – Campus Maricá | Criado por Diogo Santana Cardoso</p>
+        <div class="creditos">Projeto desenvolvido por Diogo Santana Cardoso | 3º Período Direito UV Maricá © 2025</div>
+        <p>&copy; 2025 MEI em Foco - Todos os direitos reservados</p>
+        <p>Projeto de Extensão da Universidade de Vassouras - Campus Maricá</p>
+        <p>Disciplina: Prática Extensionista Integradora – Regularização Empresarial</p>
+        <p>Professora: Maria Carolina Carelli de Oliveira</p>
       </div>
     </div>
   </footer>
-
+  
+  <!-- Botão Voltar ao Topo -->
+  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <!-- Scripts -->
   <script src="js/main.js"></script>
-  <script src="js/chatbot.js"></script>
-  <script src="js/responsive-test.js"></script>
-  <script>
-    // Script para pesquisa de perguntas
-    document.addEventListener('DOMContentLoaded', function() {
-      const searchInput = document.getElementById('faqSearch');
-      const searchButton = document.getElementById('searchButton');
-      const accordionItems = document.querySelectorAll('.accordion-item');
-      
-      function searchFAQ() {
-        const searchTerm = searchInput.value.toLowerCase();
-        
-        if (searchTerm.length < 3) {
-          // Restaura todos os itens se a pesquisa for muito curta
-          accordionItems.forEach(item => {
-            item.style.display = 'block';
-          });
-          return;
-        }
-        
-        accordionItems.forEach(item => {
-          const question = item.querySelector('.accordion-button').textContent.toLowerCase();
-          const answer = item.querySelector('.accordion-body').textContent.toLowerCase();
-          
-          if (question.includes(searchTerm) || answer.includes(searchTerm)) {
-            item.style.display = 'block';
-            // Expande o item que corresponde à pesquisa
-            const collapseElement = item.querySelector('.accordion-collapse');
-            const button = item.querySelector('.accordion-button');
-            if (collapseElement && button) {
-              collapseElement.classList.add('show');
-              button.classList.remove('collapsed');
-            }
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      }
-      
-      searchButton.addEventListener('click', searchFAQ);
-      searchInput.addEventListener('keyup', function(e) {
-        if (e.key === 'Enter') {
-          searchFAQ();
-        }
-      });
-      
-      // Script para as abas de categorias
-      const tabButtons = document.querySelectorAll('.tab-button');
-      const tabContents = document.querySelectorAll('.tab-content');
-      
-      tabButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          // Remove a classe active de todos os botões e conteúdos
-          tabButtons.forEach(btn => btn.classList.remove('active'));
-          tabContents.forEach(content => content.classList.remove('active'));
-          
-          // Adiciona a classe active ao botão clicado
-          this.classList.add('active');
-          
-          // Mostra o conteúdo correspondente
-          const tabId = this.getAttribute('data-tab');
-          document.getElementById(tabId).classList.add('active');
-          
-          // Limpa a pesquisa ao trocar de aba
-          searchInput.value = '';
-          accordionItems.forEach(item => {
-            item.style.display = 'block';
-          });
-        });
-      });
-    });
-    
-    // Função para abrir o chatbot
-    function openChatbot() {
-      const chatbot = document.getElementById('chatbot');
-      const chatbotBody = document.getElementById('chatbot-body');
-      
-      if (chatbotBody.classList.contains('hidden')) {
-        const chatbotToggle = document.getElementById('chatbot-toggle');
-        chatbotToggle.click();
-      }
-      
-      // Foca no campo de input
-      setTimeout(() => {
-        document.getElementById('chatbot-message').focus();
-      }, 300);
-    }
-  </script>
+  <script src="js/faq.js"></script>
 </body>
 </html>
