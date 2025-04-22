@@ -1,0 +1,219 @@
+/* 
+ * MEI em Foco - Correções de Contraste Visual
+ * Projeto de extensão da Universidade de Vassouras - Campus Maricá
+ * Desenvolvido por: Diogo Santana Cardoso
+ */
+
+/* Correção para títulos de tabelas */
+.table thead th {
+  color: #ffffff !important;
+  font-weight: bold !important;
+  background-color: var(--primary-color) !important;
+}
+
+/* Correção para cabeçalhos de tabelas em todas as páginas */
+.table th {
+  color: #ffffff !important;
+  background-color: var(--primary-color) !important;
+  font-weight: bold !important;
+}
+
+/* Correção específica para a tabela comparativa na página "O que é MEI" */
+.table-bordered thead th {
+  color: #ffffff !important;
+  background-color: var(--primary-color) !important;
+  font-weight: bold !important;
+  border-color: #7a0000 !important;
+}
+
+/* Correção para botões com fundo vermelho */
+.btn-primary {
+  color: #ffffff !important;
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) !important;
+}
+
+.btn-primary:hover {
+  background-color: #7a0000 !important;
+  border-color: #7a0000 !important;
+}
+
+/* Correção para botões outline em fundo vermelho */
+.btn-outline {
+  color: #ffffff !important;
+  background-color: transparent !important;
+  border-color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) !important;
+}
+
+.btn-outline:hover {
+  color: var(--primary-color) !important;
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* Correção para botões de ação em todas as páginas */
+.btn {
+  font-weight: 600 !important;
+}
+
+/* Correção para tabelas na página "DAS e Obrigações" */
+.das-table th,
+.notas-fiscais-table th,
+.funcionario-table th {
+  color: #ffffff !important;
+  background-color: var(--primary-color) !important;
+  font-weight: bold !important;
+}
+
+/* Correção para melhorar contraste em textos sobre fundos coloridos */
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-primary * {
+  color: #ffffff !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Correção para links no rodapé */
+.footer-links a {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+.footer-links a:hover {
+  color: #f8f9fa !important;
+  text-decoration: underline !important;
+}
+
+/* Correção para títulos no rodapé */
+.footer-title {
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+
+/* Correção para texto no rodapé */
+.footer p {
+  color: #e0e0e0 !important;
+}
+
+/* Correção para ícones sociais no rodapé */
+.social-icon {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Correção para botões de acordeão */
+.accordion-button {
+  color: var(--dark-gray) !important;
+  font-weight: 600 !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--primary-color) !important;
+  background-color: rgba(153, 0, 0, 0.1) !important;
+}
+
+/* Correção para alertas */
+.alert-primary {
+  color: #004085 !important;
+  background-color: #cce5ff !important;
+  border-color: #b8daff !important;
+}
+
+.alert-warning {
+  color: #856404 !important;
+  background-color: #fff3cd !important;
+  border-color: #ffeeba !important;
+}
+
+/* Correção para links em geral */
+a {
+  color: var(--primary-color) !important;
+  font-weight: 500 !important;
+}
+
+a:hover {
+  color: #7a0000 !important;
+  text-decoration: underline !important;
+}
+
+/* Exceção para links em fundos escuros */
+.bg-primary a, 
+.footer a {
+  color: #ffffff !important;
+}
+
+.bg-primary a:hover, 
+.footer a:hover {
+  color: #f8f9fa !important;
+}
+
+/* Correção para texto em cards */
+.card-title {
+  color: var(--primary-color) !important;
+  font-weight: 600 !important;
+}
+
+.card-text {
+  color: var(--dark-gray) !important;
+}
+
+/* Correção para ícones em cards */
+.card i {
+  color: var(--primary-color) !important;
+}
+
+/* Correção para títulos de seção */
+.section-title {
+  color: var(--dark-gray) !important;
+}
+
+.section-title span {
+  color: var(--primary-color) !important;
+}
+
+/* Correção para navegação */
+.nav-link {
+  color: var(--dark-gray) !important;
+  font-weight: 500 !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+/* Correção para texto em geral */
+body {
+  color: var(--dark-gray) !important;
+}
+
+/* Correção para cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark-gray) !important;
+}
+
+/* Exceção para cabeçalhos em fundos escuros */
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary h4,
+.bg-primary h5,
+.bg-primary h6,
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6 {
+  color: #ffffff !important;
+}

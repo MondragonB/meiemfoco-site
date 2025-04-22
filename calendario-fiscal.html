@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendário Fiscal | MEI em Foco</title>
+  <meta name="description" content="Calendário fiscal interativo para Microempreendedores Individuais (MEI), com prazos, obrigações e eventos importantes.">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/custom-fixes.css">
+  <link rel="stylesheet" href="css/calendario.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#990000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+<!-- Proteção de Autoria - Desenvolvido por Diogo Santana Cardoso | 3º Período Direito UV Maricá -->
+  <meta name="author" content="Diogo Santana Cardoso">
+  <meta name="copyright" content="© 2025 Universidade de Vassouras - Campus Maricá">
+  <meta name="rights" content="Todos os direitos reservados à Universidade de Vassouras - Campus Maricá">
+  <link rel="stylesheet" href="css/autoria-protecao.css">
+</head>
+<body>
+  <!-- Skip Link para acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <a href="index.html" aria-label="Página inicial do MEI em Foco">
+          <!-- Logotipo do MEI em Foco removido temporariamente -->
+          
+        </a>
+      </div>
+      <div class="logo-univassouras">
+        <a href="https://univassouras.edu.br/campus-marica/" target="_blank" rel="noopener" aria-label="Site da Universidade de Vassouras - Campus Maricá">
+          <img src="images/logos/universidade-de-vassouras-seeklogo.svg" alt="Universidade de Vassouras" width="160" height="40">
+        </a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir menu de navegação">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Navegação -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <ul class="nav-menu" id="mainMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+        <li class="nav-item"><a href="o-que-e-mei.html" class="nav-link"><i class="fas fa-info-circle"></i> O que é MEI</a></li>
+        <li class="nav-item"><a href="como-abrir-mei.html" class="nav-link"><i class="fas fa-user-plus"></i> Como Abrir MEI</a></li>
+        <li class="nav-item"><a href="consulta.html" class="nav-link"><i class="fas fa-search"></i> Consulta MEI</a></li>
+        <li class="nav-item"><a href="das-obrigacoes.html" class="nav-link"><i class="fas fa-file-invoice-dollar"></i> DAS e Obrigações</a></li>
+        <li class="nav-item"><a href="calendario-fiscal.html" class="nav-link active"><i class="fas fa-calendar-alt"></i> Calendário Fiscal</a></li>
+        <li class="nav-item"><a href="modelos-documentos.html" class="nav-link"><i class="fas fa-file-alt"></i> Modelos</a></li>
+        <li class="nav-item"><a href="apps.html" class="nav-link"><i class="fas fa-mobile-alt"></i> Apps Úteis</a></li>
+        <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> Tira-Dúvidas</a></li>
+        <li class="nav-item"><a href="dicas.html" class="nav-link"><i class="fas fa-lightbulb"></i> Dicas</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link"><i class="fas fa-newspaper"></i> Blog</a></li>
+        <li class="nav-item"><a href="eventos.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+        <li class="nav-item"><a href="glossario.html" class="nav-link"><i class="fas fa-book"></i> Glossário</a></li>
+        <li class="nav-item"><a href="sobre.html" class="nav-link"><i class="fas fa-users"></i> Sobre</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Conteúdo Principal -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="page-header bg-primary">
+      <div class="container">
+        <h1 class="text-white">Calendário Fiscal</h1>
+        <p class="text-white">Acompanhe prazos, obrigações e eventos importantes para o seu MEI</p>
+      </div>
+    </section>
+    
+    <!-- Alerta de Próximo Prazo -->
+    <section class="bg-light py-3">
+      <div class="container">
+        <div id="calendario-alerta" class="calendario-alert">
+          <div class="calendario-alert-title">
+            <i class="fas fa-exclamation-triangle"></i> Carregando próximo prazo...
+          </div>
+          <div class="calendario-alert-content">
+            Por favor, aguarde enquanto calculamos o próximo prazo importante para o seu MEI.
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Calendário Fiscal -->
+    <section>
+      <div class="container">
+        <div class="calendario-fiscal" id="calendario-fiscal-container" data-mes="0" data-ano="2025">
+          <div class="calendario-header">
+            <h2 class="calendario-title" id="calendario-titulo">Janeiro de 2025</h2>
+            <div class="calendario-controls">
+              <button id="calendario-anterior" class="calendario-button"><i class="fas fa-chevron-left"></i> Anterior</button>
+              <button id="calendario-hoje" class="calendario-button">Hoje</button>
+              <button id="calendario-proximo" class="calendario-button">Próximo <i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <button id="view-calendario" class="calendario-button active">Visualização em Calendário</button>
+            <button id="view-lista" class="calendario-button">Visualização em Lista</button>
+          </div>
+          
+          <div id="calendario-grid-view" class="calendario-grid active">
+            <!-- Dias da semana e dias do mês serão inseridos via JavaScript -->
+          </div>
+          
+          <div id="calendario-list-view" class="calendario-list-view">
+            <!-- Eventos em formato de lista serão inseridos via JavaScript -->
+          </div>
+          
+          <div class="calendario-legend">
+            <div class="calendario-legend-item">
+              <div class="calendario-legend-color fiscal"></div>
+              <span>Obrigação Fiscal</span>
+            </div>
+            <div class="calendario-legend-item">
+              <div class="calendario-legend-color prazo"></div>
+              <span>Prazo Final</span>
+            </div>
+            <div class="calendario-legend-item">
+              <div class="calendario-legend-color evento"></div>
+              <span>Evento</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Informações Adicionais -->
+    <section class="bg-light">
+      <div class="container">
+        <h2 class="section-title">Principais <span>Obrigações</span></h2>
+        
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                <h3><i class="fas fa-file-invoice-dollar"></i> Pagamento do DAS</h3>
+              </div>
+              <div class="card-body">
+                <p>O DAS (Documento de Arrecadação do Simples Nacional) deve ser pago mensalmente até o dia 20 de cada mês.</p>
+                <p>O valor do DAS para 2025 é:</p>
+                <ul>
+                  <li>Comércio e Indústria: R$ 67,00</li>
+                  <li>Prestação de Serviços: R$ 71,00</li>
+                  <li>Comércio e Serviços: R$ 72,00</li>
+                </ul>
+                <a href="das-obrigacoes.html" class="btn btn-primary mt-3">Saiba mais sobre o DAS</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                <h3><i class="fas fa-file-alt"></i> Declaração Anual (DASN-SIMEI)</h3>
+              </div>
+              <div class="card-body">
+                <p>A DASN-SIMEI (Declaração Anual Simplificada do MEI) deve ser entregue até o dia 31 de maio de cada ano, referente ao ano-calendário anterior.</p>
+                <p>Nesta declaração, você informa:</p>
+                <ul>
+                  <li>Receita bruta total do ano anterior</li>
+                  <li>Receita bruta de comércio, indústria e transporte</li>
+                  <li>Receita bruta de serviços</li>
+                  <li>Se teve empregado durante o ano</li>
+                </ul>
+                <a href="das-obrigacoes.html#dasn" class="btn btn-primary mt-3">Saiba mais sobre a DASN-SIMEI</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="alert alert-info mt-4">
+          <i class="fas fa-info-circle"></i> Este calendário é atualizado regularmente. Recomendamos verificar periodicamente para não perder prazos importantes.
+        </div>
+      </div>
+    </section>
+    
+    <!-- Dicas -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Dicas para <span>Organização Fiscal</span></h2>
+        
+        <div class="row">
+          <div class="col">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-bell"></i>
+              </div>
+              <h3>Configure Lembretes</h3>
+              <p>Adicione os prazos importantes ao calendário do seu celular com lembretes alguns dias antes para não esquecer.</p>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-file-invoice"></i>
+              </div>
+              <h3>Guarde os Comprovantes</h3>
+              <p>Mantenha todos os comprovantes de pagamento do DAS organizados, preferencialmente em formato digital.</p>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-money-bill-wave"></i>
+              </div>
+              <h3>Reserve o Valor</h3>
+              <p>Separe mensalmente o valor do DAS para garantir que terá o dinheiro disponível na data de pagamento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="bg-primary">
+      <div class="container text-center py-5">
+        <h2 class="text-white mb-3">Precisa de ajuda com suas obrigações fiscais?</h2>
+        <p class="text-white mb-4">Entre em contato conosco ou consulte nossa seção de perguntas frequentes.</p>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+          <a href="faq.html" class="btn btn-light btn-lg"><i class="fas fa-question-circle"></i> Tira-Dúvidas</a>
+          <a href="sobre.html#contato" class="btn btn-outline btn-lg text-white"><i class="fas fa-envelope"></i> Entre em Contato</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-logo">
+            <!-- Logotipo do MEI em Foco removido temporariamente -->
+            
+          </div>
+          <p>MEI em Foco é uma prática extensionista da Universidade de Vassouras - Campus Maricá, desenvolvida por alunos do curso de Direito sob orientação da professora Maria Carolina Carelli de Oliveira.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram do MEI em Foco">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <span class="social-icon" aria-label="Facebook do MEI em Foco">
+              <i class="fab fa-facebook-f"></i>
+            </span>
+            <span class="social-icon" aria-label="YouTube do MEI em Foco">
+              <i class="fab fa-youtube"></i>
+            </span>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Links Rápidos</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="o-que-e-mei.html">O que é MEI</a></li>
+            <li><a href="como-abrir-mei.html">Como Abrir MEI</a></li>
+            <li><a href="consulta.html">Consulta MEI</a></li>
+            <li><a href="das-obrigacoes.html">DAS e Obrigações</a></li>
+            <li><a href="faq.html">Tira-Dúvidas</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Links Oficiais</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank" rel="noopener">Portal do Empreendedor</a></li>
+            <li><a href="https://www.gov.br/receitafederal/pt-br" target="_blank" rel="noopener">Receita Federal</a></li>
+            <li><a href="https://www.sebrae.com.br/" target="_blank" rel="noopener">SEBRAE</a></li>
+            <li><a href="https://univassouras.edu.br/campus-marica/" target="_blank" rel="noopener">Univassouras - Campus Maricá</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Contato</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Av. Roberto Silveira, 1954 - Flamengo, Maricá - RJ, 24903-815</li>
+            <li><i class="fas fa-phone"></i> (21) 2637-2784</li>
+            <li><i class="fas fa-envelope"></i> contato@meiemfoco.com.br</li>
+            <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener">@meiemfoco.univassouras</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="creditos">Projeto desenvolvido por Diogo Santana Cardoso | 3º Período Direito UV Maricá © 2025</div>
+        <p>&copy; 2025 MEI em Foco - Todos os direitos reservados</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Botão Voltar ao Topo -->
+  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/glossario.js"></script>
+  <script src="js/calendario.js"></script>
+</body>
+</html>

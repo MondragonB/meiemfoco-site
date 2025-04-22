@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossário | MEI em Foco</title>
+  <meta name="description" content="Glossário de termos técnicos relacionados ao Microempreendedor Individual (MEI), com explicações simples e diretas.">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/custom-fixes.css">
+  <link rel="stylesheet" href="css/glossario.css">
+  <link rel="stylesheet" href="css/botoes-melhorados.css">
+  <link rel="stylesheet" href="css/tutorial.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#990000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+<!-- Proteção de Autoria - Desenvolvido por Diogo Santana Cardoso | 3º Período Direito UV Maricá -->
+  <meta name="author" content="Diogo Santana Cardoso">
+  <meta name="copyright" content="© 2025 Universidade de Vassouras - Campus Maricá">
+  <meta name="rights" content="Todos os direitos reservados à Universidade de Vassouras - Campus Maricá">
+  <link rel="stylesheet" href="css/autoria-protecao.css">
+</head>
+<body>
+  <!-- Skip Link para acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <a href="index.html" aria-label="Página inicial do MEI em Foco">
+          <!-- Logotipo do MEI em Foco removido temporariamente -->
+          
+        </a>
+      </div>
+      <div class="logo-univassouras">
+        <a href="https://univassouras.edu.br/campus-marica/" target="_blank" rel="noopener" aria-label="Site da Universidade de Vassouras - Campus Maricá">
+          <img src="images/logos/universidade-de-vassouras-seeklogo.svg" alt="Universidade de Vassouras" width="160" height="40">
+        </a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir menu de navegação">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Navegação -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <ul class="nav-menu" id="mainMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+        <li class="nav-item"><a href="o-que-e-mei.html" class="nav-link"><i class="fas fa-info-circle"></i> O que é MEI</a></li>
+        <li class="nav-item"><a href="como-abrir-mei.html" class="nav-link"><i class="fas fa-user-plus"></i> Como Abrir MEI</a></li>
+        <li class="nav-item"><a href="consulta.html" class="nav-link"><i class="fas fa-search"></i> Consulta MEI</a></li>
+        <li class="nav-item"><a href="das-obrigacoes.html" class="nav-link"><i class="fas fa-file-invoice-dollar"></i> DAS e Obrigações</a></li>
+        <li class="nav-item"><a href="calendario-fiscal.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Calendário Fiscal</a></li>
+        <li class="nav-item"><a href="modelos-documentos.html" class="nav-link"><i class="fas fa-file-alt"></i> Modelos</a></li>
+        <li class="nav-item"><a href="apps.html" class="nav-link"><i class="fas fa-mobile-alt"></i> Apps Úteis</a></li>
+        <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> Tira-Dúvidas</a></li>
+        <li class="nav-item"><a href="dicas.html" class="nav-link"><i class="fas fa-lightbulb"></i> Dicas</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link"><i class="fas fa-newspaper"></i> Blog</a></li>
+        <li class="nav-item"><a href="eventos.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+        <li class="nav-item"><a href="glossario.html" class="nav-link active"><i class="fas fa-book"></i> Glossário</a></li>
+        <li class="nav-item"><a href="sobre.html" class="nav-link"><i class="fas fa-users"></i> Sobre</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Conteúdo Principal -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="page-header bg-primary">
+      <div class="container">
+        <h1 class="text-white">Glossário MEI</h1>
+        <p class="text-white">Entenda os termos técnicos relacionados ao Microempreendedor Individual</p>
+      </div>
+    </section>
+    
+    <!-- Glossário -->
+    <section>
+      <div class="container">
+        <div class="glossario-pagina" id="glossario-container">
+          <div class="alert alert-primary mt-4 mb-4">
+            <i class="fas fa-info-circle"></i> Este glossário foi criado para facilitar o entendimento dos termos técnicos relacionados ao MEI. Sempre que encontrar uma palavra destacada em vermelho no site, você pode passar o mouse sobre ela para ver sua definição.
+          </div>
+          
+          <div class="glossario-filtro">
+            <input type="text" id="glossario-filtro-input" class="form-control" placeholder="Digite para buscar termos...">
+          </div>
+          
+          <div class="glossario-categorias">
+            <div class="glossario-categoria active" data-categoria="todas">Todas</div>
+            <div class="glossario-categoria" data-categoria="fiscal">Fiscal</div>
+            <div class="glossario-categoria" data-categoria="juridico">Jurídico</div>
+            <div class="glossario-categoria" data-categoria="contabil">Contábil</div>
+            <div class="glossario-categoria" data-categoria="previdenciario">Previdenciário</div>
+            <div class="glossario-categoria" data-categoria="financeiro">Financeiro</div>
+          </div>
+          
+          <div class="glossario-alfabeto">
+            <div class="glossario-letra active">Todos</div>
+            <div class="glossario-letra">A</div>
+            <div class="glossario-letra">B</div>
+            <div class="glossario-letra">C</div>
+            <div class="glossario-letra">D</div>
+            <div class="glossario-letra">E</div>
+            <div class="glossario-letra">F</div>
+            <div class="glossario-letra">G</div>
+            <div class="glossario-letra">H</div>
+            <div class="glossario-letra">I</div>
+            <div class="glossario-letra">J</div>
+            <div class="glossario-letra">K</div>
+            <div class="glossario-letra">L</div>
+            <div class="glossario-letra">M</div>
+            <div class="glossario-letra">N</div>
+            <div class="glossario-letra">O</div>
+            <div class="glossario-letra">P</div>
+            <div class="glossario-letra">Q</div>
+            <div class="glossario-letra">R</div>
+            <div class="glossario-letra">S</div>
+            <div class="glossario-letra">T</div>
+            <div class="glossario-letra">U</div>
+            <div class="glossario-letra">V</div>
+            <div class="glossario-letra">W</div>
+            <div class="glossario-letra">X</div>
+            <div class="glossario-letra">Y</div>
+            <div class="glossario-letra">Z</div>
+          </div>
+          
+          <div class="glossario-lista">
+            <!-- Termos com A -->
+            <div class="glossario-item" data-categoria="fiscal">
+              <h3>Alíquota</h3>
+              <p>Percentual ou valor fixo que será aplicado sobre uma base de cálculo para determinar o valor de um tributo a ser pago.</p>
+            </div>
+            
+            <div class="glossario-item" data-categoria="juridico">
+              <h3>Alvará</h3>
+              <p>Documento que autoriza o funcionamento de estabelecimentos comerciais, industriais e prestadores de serviços, emitido pela prefeitura municipal.</p>
+            </div>
+            
+            <div class="glossario-item" data-categoria="fiscal">
+              <h3>Atividade Principal</h3>
+              <p>É a atividade mais importante ou a que gera maior receita para o MEI, dentre as atividades cadastradas.</p>
+            </div>
+            
+            <!-- Termos com C -->
+            <div class="glossario-item" data-categoria="juridico">
+              <h3>CCMEI</h3>
+              <p>Certificado da Condição de Microempreendedor Individual. É o documento oficial que comprova a inscrição do MEI no CNPJ e no Simples Nacional.</p>
+            </div>
+            
+            <div class="glossario-item" data-categoria="fiscal">
+              <h3>CNAE</h3>
+              <p>Classificação Nacional de Atividades Econômicas. É o código que identifica a atividade econômica exercida por uma empresa ou profissional autônomo.</p>
+            </div>
+            
+            <div class="glossario-item" data-categoria="juridico">
+              <h3>CNPJ</h3>
+              <p>Cadastro Nacional da Pessoa Jurídica. É o número de identificação de uma empresa junto à Receita Federal do Brasil.</p>
+            </div>
+            
+            <!-- Termos com D -->
+            <div class="glossario-item" data-categoria="fiscal">
+              <h3>DAS</h3>
+              <p>Documento de Arrecadação do Simples Nacional. É a guia utilizada pelo MEI para pagar seus tributos mensais em valor fixo.</p>
+            </div>
+            
+            <div class="glossario-item" data-categoria="fiscal">
+              <h3>DASN-SIMEI</h3>
+              <p>Declaração Anual Simplificada para o Microempreendedor Individual. É a declaração que o MEI deve entregar anualmente à Receita Federal.</p>
+            </div>
+            
+            <!-- Termos com F -->
+            <div class="glossario-item" data-categoria="financeiro">
+              <h3>Faturamento</h3>
+              <p>É a soma de todas as vendas de produtos ou serviços realizados pelo MEI em determinado período. O limite anual de faturamento do MEI é de R$ 81.000,00.</p>
+            </div>
+            
+            <!-- Termos com I -->
+            <div class="glossario-item" data-categoria="fiscal">
+              <h3>ICMS</h3>
+              <p>Imposto sobre Circulação de Mercadorias e Serviços. É um imposto estadual que incide sobre operações de circulação de mercadorias e alguns serviços.</p>
+            </div>
+            
+            <div class="glossario-item" data-categoria="previdenciario">
+              <h3>INSS</h3>
+              <p>Instituto Nacional do Seguro Social. É o órgão responsável pelo pagamento de benefícios previdenciários aos trabalhadores brasileiros.</p>
+            </div>
+            
+            <div class="glossario-item" data-categoria="fiscal">
+              <h3>ISS</h3>
+              <p>Imposto Sobre Serviços. É um imposto municipal que incide sobre a prestação de serviços.</p>
+            </div>
+            
+            <!-- Termos com M -->
+            <div class="glossario-item" data-categoria="juridico">
+              <h3>MEI</h3>
+              <p>Microempreendedor Individual. É a pessoa que trabalha por conta própria e se legaliza como pequeno empresário, com faturamento anual de até R$ 81.000,00.</p>
+            </div>
+            
+            <!-- Termos com N -->
+            <div class="glossario-item" data-categoria="fiscal">
+              <h3>Nota Fiscal</h3>
+              <p>Documento fiscal que registra a venda de produtos ou serviços. O MEI é obrigado a emitir nota fiscal apenas nas vendas para pessoas jurídicas.</p>
+            </div>
+            
+            <!-- Termos com P -->
+            <div class="glossario-item" data-categoria="juridico">
+              <h3>Portal do Empreendedor</h3>
+              <p>Site oficial do governo federal onde é possível realizar a formalização do MEI e diversos outros serviços relacionados.</p>
+            </div>
+            
+            <!-- Termos com S -->
+            <div class="glossario-item" data-categoria="fiscal">
+              <h3>Simples Nacional</h3>
+              <p>Regime tributário simplificado para micro e pequenas empresas, incluindo o MEI, que unifica o pagamento de diversos tributos.</p>
+            </div>
+            
+            <!-- Adicione mais termos conforme necessário -->
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="bg-primary">
+      <div class="container text-center py-5">
+        <h2 class="text-white mb-3">Ainda tem dúvidas?</h2>
+        <p class="text-white mb-4">Entre em contato conosco ou consulte nossa seção de perguntas frequentes.</p>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+          <a href="faq.html" class="btn btn-light btn-lg"><i class="fas fa-question-circle"></i> Tira-Dúvidas</a>
+          <a href="sobre.html#contato" class="btn btn-outline btn-lg text-white"><i class="fas fa-envelope"></i> Entre em Contato</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-logo">
+            <!-- Logotipo do MEI em Foco removido temporariamente -->
+            
+          </div>
+          <p>MEI em Foco é uma prática extensionista da Universidade de Vassouras - Campus Maricá, desenvolvida por alunos do curso de Direito sob orientação da professora Maria Carolina Carelli de Oliveira.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram do MEI em Foco">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <span class="social-icon" aria-label="Facebook do MEI em Foco">
+              
+            </span>
+            <span class="social-icon" aria-label="YouTube do MEI em Foco">
+              
+            </span>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Links Rápidos</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="o-que-e-mei.html">O que é MEI</a></li>
+            <li><a href="como-abrir-mei.html">Como Abrir MEI</a></li>
+            <li><a href="consulta.html">Consulta MEI</a></li>
+            <li><a href="das-obrigacoes.html">DAS e Obrigações</a></li>
+            <li><a href="faq.html">Tira-Dúvidas</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Links Oficiais</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank" rel="noopener">Portal do Empreendedor</a></li>
+            <li><a href="https://www.gov.br/receitafederal/pt-br" target="_blank" rel="noopener">Receita Federal</a></li>
+            <li><a href="https://www.sebrae.com.br/" target="_blank" rel="noopener">SEBRAE</a></li>
+            <li><a href="https://univassouras.edu.br/campus-marica/" target="_blank" rel="noopener">Univassouras - Campus Maricá</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Contato</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Av. Roberto Silveira, 1954 - Flamengo, Maricá - RJ, 24903-815</li>
+            <li><i class="fas fa-phone"></i> (21) 2637-2784</li>
+            <li><i class="fas fa-envelope"></i> contato@meiemfoco.com.br</li>
+            <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener">@meiemfoco.univassouras</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="creditos">Projeto desenvolvido por Diogo Santana Cardoso | 3º Período Direito UV Maricá © 2025</div>
+        <p>&copy; 2025 MEI em Foco - Todos os direitos reservados</p>
+        <p>Projeto de Extensão da Universidade de Vassouras - Campus Maricá</p>
+        <p>Disciplina: Prática Extensionista Integradora – Regularização Empresarial</p>
+        <p>Professora: Maria Carolina Carelli de Oliveira</p>
+        <p>Desenvolvido por <span class="creator-name">Diogo Santana Cardoso</span></p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Botão Voltar ao Topo -->
+  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/glossario.js"></script>
+  <script src="js/tutorial.js"></script>
+</body>
+</html>
