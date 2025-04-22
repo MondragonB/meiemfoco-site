@@ -53,36 +53,6 @@ Este projeto pretende ser duradouro e acessível para as próximas turmas da Uni
 
 ---
 
-📁 Estrutura de Arquivos do Projeto
-
-mei-em-foco/
-│
-├── css/
-│   ├── base.css
-│   ├── responsive.css
-│   └── [outros arquivos de estilo]
-│
-├── js/
-│   ├── main.js
-│   └── [outros scripts]
-│
-├── images/
-│   └── [logos, banners, ícones]
-│
-├── index.html
-├── sobre.html
-├── dicas.html
-├── eventos.html
-├── como-abrir-mei.html
-├── consulta.html
-├── das-obrigacoes.html
-├── calendario-fiscal.html
-├── apps.html
-├── faq.html
-├── blog.html
-└── [demais páginas]
----
-
 ## 🧠 Como Contribuir
 
 Este projeto poderá ser continuado por alunos e professores em futuros semestres. Para isso:
