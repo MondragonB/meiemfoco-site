@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos | MEI em Foco</title>
+  <meta name="description" content="Confira os próximos eventos, workshops e palestras para microempreendedores individuais promovidos pelo projeto MEI em Foco.">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#990000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+<!-- Proteção de Autoria - Desenvolvido por Diogo Santana Cardoso | 3º Período Direito UV Maricá -->
+  <meta name="author" content="Diogo Santana Cardoso">
+  <meta name="copyright" content="© 2025 Universidade de Vassouras - Campus Maricá">
+  <meta name="rights" content="Todos os direitos reservados à Universidade de Vassouras - Campus Maricá">
+  <link rel="stylesheet" href="css/autoria-protecao.css">
+</head>
+<body>
+  <!-- Skip Link para acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <a href="index.html" aria-label="Página inicial do MEI em Foco">
+          <!-- Logotipo do MEI em Foco removido temporariamente -->
+          
+        </a>
+      </div>
+      <div class="logo-univassouras">
+        <a href="https://univassouras.edu.br/campus-marica/" target="_blank" rel="noopener" aria-label="Site da Universidade de Vassouras - Campus Maricá">
+          <img src="images/logos/universidade-de-vassouras-seeklogo.svg" alt="Universidade de Vassouras" width="160" height="40">
+        </a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir menu de navegação">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Navegação -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <ul class="nav-menu" id="mainMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+        <li class="nav-item"><a href="o-que-e-mei.html" class="nav-link"><i class="fas fa-info-circle"></i> O que é MEI</a></li>
+        <li class="nav-item"><a href="como-abrir-mei.html" class="nav-link"><i class="fas fa-user-plus"></i> Como Abrir MEI</a></li>
+        <li class="nav-item"><a href="consulta.html" class="nav-link"><i class="fas fa-search"></i> Consulta MEI</a></li>
+        <li class="nav-item"><a href="das-obrigacoes.html" class="nav-link"><i class="fas fa-file-invoice-dollar"></i> DAS e Obrigações</a></li>
+        <li class="nav-item"><a href="calendario-fiscal.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Calendário Fiscal</a></li>
+        <li class="nav-item"><a href="modelos-documentos.html" class="nav-link"><i class="fas fa-file-alt"></i> Modelos</a></li>
+        <li class="nav-item"><a href="apps.html" class="nav-link"><i class="fas fa-mobile-alt"></i> Apps Úteis</a></li>
+        <li class="nav-item"><a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> Tira-Dúvidas</a></li>
+        <li class="nav-item"><a href="dicas.html" class="nav-link"><i class="fas fa-lightbulb"></i> Dicas</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link"><i class="fas fa-newspaper"></i> Blog</a></li>
+        <li class="nav-item"><a href="eventos.html" class="nav-link active"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+        <li class="nav-item"><a href="glossario.html" class="nav-link"><i class="fas fa-book"></i> Glossário</a></li>
+        <li class="nav-item"><a href="sobre.html" class="nav-link"><i class="fas fa-users"></i> Sobre</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Conteúdo Principal -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="page-header bg-primary">
+      <div class="container">
+        <h1 class="text-white">Eventos</h1>
+        <p class="text-white">Workshops, palestras e encontros para microempreendedores</p>
+      </div>
+    </section>
+    
+    <!-- Filtros -->
+    <section class="bg-light py-4">
+      <div class="container">
+        <div class="event-filters">
+          <button class="event-filter active" data-filter="all">Todos os Eventos</button>
+          <button class="event-filter" data-filter="upcoming">Próximos Eventos</button>
+          <button class="event-filter" data-filter="workshops">Workshops</button>
+          <button class="event-filter" data-filter="palestras">Palestras</button>
+          <button class="event-filter" data-filter="online">Eventos Online</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Evento em Destaque -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Evento em <span>Destaque</span></h2>
+        
+        <div class="featured-event">
+          <div class="featured-event-image">
+            <img src="images/eventos/amor-empreendedorismo.webp" alt="Evento Amor e Empreendedorismo" class="img-fluid">
+            <div class="event-date">
+              <span class="event-day">14</span>
+              <span class="event-month">Maio</span>
+            </div>
+          </div>
+          <div class="featured-event-content">
+            <span class="event-tag">Workshop</span>
+            <h3>Amor e Empreendedorismo: Como Equilibrar Vida Pessoal e Negócios</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
+              <span><i class="far fa-clock"></i> 14 de Maio, 2025 | 18:30 - 21:00</span>
+              <span><i class="fas fa-user"></i> Palestrante: Profa. Maria Carolina Carelli</span>
+            </div>
+            <p>Neste workshop especial, abordaremos os desafios de conciliar relacionamentos pessoais e a gestão de um negócio próprio. Discutiremos estratégias práticas para organizar o tempo, estabelecer limites saudáveis e construir uma rede de apoio que beneficie tanto sua vida pessoal quanto profissional.</p>
+            <div class="event-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Gestão de tempo para empreendedores</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Comunicação eficaz com parceiros e familiares</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Estabelecimento de limites entre trabalho e vida pessoal</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Construção de uma rede de apoio</span>
+              </div>
+            </div>
+            <div class="event-actions">
+              <a href="evento-amor-empreendedorismo.html" class="btn btn-primary">Ver Detalhes</a>
+              <a href="https://forms.gle/inscricao-evento-amor" target="_blank" rel="noopener" class="btn btn-outline">Inscrever-se</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Próximos Eventos -->
+    <section class="bg-light">
+      <div class="container">
+        <h2 class="section-title">Próximos <span>Eventos</span></h2>
+        
+        <div class="events-grid">
+          <!-- Evento 1 -->
+          <div class="event-card" data-category="workshops upcoming">
+            <div class="event-image">
+              <img src="images/eventos/marketing-digital.webp" alt="Workshop de Marketing Digital" class="img-fluid">
+              <div class="event-date">
+                <span class="event-day">25</span>
+                <span class="event-month">Abr</span>
+              </div>
+            </div>
+            <div class="event-content">
+              <span class="event-tag">Workshop</span>
+              <h3>Marketing Digital para MEI: Estratégias Práticas</h3>
+              <div class="event-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
+                <span><i class="far fa-clock"></i> 25 de Abril, 2025 | 14:00 - 17:00</span>
+              </div>
+              <p>Aprenda técnicas eficientes de marketing digital para promover seu negócio nas redes sociais com baixo investimento.</p>
+              <div class="event-actions">
+                <a href="evento-marketing-digital.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
+                <a href="https://forms.gle/inscricao-marketing-digital" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Evento 2 -->
+          <div class="event-card" data-category="palestras upcoming">
+            <div class="event-image">
+              <img src="images/eventos/gestao-financeira.webp" alt="Palestra sobre Gestão Financeira" class="img-fluid">
+              <div class="event-date">
+                <span class="event-day">10</span>
+                <span class="event-month">Mai</span>
+              </div>
+            </div>
+            <div class="event-content">
+              <span class="event-tag">Palestra</span>
+              <h3>Gestão Financeira para Microempreendedores</h3>
+              <div class="event-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
+                <span><i class="far fa-clock"></i> 10 de Maio, 2025 | 19:00 - 21:00</span>
+              </div>
+              <p>Descubra como organizar as finanças do seu negócio, calcular preços corretamente e planejar investimentos futuros.</p>
+              <div class="event-actions">
+                <a href="evento-gestao-financeira.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
+                <a href="https://forms.gle/inscricao-gestao-financeira" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Evento 3 -->
+          <div class="event-card" data-category="online upcoming">
+            <div class="event-image">
+              <img src="images/eventos/mei-digital.webp" alt="Webinar MEI Digital" class="img-fluid">
+              <div class="event-date">
+                <span class="event-day">20</span>
+                <span class="event-month">Mai</span>
+              </div>
+            </div>
+            <div class="event-content">
+              <span class="event-tag">Webinar</span>
+              <h3>MEI Digital: Como Usar Ferramentas Gratuitas para Gestão</h3>
+              <div class="event-meta">
+                <span><i class="fas fa-globe"></i> Online (Zoom)</span>
+                <span><i class="far fa-clock"></i> 20 de Maio, 2025 | 19:30 - 21:00</span>
+              </div>
+              <p>Conheça ferramentas digitais gratuitas que podem facilitar a gestão do seu negócio, desde controle financeiro até marketing.</p>
+              <div class="event-actions">
+                <a href="evento-mei-digital.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
+                <a href="https://forms.gle/inscricao-mei-digital" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Evento 4 -->
+          <div class="event-card" data-category="workshops upcoming">
+            <div class="event-image">
+              <img src="images/eventos/vendas-online.webp" alt="Workshop de Vendas Online" class="img-fluid">
+              <div class="event-date">
+                <span class="event-day">05</span>
+                <span class="event-month">Jun</span>
+              </div>
+            </div>
+            <div class="event-content">
+              <span class="event-tag">Workshop</span>
+              <h3>Como Vender Online: Do Instagram ao Marketplace</h3>
+              <div class="event-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
+                <span><i class="far fa-clock"></i> 05 de Junho, 2025 | 14:00 - 17:00</span>
+              </div>
+              <p>Aprenda a criar uma presença digital eficiente e vender seus produtos ou serviços em diferentes plataformas online.</p>
+              <div class="event-actions">
+                <a href="evento-vendas-online.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
+                <a href="https://forms.gle/inscricao-vendas-online" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Evento 5 -->
+          <div class="event-card" data-category="palestras upcoming">
+            <div class="event-image">
+              <img src="images/eventos/mei-para-me.webp" alt="Palestra sobre transição de MEI para ME" class="img-fluid">
+              <div class="event-date">
+                <span class="event-day">15</span>
+                <span class="event-month">Jun</span>
+              </div>
+            </div>
+            <div class="event-content">
+              <span class="event-tag">Palestra</span>
+              <h3>De MEI para ME: Quando e Como Fazer a Transição</h3>
+              <div class="event-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
+                <span><i class="far fa-clock"></i> 15 de Junho, 2025 | 19:00 - 21:00</span>
+              </div>
+              <p>Saiba identificar o momento certo para migrar de MEI para Microempresa e entenda os procedimentos necessários para essa transição.</p>
+              <div class="event-actions">
+                <a href="evento-mei-para-me.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
+                <a href="https://forms.gle/inscricao-mei-para-me" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Evento 6 -->
+          <div class="event-card" data-category="online upcoming">
+            <div class="event-image">
+              <img src="images/eventos/notas-fiscais.webp" alt="Webinar sobre Notas Fiscais" class="img-fluid">
+              <div class="event-date">
+                <span class="event-day">22</span>
+                <span class="event-month">Jun</span>
+              </div>
+            </div>
+            <div class="event-content">
+              <span class="event-tag">Webinar</span>
+              <h3>Notas Fiscais para MEI: Tudo o que Você Precisa Saber</h3>
+              <div class="event-meta">
+                <span><i class="fas fa-globe"></i> Online (Zoom)</span>
+                <span><i class="far fa-clock"></i> 22 de Junho, 2025 | 19:30 - 21:00</span>
+              </div>
+              <p>Aprenda quando e como emitir notas fiscais, quais são as obrigações do MEI e como evitar problemas fiscais.</p>
+              <div class="event-actions">
+                <a href="evento-notas-fiscais.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
+                <a href="https://forms.gle/inscricao-notas-fiscais" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Eventos Anteriores -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Eventos <span>Anteriores</span></h2>
+        
+        <div class="events-grid past-events">
+          <!-- Evento Anterior 1 -->
+          <div class="event-card" data-category="workshops">
+            <div class="event-image">
+              <img src="images/eventos/precificacao.webp" alt="Workshop de Precificação" class="img-fluid">
+              <div class="event-badge">Realizado</div>
+            </div>
+            <div class="event-content">
+              <span class="event-tag">Workshop</span>
+              <h3>Precificação Estratégica para MEI</h3>
+              <div class="event-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
+                <span><i class="far fa-calendar-alt"></i> 15 de Março, 2025</span>
+              </div>
+              <p>Workshop sobre como calcular corretamente o preço de produtos e serviços, considerando custos, impostos e margem de lucro.</p>
+              <div class="event-actions">
+                <a href="evento-precificacao.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
+                <a href="downloads/materiais-precificacao.pdf" class="btn btn-sm btn-primary" download>Baixar Material</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Evento Anterior 2 -->
+          <div class="event-card" data-category="palestras">
+            <div class="event-image">
+              <img src="images/eventos/declaracao-anual.webp" alt="Palestra sobre Declaração Anual" class="img-fluid">
+              <div class="event-badge">Realizado</div>
+            </div>
+            <div class="event-content">
+              <span class="event-tag">Palestra</span>
+              <h3>Declaração Anual do MEI: Como Fazer Corretamente</h3>
+              <div class="event-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
+                <span><i class="far fa-calendar-alt"></i> 20 de Fevereiro, 2025</span>
+              </div>
+              <p>Palestra sobre como preencher corretamente a Declaração Anual do Simples Nacional para Microempreendedores Individuais (DASN-SIMEI).</p>
+              <div class="event-actions">
+                <a href="evento-declaracao-anual.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
+                <a href="downloads/materiais-declaracao-anual.pdf" class="btn btn-sm btn-primary" download>Baixar Material</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Evento Anterior 3 -->
+          <div class="event-card" data-category="online">
+            <div class="event-image">
+              <img src="images/eventos/redes-sociais.webp" alt="Webinar sobre Redes Sociais" class="img-fluid">
+              <div class="event-badge">Realizado</div>
+            </div>
+            <div class="event-content">
+              <span class="event-tag">Webinar</span>
+              <h3>Redes Sociais para MEI: Estratégias que Funcionam</h3>
+              <div class="event-meta">
+                <span><i class="fas fa-globe"></i> Online (Zoom)</span>
+                <span><i class="far fa-calendar-alt"></i> 10 de Janeiro, 2025</span>
+              </div>
+              <p>Webinar sobre como utilizar as redes sociais para divulgar seu negócio, atrair clientes e aumentar as vendas.</p>
+              <div class="event-actions">
+                <a href="evento-redes-sociais.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-4">
+          <a href="eventos-anteriores.html" class="btn btn-outline">
+            <i class="fas fa-history"></i> Ver Todos os Eventos Anteriores
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Propor Evento -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="propose-event-box">
+          <div class="row">
+            <div class="col">
+              <h2 class="section-title">Tem uma <span>Ideia de Evento</span>?</h2>
+              <p>Você é especialista em algum tema relevante para microempreendedores e gostaria de compartilhar seu conhecimento? Ou tem sugestões de temas que gostaria de ver abordados em nossos próximos eventos?</p>
+              <p>Entre em contato conosco! Estamos sempre abertos a novas parcerias e sugestões para melhor atender às necessidades dos microempreendedores de Maricá e região.</p>
+              <div class="mt-4">
+                <a href="sobre.html#contato" class="btn btn-primary">
+                  <i class="fas fa-paper-plane"></i> Enviar Proposta
+                </a>
+              </div>
+            </div>
+            <div class="col d-none-md">
+              <img src="images/eventos/propor-evento.webp" alt="Propor um evento" class="img-fluid rounded">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Inscrição na Newsletter -->
+    <section>
+      <div class="container">
+        <div class="newsletter-box">
+          <div class="row">
+            <div class="col">
+              <h2>Fique por dentro dos próximos eventos</h2>
+              <p>Cadastre-se para receber notificações sobre novos eventos, workshops e palestras do MEI em Foco.</p>
+              <form class="newsletter-form">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Nome" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="E-mail" required>
+                </div>
+                <div class="form-check mb-3">
+                  <input type="checkbox" class="form-check-input" id="eventNotifications" checked>
+                  <label class="form-check-label" for="eventNotifications">Quero receber notificações sobre novos eventos</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Inscrever-se</button>
+              </form>
+              <p class="small">Ao se inscrever, você concorda com nossa <a href="#">Política de Privacidade</a>.</p>
+            </div>
+            <div class="col d-none-md">
+              <img src="images/newsletter-events.webp" alt="Newsletter de Eventos" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="bg-primary">
+      <div class="container text-center py-5">
+        <h2 class="text-white mb-3">Conhecimento na prática!</h2>
+        <p class="text-white mb-4">Participe dos nossos eventos e transforme seu negócio.</p>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+          <a href="evento-amor-empreendedorismo.html" class="btn btn-light btn-lg"><i class="fas fa-calendar-check"></i> Inscrever-se no Próximo Evento</a>
+          <a href="blog.html" class="btn btn-outline btn-lg text-white"><i class="fas fa-newspaper"></i> Ler Artigos do Blog</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-logo">
+            <!-- Logotipo do MEI em Foco removido -->
+            
+          </div>
+          <p>MEI em Foco é uma prática extensionista da Universidade de Vassouras - Campus Maricá, desenvolvida por alunos do curso de Direito sob orientação da professora Maria Carolina Carelli de Oliveira.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram do MEI em Foco">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <span class="social-icon" aria-label="Facebook do MEI em Foco">
+              <i class="fab fa-facebook-f"></i>
+            </span>
+            <span class="social-icon" aria-label="YouTube do MEI em Foco">
+              <i class="fab fa-youtube"></i>
+            </span>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Links Rápidos</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="o-que-e-mei.html">O que é MEI</a></li>
+            <li><a href="como-abrir-mei.html">Como Abrir MEI</a></li>
+            <li><a href="consulta.html">Consulta MEI</a></li>
+            <li><a href="das-obrigacoes.html">DAS e Obrigações</a></li>
+            <li><a href="faq.html">Tira-Dúvidas</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Links Oficiais</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank" rel="noopener">Portal do Empreendedor</a></li>
+            <li><a href="https://www.gov.br/receitafederal/pt-br" target="_blank" rel="noopener">Receita Federal</a></li>
+            <li><a href="https://www.sebrae.com.br/" target="_blank" rel="noopener">SEBRAE</a></li>
+            <li><a href="https://univassouras.edu.br/campus-marica/" target="_blank" rel="noopener">Univassouras - Campus Maricá</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="footer-title">Contato</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Av. Governador Roberto Silveira, 437 - Flamengo, Maricá/RJ</li>
+            <li><i class="fas fa-phone"></i> (21) 2637-2784</li>
+            <li><i class="fas fa-envelope"></i> contato@meiemfoco.com.br</li>
+            <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener">@meiemfoco.univassouras</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="creditos">Projeto desenvolvido por Diogo Santana Cardoso | 3º Período Direito UV Maricá © 2025</div>
+        <p>&copy; 2025 MEI em Foco - Todos os direitos reservados</p>
+        <p>Projeto de Extensão da Universidade de Vassouras - Campus Maricá</p>
+        <p>Disciplina: Prática Extensionista Integradora – Regularização Empresarial</p>
+        <p>Professora: Maria Carolina Carelli de Oliveira</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Botão Voltar ao Topo -->
+  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
