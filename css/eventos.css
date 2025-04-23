@@ -1,0 +1,379 @@
+/* 
+ * MEI em Foco - Estilos para Eventos
+ * Projeto de extensão da Universidade de Vassouras - Campus Maricá
+ */
+
+/* Estilos para a página de eventos */
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+/* Card de evento com design melhorado */
+.event-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.event-image {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.event-card:hover .event-image img {
+  transform: scale(1.05);
+}
+
+.event-date-badge {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-bold);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: center;
+}
+
+.event-date-badge .day {
+  font-size: 1.5rem;
+  display: block;
+  line-height: 1;
+}
+
+.event-date-badge .month {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.event-content {
+  padding: var(--spacing-lg);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-tag {
+  display: inline-block;
+  background-color: rgba(153, 0, 0, 0.1);
+  color: var(--primary-color);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-sm);
+}
+
+.event-title {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--dark-gray);
+}
+
+.event-meta {
+  margin-bottom: var(--spacing-md);
+}
+
+.event-meta-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+  color: var(--secondary-color);
+}
+
+.event-meta-item i {
+  width: 20px;
+  margin-right: var(--spacing-sm);
+  color: var(--primary-color);
+}
+
+.event-description {
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+  color: var(--dark-gray);
+}
+
+.event-actions {
+  margin-top: auto;
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+/* Destaque para eventos em destaque */
+.featured-event {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  margin-bottom: var(--spacing-xl);
+}
+
+.featured-event-image {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+}
+
+.featured-event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-event-content {
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-event-title {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--dark-gray);
+}
+
+.featured-event-meta {
+  margin-bottom: var(--spacing-lg);
+}
+
+.featured-event-description {
+  margin-bottom: var(--spacing-lg);
+  flex-grow: 1;
+}
+
+.featured-event-actions {
+  margin-top: auto;
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+/* Marcadores para eventos */
+.event-badge {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.badge-new {
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+.badge-soon {
+  background-color: var(--info);
+  color: var(--white);
+}
+
+.badge-past {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+/* Filtros de eventos */
+.event-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+  justify-content: center;
+}
+
+.event-filter {
+  background-color: var(--white);
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-weight: var(--font-weight-medium);
+}
+
+.event-filter:hover,
+.event-filter.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
+/* QR Code para eventos */
+.qrcode-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius-md);
+}
+
+.qrcode-image {
+  max-width: 200px;
+  margin-bottom: var(--spacing-md);
+}
+
+.qrcode-text {
+  text-align: center;
+  font-weight: var(--font-weight-medium);
+}
+
+/* Eventos na página inicial */
+.home-events {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.home-event-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.home-event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.home-event-image {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.home-event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.home-event-card:hover .home-event-image img {
+  transform: scale(1.05);
+}
+
+.home-event-content {
+  padding: var(--spacing-md);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-event-title {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--dark-gray);
+}
+
+.home-event-meta {
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-small);
+}
+
+.home-event-meta-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(var(--spacing-xs) / 2);
+  color: var(--secondary-color);
+}
+
+.home-event-meta-item i {
+  width: 16px;
+  margin-right: var(--spacing-xs);
+  color: var(--primary-color);
+}
+
+.home-event-actions {
+  margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .featured-event {
+    grid-template-columns: 1fr;
+  }
+  
+  .featured-event-image {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .event-image {
+    height: 180px;
+  }
+  
+  .featured-event-content {
+    padding: var(--spacing-lg);
+  }
+  
+  .featured-event-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .events-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .event-filters {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .event-filter {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .home-events {
+    grid-template-columns: 1fr;
+  }
+}

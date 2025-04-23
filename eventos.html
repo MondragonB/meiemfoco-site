@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/utils.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/custom-fixes.css">
+  <link rel="stylesheet" href="css/eventos.css">
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -93,56 +95,126 @@
         <div class="event-filters">
           <button class="event-filter active" data-filter="all">Todos os Eventos</button>
           <button class="event-filter" data-filter="upcoming">Próximos Eventos</button>
-          <button class="event-filter" data-filter="workshops">Workshops</button>
           <button class="event-filter" data-filter="palestras">Palestras</button>
+          <button class="event-filter" data-filter="workshops">Workshops</button>
           <button class="event-filter" data-filter="online">Eventos Online</button>
+          <button class="event-filter" data-filter="past">Eventos Passados</button>
         </div>
       </div>
     </section>
     
-    <!-- Evento em Destaque -->
+    <!-- Eventos em Destaque -->
     <section>
       <div class="container">
-        <h2 class="section-title">Evento em <span>Destaque</span></h2>
+        <h2 class="section-title">Eventos em <span>Destaque</span></h2>
         
+        <!-- Evento 06/05 - Amor e Empreendedorismo -->
         <div class="featured-event">
           <div class="featured-event-image">
-            <img src="images/eventos/amor-empreendedorismo.webp" alt="Evento Amor e Empreendedorismo" class="img-fluid">
-            <div class="event-date">
-              <span class="event-day">14</span>
-              <span class="event-month">Maio</span>
-            </div>
+            <img src="images/eventos/06-maio-new/WhatsApp Image 2025-04-22 at 10.40.23.jpeg" alt="Evento Amor e Empreendedorismo" class="img-fluid">
+            <div class="event-badge badge-new">Novo</div>
           </div>
           <div class="featured-event-content">
-            <span class="event-tag">Workshop</span>
-            <h3>Amor e Empreendedorismo: Como Equilibrar Vida Pessoal e Negócios</h3>
+            <span class="event-tag">Palestra</span>
+            <h3 class="featured-event-title">Amor e Empreendedorismo: Quando o Sonho de Ser MEI Precisa Continuar</h3>
             <div class="event-meta">
-              <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
-              <span><i class="far fa-clock"></i> 14 de Maio, 2025 | 18:30 - 21:00</span>
-              <span><i class="fas fa-user"></i> Palestrante: Profa. Maria Carolina Carelli</span>
+              <div class="event-meta-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>06 de Maio, 2025</span>
+              </div>
+              <div class="event-meta-item">
+                <i class="fas fa-clock"></i>
+                <span>18:30</span>
+              </div>
+              <div class="event-meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Universidade de Vassouras - Campus Maricá (Auditório C2)</span>
+              </div>
+              <div class="event-meta-item">
+                <i class="fas fa-users"></i>
+                <span>Palestrantes: Thaisa Muniz, Alê Silveira e Eugênio Soares</span>
+              </div>
             </div>
-            <p>Neste workshop especial, abordaremos os desafios de conciliar relacionamentos pessoais e a gestão de um negócio próprio. Discutiremos estratégias práticas para organizar o tempo, estabelecer limites saudáveis e construir uma rede de apoio que beneficie tanto sua vida pessoal quanto profissional.</p>
+            <p class="featured-event-description">Neste evento especial, abordaremos a relação entre o amor pelo empreendedorismo e a persistência necessária para manter seu negócio. Nossos palestrantes compartilharão suas experiências e estratégias para superar desafios e continuar empreendendo com paixão.</p>
+            
             <div class="event-highlights">
               <div class="highlight-item">
                 <i class="fas fa-check-circle"></i>
-                <span>Gestão de tempo para empreendedores</span>
+                <span>Thaisa Muniz - Fundadora da Rede Colmeia</span>
               </div>
               <div class="highlight-item">
                 <i class="fas fa-check-circle"></i>
-                <span>Comunicação eficaz com parceiros e familiares</span>
+                <span>Alê Silveira - Especialista em Liderança e Cultura Organizacional, Gestora da gráfica AGA PRINT</span>
               </div>
               <div class="highlight-item">
                 <i class="fas fa-check-circle"></i>
-                <span>Estabelecimento de limites entre trabalho e vida pessoal</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-check-circle"></i>
-                <span>Construção de uma rede de apoio</span>
+                <span>Eugênio Soares - Subsecretário de Turismo, Comércio, Indústria e Mercado Interno</span>
               </div>
             </div>
-            <div class="event-actions">
-              <a href="evento-amor-empreendedorismo.html" class="btn btn-primary">Ver Detalhes</a>
-              <a href="https://forms.gle/inscricao-evento-amor" target="_blank" rel="noopener" class="btn btn-outline">Inscrever-se</a>
+            
+            <div class="featured-event-actions">
+              <a href="#" class="btn btn-primary">Mais Informações</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Evento 13/05 - Educação Financeira -->
+        <div class="featured-event mt-5">
+          <div class="featured-event-image">
+            <img src="images/eventos/13-maio-new/WhatsApp Image 2025-04-22 at 20.12.33.jpeg" alt="Evento Educação Financeira para MEI" class="img-fluid">
+            <div class="event-badge badge-soon">Em breve</div>
+          </div>
+          <div class="featured-event-content">
+            <span class="event-tag">Palestra</span>
+            <h3 class="featured-event-title">MEI EM FOCO - Educação, Planejamento e Estratégias para Superar Dívidas no MEI</h3>
+            <div class="event-meta">
+              <div class="event-meta-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>13 de Maio, 2025</span>
+              </div>
+              <div class="event-meta-item">
+                <i class="fas fa-clock"></i>
+                <span>19:00</span>
+              </div>
+              <div class="event-meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Banco Mumbuca (Auditório) - Rua Comandante Homero Queiroz da Silva, 293 - Eldorado, Maricá - RJ</span>
+              </div>
+              <div class="event-meta-item">
+                <i class="fas fa-users"></i>
+                <span>Palestrantes: Dr. Omar e Dayane Fernandes</span>
+              </div>
+            </div>
+            <p class="featured-event-description">Você é Microempreendedor Individual (MEI) e quer organizar melhor suas finanças, sair do vermelho e garantir a saúde financeira do seu negócio? Então este evento é para você! Aprenda estratégias práticas de educação financeira e renegociação de dívidas para organizar suas contas e garantir a saúde financeira do seu negócio.</p>
+            
+            <div class="event-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Dr. Omar - Advogado especialista em MEI e renegociação de dívidas</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Dayane Fernandes - Contadora especialista em planejamento financeiro</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Educação financeira voltada para MEI</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Estratégias práticas para renegociar dívidas</span>
+              </div>
+            </div>
+            
+            <div class="featured-event-actions">
+              <a href="https://www.sympla.com.br/evento/mei-em-foco---educacao-planejamento-e-estrategias-para-superar-dividas-no-mei/2925345" target="_blank" rel="noopener" class="btn btn-primary">Inscrever-se</a>
+              <a href="#qrcode-section" class="btn btn-outline">Ver QR Code</a>
+            </div>
+            
+            <!-- QR Code Section -->
+            <div id="qrcode-section" class="qrcode-container">
+              <img src="images/eventos/13-maio-new/WhatsApp Image 2025-04-22 at 21.07.35.jpeg" alt="QR Code para inscrição no evento" class="qrcode-image">
+              <p class="qrcode-text">Escaneie o QR Code acima para se inscrever no evento</p>
             </div>
           </div>
         </div>
@@ -150,299 +222,93 @@
     </section>
     
     <!-- Próximos Eventos -->
-    <section class="bg-light">
+    <section class="bg-light py-5">
       <div class="container">
         <h2 class="section-title">Próximos <span>Eventos</span></h2>
         
-        <div class="events-grid">
-          <!-- Evento 1 -->
-          <div class="event-card" data-category="workshops upcoming">
-            <div class="event-image">
-              <img src="images/eventos/marketing-digital.webp" alt="Workshop de Marketing Digital" class="img-fluid">
-              <div class="event-date">
-                <span class="event-day">25</span>
-                <span class="event-month">Abr</span>
-              </div>
-            </div>
-            <div class="event-content">
-              <span class="event-tag">Workshop</span>
-              <h3>Marketing Digital para MEI: Estratégias Práticas</h3>
-              <div class="event-meta">
-                <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
-                <span><i class="far fa-clock"></i> 25 de Abril, 2025 | 14:00 - 17:00</span>
-              </div>
-              <p>Aprenda técnicas eficientes de marketing digital para promover seu negócio nas redes sociais com baixo investimento.</p>
-              <div class="event-actions">
-                <a href="evento-marketing-digital.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
-                <a href="https://forms.gle/inscricao-marketing-digital" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Evento 2 -->
+        <div class="events-container">
+          <!-- Evento 1 - Amor e Empreendedorismo (06/05) -->
           <div class="event-card" data-category="palestras upcoming">
             <div class="event-image">
-              <img src="images/eventos/gestao-financeira.webp" alt="Palestra sobre Gestão Financeira" class="img-fluid">
-              <div class="event-date">
-                <span class="event-day">10</span>
-                <span class="event-month">Mai</span>
+              <img src="images/eventos/06-maio-new/WhatsApp Image 2025-04-22 at 10.40.23.jpeg" alt="Evento Amor e Empreendedorismo" class="img-fluid">
+              <div class="event-badge badge-new">Novo</div>
+              <div class="event-date-badge">
+                <span class="day">06</span>
+                <span class="month">Mai</span>
               </div>
             </div>
             <div class="event-content">
               <span class="event-tag">Palestra</span>
-              <h3>Gestão Financeira para Microempreendedores</h3>
+              <h3 class="event-title">Amor e Empreendedorismo</h3>
               <div class="event-meta">
-                <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
-                <span><i class="far fa-clock"></i> 10 de Maio, 2025 | 19:00 - 21:00</span>
+                <div class="event-meta-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Univassouras - Auditório C2</span>
+                </div>
+                <div class="event-meta-item">
+                  <i class="fas fa-clock"></i>
+                  <span>18:30</span>
+                </div>
+                <div class="event-meta-item">
+                  <i class="fas fa-users"></i>
+                  <span>Thaisa, Alê e Eugênio</span>
+                </div>
               </div>
-              <p>Descubra como organizar as finanças do seu negócio, calcular preços corretamente e planejar investimentos futuros.</p>
+              <p class="event-description">Quando o sonho de ser MEI precisa continuar. Palestra sobre empreendedorismo e persistência nos negócios.</p>
               <div class="event-actions">
-                <a href="evento-gestao-financeira.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
-                <a href="https://forms.gle/inscricao-gestao-financeira" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
+                <a href="#" class="btn btn-sm btn-primary">Mais Detalhes</a>
               </div>
             </div>
           </div>
           
-          <!-- Evento 3 -->
-          <div class="event-card" data-category="online upcoming">
-            <div class="event-image">
-              <img src="images/eventos/mei-digital.webp" alt="Webinar MEI Digital" class="img-fluid">
-              <div class="event-date">
-                <span class="event-day">20</span>
-                <span class="event-month">Mai</span>
-              </div>
-            </div>
-            <div class="event-content">
-              <span class="event-tag">Webinar</span>
-              <h3>MEI Digital: Como Usar Ferramentas Gratuitas para Gestão</h3>
-              <div class="event-meta">
-                <span><i class="fas fa-globe"></i> Online (Zoom)</span>
-                <span><i class="far fa-clock"></i> 20 de Maio, 2025 | 19:30 - 21:00</span>
-              </div>
-              <p>Conheça ferramentas digitais gratuitas que podem facilitar a gestão do seu negócio, desde controle financeiro até marketing.</p>
-              <div class="event-actions">
-                <a href="evento-mei-digital.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
-                <a href="https://forms.gle/inscricao-mei-digital" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Evento 4 -->
-          <div class="event-card" data-category="workshops upcoming">
-            <div class="event-image">
-              <img src="images/eventos/vendas-online.webp" alt="Workshop de Vendas Online" class="img-fluid">
-              <div class="event-date">
-                <span class="event-day">05</span>
-                <span class="event-month">Jun</span>
-              </div>
-            </div>
-            <div class="event-content">
-              <span class="event-tag">Workshop</span>
-              <h3>Como Vender Online: Do Instagram ao Marketplace</h3>
-              <div class="event-meta">
-                <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
-                <span><i class="far fa-clock"></i> 05 de Junho, 2025 | 14:00 - 17:00</span>
-              </div>
-              <p>Aprenda a criar uma presença digital eficiente e vender seus produtos ou serviços em diferentes plataformas online.</p>
-              <div class="event-actions">
-                <a href="evento-vendas-online.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
-                <a href="https://forms.gle/inscricao-vendas-online" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Evento 5 -->
+          <!-- Evento 2 - Educação Financeira (13/05) -->
           <div class="event-card" data-category="palestras upcoming">
             <div class="event-image">
-              <img src="images/eventos/mei-para-me.webp" alt="Palestra sobre transição de MEI para ME" class="img-fluid">
-              <div class="event-date">
-                <span class="event-day">15</span>
-                <span class="event-month">Jun</span>
+              <img src="images/eventos/13-maio-new/WhatsApp Image 2025-04-22 at 20.12.33.jpeg" alt="Educação Financeira para MEI" class="img-fluid">
+              <div class="event-badge badge-soon">Em breve</div>
+              <div class="event-date-badge">
+                <span class="day">13</span>
+                <span class="month">Mai</span>
               </div>
             </div>
             <div class="event-content">
               <span class="event-tag">Palestra</span>
-              <h3>De MEI para ME: Quando e Como Fazer a Transição</h3>
+              <h3 class="event-title">Educação Financeira para MEI</h3>
               <div class="event-meta">
-                <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
-                <span><i class="far fa-clock"></i> 15 de Junho, 2025 | 19:00 - 21:00</span>
-              </div>
-              <p>Saiba identificar o momento certo para migrar de MEI para Microempresa e entenda os procedimentos necessários para essa transição.</p>
-              <div class="event-actions">
-                <a href="evento-mei-para-me.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
-                <a href="https://forms.gle/inscricao-mei-para-me" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Evento 6 -->
-          <div class="event-card" data-category="online upcoming">
-            <div class="event-image">
-              <img src="images/eventos/notas-fiscais.webp" alt="Webinar sobre Notas Fiscais" class="img-fluid">
-              <div class="event-date">
-                <span class="event-day">22</span>
-                <span class="event-month">Jun</span>
-              </div>
-            </div>
-            <div class="event-content">
-              <span class="event-tag">Webinar</span>
-              <h3>Notas Fiscais para MEI: Tudo o que Você Precisa Saber</h3>
-              <div class="event-meta">
-                <span><i class="fas fa-globe"></i> Online (Zoom)</span>
-                <span><i class="far fa-clock"></i> 22 de Junho, 2025 | 19:30 - 21:00</span>
-              </div>
-              <p>Aprenda quando e como emitir notas fiscais, quais são as obrigações do MEI e como evitar problemas fiscais.</p>
-              <div class="event-actions">
-                <a href="evento-notas-fiscais.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
-                <a href="https://forms.gle/inscricao-notas-fiscais" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Eventos Anteriores -->
-    <section>
-      <div class="container">
-        <h2 class="section-title">Eventos <span>Anteriores</span></h2>
-        
-        <div class="events-grid past-events">
-          <!-- Evento Anterior 1 -->
-          <div class="event-card" data-category="workshops">
-            <div class="event-image">
-              <img src="images/eventos/precificacao.webp" alt="Workshop de Precificação" class="img-fluid">
-              <div class="event-badge">Realizado</div>
-            </div>
-            <div class="event-content">
-              <span class="event-tag">Workshop</span>
-              <h3>Precificação Estratégica para MEI</h3>
-              <div class="event-meta">
-                <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
-                <span><i class="far fa-calendar-alt"></i> 15 de Março, 2025</span>
-              </div>
-              <p>Workshop sobre como calcular corretamente o preço de produtos e serviços, considerando custos, impostos e margem de lucro.</p>
-              <div class="event-actions">
-                <a href="evento-precificacao.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
-                <a href="downloads/materiais-precificacao.pdf" class="btn btn-sm btn-primary" download>Baixar Material</a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Evento Anterior 2 -->
-          <div class="event-card" data-category="palestras">
-            <div class="event-image">
-              <img src="images/eventos/declaracao-anual.webp" alt="Palestra sobre Declaração Anual" class="img-fluid">
-              <div class="event-badge">Realizado</div>
-            </div>
-            <div class="event-content">
-              <span class="event-tag">Palestra</span>
-              <h3>Declaração Anual do MEI: Como Fazer Corretamente</h3>
-              <div class="event-meta">
-                <span><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá</span>
-                <span><i class="far fa-calendar-alt"></i> 20 de Fevereiro, 2025</span>
-              </div>
-              <p>Palestra sobre como preencher corretamente a Declaração Anual do Simples Nacional para Microempreendedores Individuais (DASN-SIMEI).</p>
-              <div class="event-actions">
-                <a href="evento-declaracao-anual.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
-                <a href="downloads/materiais-declaracao-anual.pdf" class="btn btn-sm btn-primary" download>Baixar Material</a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Evento Anterior 3 -->
-          <div class="event-card" data-category="online">
-            <div class="event-image">
-              <img src="images/eventos/redes-sociais.webp" alt="Webinar sobre Redes Sociais" class="img-fluid">
-              <div class="event-badge">Realizado</div>
-            </div>
-            <div class="event-content">
-              <span class="event-tag">Webinar</span>
-              <h3>Redes Sociais para MEI: Estratégias que Funcionam</h3>
-              <div class="event-meta">
-                <span><i class="fas fa-globe"></i> Online (Zoom)</span>
-                <span><i class="far fa-calendar-alt"></i> 10 de Janeiro, 2025</span>
-              </div>
-              <p>Webinar sobre como utilizar as redes sociais para divulgar seu negócio, atrair clientes e aumentar as vendas.</p>
-              <div class="event-actions">
-                <a href="evento-redes-sociais.html" class="btn btn-sm btn-outline">Ver Detalhes</a>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="text-center mt-4">
-          <a href="eventos-anteriores.html" class="btn btn-outline">
-            <i class="fas fa-history"></i> Ver Todos os Eventos Anteriores
-          </a>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Propor Evento -->
-    <section class="bg-light">
-      <div class="container">
-        <div class="propose-event-box">
-          <div class="row">
-            <div class="col">
-              <h2 class="section-title">Tem uma <span>Ideia de Evento</span>?</h2>
-              <p>Você é especialista em algum tema relevante para microempreendedores e gostaria de compartilhar seu conhecimento? Ou tem sugestões de temas que gostaria de ver abordados em nossos próximos eventos?</p>
-              <p>Entre em contato conosco! Estamos sempre abertos a novas parcerias e sugestões para melhor atender às necessidades dos microempreendedores de Maricá e região.</p>
-              <div class="mt-4">
-                <a href="sobre.html#contato" class="btn btn-primary">
-                  <i class="fas fa-paper-plane"></i> Enviar Proposta
-                </a>
-              </div>
-            </div>
-            <div class="col d-none-md">
-              <img src="images/eventos/propor-evento.webp" alt="Propor um evento" class="img-fluid rounded">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Inscrição na Newsletter -->
-    <section>
-      <div class="container">
-        <div class="newsletter-box">
-          <div class="row">
-            <div class="col">
-              <h2>Fique por dentro dos próximos eventos</h2>
-              <p>Cadastre-se para receber notificações sobre novos eventos, workshops e palestras do MEI em Foco.</p>
-              <form class="newsletter-form">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Nome" required>
+                <div class="event-meta-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Banco Mumbuca (Auditório)</span>
                 </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" placeholder="E-mail" required>
+                <div class="event-meta-item">
+                  <i class="fas fa-clock"></i>
+                  <span>19:00</span>
                 </div>
-                <div class="form-check mb-3">
-                  <input type="checkbox" class="form-check-input" id="eventNotifications" checked>
-                  <label class="form-check-label" for="eventNotifications">Quero receber notificações sobre novos eventos</label>
+                <div class="event-meta-item">
+                  <i class="fas fa-users"></i>
+                  <span>Dr. Omar e Dayane Fernandes</span>
                 </div>
-                <button type="submit" class="btn btn-primary">Inscrever-se</button>
-              </form>
-              <p class="small">Ao se inscrever, você concorda com nossa <a href="#">Política de Privacidade</a>.</p>
-            </div>
-            <div class="col d-none-md">
-              <img src="images/newsletter-events.webp" alt="Newsletter de Eventos" class="img-fluid">
+              </div>
+              <p class="event-description">Orientações práticas de educação financeira e renegociação de dívidas para organizar suas contas e garantir a saúde financeira do seu negócio.</p>
+              <div class="event-actions">
+                <a href="https://www.sympla.com.br/evento/mei-em-foco---educacao-planejamento-e-estrategias-para-superar-dividas-no-mei/2925345" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
     
-    <!-- CTA -->
-    <section class="bg-primary">
-      <div class="container text-center py-5">
-        <h2 class="text-white mb-3">Conhecimento na prática!</h2>
-        <p class="text-white mb-4">Participe dos nossos eventos e transforme seu negócio.</p>
-        <div class="d-flex justify-content-center flex-wrap gap-3">
-          <a href="evento-amor-empreendedorismo.html" class="btn btn-light btn-lg"><i class="fas fa-calendar-check"></i> Inscrever-se no Próximo Evento</a>
-          <a href="blog.html" class="btn btn-outline btn-lg text-white"><i class="fas fa-newspaper"></i> Ler Artigos do Blog</a>
-        </div>
+    <!-- Inscrição para Notificações -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">Fique por dentro dos próximos eventos</h2>
+        <p class="cta-text">Inscreva-se para receber notificações sobre novos eventos, workshops e palestras do MEI em Foco.</p>
+        <form class="subscription-form">
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Seu e-mail" required>
+          </div>
+          <button type="submit" class="btn btn-light">Inscrever-se</button>
+        </form>
       </div>
     </section>
   </main>
@@ -451,26 +317,19 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div>
+        <div class="footer-about">
           <div class="footer-logo">
-            <!-- Logotipo do MEI em Foco removido -->
-            
+            <img src="images/logos/mei-em-foco-logo.webp" alt="MEI em Foco" width="150" height="60">
           </div>
-          <p>MEI em Foco é uma prática extensionista da Universidade de Vassouras - Campus Maricá, desenvolvida por alunos do curso de Direito sob orientação da professora Maria Carolina Carelli de Oliveira.</p>
+          <p>O MEI em Foco é um projeto de extensão da Universidade de Vassouras - Campus Maricá que visa oferecer orientação e apoio para Microempreendedores Individuais.</p>
           <div class="footer-social">
-            <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram do MEI em Foco">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <span class="social-icon" aria-label="Facebook do MEI em Foco">
-              <i class="fab fa-facebook-f"></i>
-            </span>
-            <span class="social-icon" aria-label="YouTube do MEI em Foco">
-              <i class="fab fa-youtube"></i>
-            </span>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
-        
-        <div>
+        <div class="footer-links">
           <h3 class="footer-title">Links Rápidos</h3>
           <ul class="footer-links">
             <li><a href="index.html">Início</a></li>
@@ -478,47 +337,88 @@
             <li><a href="como-abrir-mei.html">Como Abrir MEI</a></li>
             <li><a href="consulta.html">Consulta MEI</a></li>
             <li><a href="das-obrigacoes.html">DAS e Obrigações</a></li>
+            <li><a href="calendario-fiscal.html">Calendário Fiscal</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3 class="footer-title">Recursos</h3>
+          <ul class="footer-links">
+            <li><a href="modelos-documentos.html">Modelos de Documentos</a></li>
+            <li><a href="apps.html">Apps Úteis</a></li>
             <li><a href="faq.html">Tira-Dúvidas</a></li>
+            <li><a href="dicas.html">Dicas</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
           </ul>
         </div>
-        
-        <div>
-          <h3 class="footer-title">Links Oficiais</h3>
-          <ul class="footer-links">
-            <li><a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank" rel="noopener">Portal do Empreendedor</a></li>
-            <li><a href="https://www.gov.br/receitafederal/pt-br" target="_blank" rel="noopener">Receita Federal</a></li>
-            <li><a href="https://www.sebrae.com.br/" target="_blank" rel="noopener">SEBRAE</a></li>
-            <li><a href="https://univassouras.edu.br/campus-marica/" target="_blank" rel="noopener">Univassouras - Campus Maricá</a></li>
-          </ul>
-        </div>
-        
-        <div>
+        <div class="footer-contact">
           <h3 class="footer-title">Contato</h3>
-          <ul class="footer-links">
-            <li><i class="fas fa-map-marker-alt"></i> Av. Governador Roberto Silveira, 437 - Flamengo, Maricá/RJ</li>
-            <li><i class="fas fa-phone"></i> (21) 2637-2784</li>
-            <li><i class="fas fa-envelope"></i> contato@meiemfoco.com.br</li>
-            <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener">@meiemfoco.univassouras</a></li>
-          </ul>
+          <p><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá<br>Av. Roberto Silveira, 437 - Centro, Maricá - RJ, 24900-440</p>
+          <p><i class="fas fa-envelope"></i> meifoco@univassouras.edu.br</p>
+          <p><i class="fas fa-phone"></i> (21) 2637-8500</p>
         </div>
       </div>
-      
       <div class="footer-bottom">
-        <div class="creditos">Projeto desenvolvido por Diogo Santana Cardoso | 3º Período Direito UV Maricá © 2025</div>
-        <p>&copy; 2025 MEI em Foco - Todos os direitos reservados</p>
-        <p>Projeto de Extensão da Universidade de Vassouras - Campus Maricá</p>
-        <p>Disciplina: Prática Extensionista Integradora – Regularização Empresarial</p>
-        <p>Professora: Maria Carolina Carelli de Oliveira</p>
+        <p>&copy; 2025 MEI em Foco | Projeto de Extensão da Universidade de Vassouras - Campus Maricá<br>Desenvolvido por <span class="creator-name">Diogo Santana Cardoso</span> | 3º Período Direito UV Maricá</p>
       </div>
     </div>
   </footer>
   
   <!-- Botão Voltar ao Topo -->
-  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Voltar ao topo da página">
     <i class="fas fa-arrow-up"></i>
-  </button>
+  </a>
   
-  <!-- Scripts -->
+  <!-- JavaScript -->
   <script src="js/main.js"></script>
+  
+  <!-- JavaScript para filtros de eventos -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.event-filter');
+      const eventCards = document.querySelectorAll('.event-card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          // Get filter value
+          const filterValue = this.getAttribute('data-filter');
+          
+          // Show/hide event cards based on filter
+          eventCards.forEach(card => {
+            if (filterValue === 'all') {
+              card.style.display = 'flex';
+            } else {
+              if (card.getAttribute('data-category').includes(filterValue)) {
+                card.style.display = 'flex';
+              } else {
+                card.style.display = 'none';
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>
+  
+  <!-- PWA Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('js/service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registrado com sucesso:', registration);
+          })
+          .catch(error => {
+            console.log('Falha ao registrar o Service Worker:', error);
+          });
+      });
+    }
+  </script>
 </body>
 </html>

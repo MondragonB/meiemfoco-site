@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="css/glossario.css">
   <link rel="stylesheet" href="css/tutorial.css">
   <link rel="stylesheet" href="css/contraste-correcoes.css">
+  <link rel="stylesheet" href="css/eventos.css">
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -164,9 +165,6 @@
                 
                 <a href="das-obrigacoes.html" class="btn btn-primary mt-3">Saiba como pagar</a>
               </div>
-              <div class="col d-none-md">
-                <img src="images/das-payment.webp" alt="Pagamento do DAS" class="img-fluid rounded">
-              </div>
             </div>
           </div>
         </div>
@@ -177,45 +175,73 @@
     <section>
       <div class="container">
         <h2 class="section-title">Próximos <span>Eventos</span></h2>
-        <div class="grid-container">
-          <div class="card">
-            <img src="images/evento-amor-empreendedorismo.webp" alt="Evento Amor e Empreendedorismo" class="card-img">
-            <div class="card-body">
-              <h3 class="card-title">Amor e Empreendedorismo</h3>
-              <p class="card-text">Como manter a paixão pelo seu negócio mesmo nos momentos difíceis.</p>
-              <p><i class="fas fa-calendar-alt"></i> 06 de Maio, 2025</p>
-              <p><i class="fas fa-clock"></i> 18:30h</p>
-              <p><i class="fas fa-map-marker-alt"></i> Univassouras Maricá - Auditório C2</p>
-              <a href="eventos.html#amor-empreendedorismo" class="btn btn-primary mt-3">Inscreva-se</a>
+        <div class="home-events">
+          <!-- Evento 1 - Amor e Empreendedorismo (06/05) -->
+          <div class="home-event-card">
+            <div class="home-event-image">
+              <img src="images/eventos/06-maio-new/WhatsApp Image 2025-04-22 at 10.40.23.jpeg" alt="Evento Amor e Empreendedorismo" class="img-fluid">
+              <div class="event-badge badge-new">Novo</div>
+              <div class="event-date-badge">
+                <span class="day">06</span>
+                <span class="month">Mai</span>
+              </div>
+            </div>
+            <div class="home-event-content">
+              <h3 class="home-event-title">Amor e Empreendedorismo</h3>
+              <div class="home-event-meta">
+                <div class="home-event-meta-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Univassouras - Auditório C2</span>
+                </div>
+                <div class="home-event-meta-item">
+                  <i class="fas fa-clock"></i>
+                  <span>18:30</span>
+                </div>
+                <div class="home-event-meta-item">
+                  <i class="fas fa-users"></i>
+                  <span>Thaisa Muniz, Alê Silveira e Eugênio Soares</span>
+                </div>
+              </div>
+              <div class="home-event-actions">
+                <a href="eventos.html" class="btn btn-primary">Ver mais</a>
+              </div>
             </div>
           </div>
           
-          <div class="card">
-            <img src="images/evento-marketing-digital.webp" alt="Workshop de Marketing Digital" class="card-img">
-            <div class="card-body">
-              <h3 class="card-title">Marketing Digital para MEI</h3>
-              <p class="card-text">Aprenda estratégias práticas para divulgar seu negócio nas redes sociais.</p>
-              <p><i class="fas fa-calendar-alt"></i> 15 de Maio, 2025</p>
-              <p><i class="fas fa-clock"></i> 14:00h</p>
-              <p><i class="fas fa-map-marker-alt"></i> Univassouras Maricá - Sala 104</p>
-              <a href="eventos.html#marketing-digital" class="btn btn-primary mt-3">Inscreva-se</a>
+          <!-- Evento 2 - Educação Financeira (13/05) -->
+          <div class="home-event-card">
+            <div class="home-event-image">
+              <img src="images/eventos/13-maio-new/WhatsApp Image 2025-04-22 at 20.12.33.jpeg" alt="Evento Educação Financeira para MEI" class="img-fluid">
+              <div class="event-badge badge-soon">Em breve</div>
+              <div class="event-date-badge">
+                <span class="day">13</span>
+                <span class="month">Mai</span>
+              </div>
             </div>
-          </div>
-          
-          <div class="card">
-            <img src="images/evento-gestao-financeira.webp" alt="Palestra sobre Gestão Financeira" class="card-img">
-            <div class="card-body">
-              <h3 class="card-title">Gestão Financeira Simplificada</h3>
-              <p class="card-text">Como organizar as finanças do seu negócio de forma prática e eficiente.</p>
-              <p><i class="fas fa-calendar-alt"></i> 22 de Maio, 2025</p>
-              <p><i class="fas fa-clock"></i> 19:00h</p>
-              <p><i class="fas fa-map-marker-alt"></i> Univassouras Maricá - Auditório Principal</p>
-              <a href="eventos.html#gestao-financeira" class="btn btn-primary mt-3">Inscreva-se</a>
+            <div class="home-event-content">
+              <h3 class="home-event-title">Educação, Planejamento e Estratégias para Superar Dívidas no MEI</h3>
+              <div class="home-event-meta">
+                <div class="home-event-meta-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Banco Mumbuca (Auditório)</span>
+                </div>
+                <div class="home-event-meta-item">
+                  <i class="fas fa-clock"></i>
+                  <span>19:00</span>
+                </div>
+                <div class="home-event-meta-item">
+                  <i class="fas fa-users"></i>
+                  <span>Dr. Omar e Dayane Fernandes</span>
+                </div>
+              </div>
+              <div class="home-event-actions">
+                <a href="https://www.sympla.com.br/evento/mei-em-foco---educacao-planejamento-e-estrategias-para-superar-dividas-no-mei/2925345" target="_blank" rel="noopener" class="btn btn-primary">Inscrever-se</a>
+              </div>
             </div>
           </div>
         </div>
         <div class="text-center mt-4">
-          <a href="eventos.html" class="btn btn-outline">Ver todos os eventos</a>
+          <a href="eventos.html" class="btn btn-outline-primary">Ver todos os eventos</a>
         </div>
       </div>
     </section>
@@ -298,12 +324,9 @@
     <!-- CTA -->
     <section class="bg-primary">
       <div class="container text-center py-5">
-        <h2 class="text-white mb-3">Precisa de ajuda com seu MEI?</h2>
-        <p class="text-white mb-4">Estamos aqui para orientar e apoiar você em todas as etapas do seu negócio.</p>
-        <div class="d-flex justify-content-center flex-wrap gap-3">
-          <a href="faq.html" class="btn btn-light btn-lg"><i class="fas fa-question-circle"></i> Tira-Dúvidas</a>
-          <a href="sobre.html#contato" class="btn btn-outline btn-lg text-white"><i class="fas fa-envelope"></i> Entre em Contato</a>
-        </div>
+        <h2 class="text-white mb-4">Precisa de ajuda com seu MEI?</h2>
+        <p class="text-white mb-4">Entre em contato conosco ou visite nosso campus para obter orientação gratuita.</p>
+        <a href="contato.html" class="btn btn-light btn-lg">Fale Conosco</a>
       </div>
     </section>
   </main>
@@ -312,26 +335,19 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div>
+        <div class="footer-about">
           <div class="footer-logo">
-            <!-- Logotipo do MEI em Foco removido temporariamente -->
-            
+            <img src="images/logos/mei-em-foco-logo.webp" alt="MEI em Foco" width="150" height="60">
           </div>
-          <p>MEI em Foco é uma prática extensionista da Universidade de Vassouras - Campus Maricá, desenvolvida por alunos do curso de Direito sob orientação da professora Maria Carolina Carelli de Oliveira.</p>
+          <p>O MEI em Foco é um projeto de extensão da Universidade de Vassouras - Campus Maricá que visa oferecer orientação e apoio para Microempreendedores Individuais.</p>
           <div class="footer-social">
-            <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram do MEI em Foco">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <span class="social-icon" aria-label="Facebook do MEI em Foco">
-              
-            </span>
-            <span class="social-icon" aria-label="YouTube do MEI em Foco">
-              
-            </span>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
-        
-        <div>
+        <div class="footer-links">
           <h3 class="footer-title">Links Rápidos</h3>
           <ul class="footer-links">
             <li><a href="index.html">Início</a></li>
@@ -339,63 +355,51 @@
             <li><a href="como-abrir-mei.html">Como Abrir MEI</a></li>
             <li><a href="consulta.html">Consulta MEI</a></li>
             <li><a href="das-obrigacoes.html">DAS e Obrigações</a></li>
+            <li><a href="calendario-fiscal.html">Calendário Fiscal</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3 class="footer-title">Recursos</h3>
+          <ul class="footer-links">
+            <li><a href="modelos-documentos.html">Modelos de Documentos</a></li>
+            <li><a href="apps.html">Apps Úteis</a></li>
             <li><a href="faq.html">Tira-Dúvidas</a></li>
+            <li><a href="dicas.html">Dicas</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
           </ul>
         </div>
-        
-        <div>
-          <h3 class="footer-title">Links Oficiais</h3>
-          <ul class="footer-links">
-            <li><a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank" rel="noopener">Portal do Empreendedor</a></li>
-            <li><a href="https://www.gov.br/receitafederal/pt-br" target="_blank" rel="noopener">Receita Federal</a></li>
-            <li><a href="https://www.sebrae.com.br/" target="_blank" rel="noopener">SEBRAE</a></li>
-            <li><a href="https://univassouras.edu.br/campus-marica/" target="_blank" rel="noopener">Univassouras - Campus Maricá</a></li>
-          </ul>
-        </div>
-        
-        <div>
+        <div class="footer-contact">
           <h3 class="footer-title">Contato</h3>
-          <ul class="footer-links">
-            <li><i class="fas fa-map-marker-alt"></i> Av. Governador Roberto Silveira, 437 - Flamengo, Maricá/RJ</li>
-            <li><i class="fas fa-phone"></i> (21) 2637-2784</li>
-            <li><i class="fas fa-envelope"></i> contato@meiemfoco.com.br</li>
-            <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/meiemfoco.univassouras" target="_blank" rel="noopener">@meiemfoco.univassouras</a></li>
-          </ul>
+          <p><i class="fas fa-map-marker-alt"></i> Universidade de Vassouras - Campus Maricá<br>Av. Roberto Silveira, 437 - Centro, Maricá - RJ, 24900-440</p>
+          <p><i class="fas fa-envelope"></i> meifoco@univassouras.edu.br</p>
+          <p><i class="fas fa-phone"></i> (21) 2637-8500</p>
         </div>
       </div>
-      
       <div class="footer-bottom">
-        <div class="creditos">Projeto desenvolvido por Diogo Santana Cardoso | 3º Período Direito UV Maricá © 2025</div>
-        <p>&copy; 2025 MEI em Foco - Todos os direitos reservados</p>
-        <p>Projeto de Extensão da Universidade de Vassouras - Campus Maricá</p>
-        <p>Disciplina: Prática Extensionista Integradora – Regularização Empresarial</p>
-        <p>Professora: Maria Carolina Carelli de Oliveira</p>
-        <p>Desenvolvido por <span class="creator-name">Diogo Santana Cardoso</span></p>
+        <p>&copy; 2025 MEI em Foco | Projeto de Extensão da Universidade de Vassouras - Campus Maricá<br>Desenvolvido por <span class="creator-name">Diogo Santana Cardoso</span> | 3º Período Direito UV Maricá</p>
       </div>
     </div>
   </footer>
   
   <!-- Botão Voltar ao Topo -->
-  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Voltar ao topo da página">
     <i class="fas fa-arrow-up"></i>
-  </button>
+  </a>
   
-  <!-- Scripts -->
+  <!-- JavaScript -->
   <script src="js/main.js"></script>
-  <script src="js/glossario.js"></script>
-  <script src="js/tutorial.js"></script>
-  <script src="js/autoria-protecao.js"></script>
   
-  <!-- PWA Registration -->
+  <!-- PWA Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/js/service-worker.js')
+        navigator.serviceWorker.register('js/service-worker.js')
           .then(registration => {
             console.log('Service Worker registrado com sucesso:', registration);
           })
           .catch(error => {
-            console.log('Falha ao registrar Service Worker:', error);
+            console.log('Falha ao registrar o Service Worker:', error);
           });
       });
     }
