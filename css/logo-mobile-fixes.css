@@ -1,0 +1,143 @@
+/* Estilos para o logotipo SVG e menu mobile */
+.logo-mei {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.logo-mei img {
+  height: 70px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-mei img:hover {
+  transform: scale(1.05);
+}
+
+/* Melhorias para o menu */
+.nav-link {
+  color: #FFFFFF !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 12px 15px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+}
+
+/* Melhorias para o rodapé */
+.footer {
+  background-color: #333;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  max-width: 220px;
+}
+
+.footer-logo img {
+  max-width: 180px;
+  height: auto;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
+}
+
+/* Melhorias para o menu mobile */
+@media (max-width: 768px) {
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .logo-mei img {
+    height: 50px;
+  }
+  
+  .logo-univassouras img {
+    max-height: 30px;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 80%;
+    height: calc(100vh - 70px);
+    background-color: var(--primary-color);
+    flex-direction: column;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 20px 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav-menu.show {
+    left: 0;
+  }
+  
+  .nav-item {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .nav-link {
+    padding: 15px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+  }
+  
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+  }
+  
+  .menu-toggle:focus {
+    outline: none;
+  }
+  
+  /* Overlay para fechar o menu ao clicar fora */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .nav-overlay.show {
+    display: block;
+  }
+}
