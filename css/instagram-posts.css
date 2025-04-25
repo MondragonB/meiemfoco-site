@@ -1,0 +1,23 @@
+/* 
+ * MEI em Foco - Estilos para Posts do Instagram
+ * Projeto de extensão da Universidade de Vassouras - Campus Maricá
+ */
+
+.instagram-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+@media (max-width: 991px) {
+  .instagram-posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .instagram-posts {
+    grid-template-columns: 1fr;
+  }
+}

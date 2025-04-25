@@ -6,13 +6,34 @@ document.addEventListener('DOMContentLoaded', function() {
   // Menu de navegação responsivo
   const menuToggle = document.getElementById('menuToggle');
   const mainMenu = document.getElementById('mainMenu');
+  const navOverlay = document.getElementById('navOverlay');
   
   if (menuToggle && mainMenu) {
     menuToggle.addEventListener('click', function() {
       mainMenu.classList.toggle('show');
+      navOverlay.classList.toggle('active');
       menuToggle.setAttribute('aria-expanded', 
         menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
       );
+    });
+    
+    // Fechar menu ao clicar no overlay
+    if (navOverlay) {
+      navOverlay.addEventListener('click', function() {
+        mainMenu.classList.remove('show');
+        navOverlay.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    }
+    
+    // Fechar menu ao clicar em um link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mainMenu.classList.remove('show');
+        navOverlay.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
   

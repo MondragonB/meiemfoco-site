@@ -159,7 +159,14 @@
             </div>
             
             <div class="featured-event-actions">
-              <a href="#" class="btn btn-primary">Mais Informações</a>
+              <a href="https://www.sympla.com.br/evento/palestra-mei-em-foco-amor-e-empreendedorismo-quando-o-sonho-de-ser-mei-precisa-continuar/2906270" target="_blank" rel="noopener" class="btn btn-primary">Inscrever-se</a>
+              <a href="#qrcode-06-maio" class="btn btn-outline">Ver QR Code</a>
+            </div>
+            
+            <!-- QR Code Section -->
+            <div id="qrcode-06-maio" class="qrcode-container">
+              <img src="images/eventos/06-maio-new/WhatsApp Image 2025-04-22 at 10.40.23.jpeg" alt="QR Code para inscrição no evento" class="qrcode-image">
+              <p class="qrcode-text">Escaneie o QR Code acima para se inscrever no evento</p>
             </div>
           </div>
         </div>
@@ -262,7 +269,7 @@
               </div>
               <p class="event-description">Quando o sonho de ser MEI precisa continuar. Palestra sobre empreendedorismo e persistência nos negócios.</p>
               <div class="event-actions">
-                <a href="#" class="btn btn-sm btn-primary">Mais Detalhes</a>
+                <a href="https://www.sympla.com.br/evento/palestra-mei-em-foco-amor-e-empreendedorismo-quando-o-sonho-de-ser-mei-precisa-continuar/2906270" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Inscrever-se</a>
               </div>
             </div>
           </div>
@@ -399,10 +406,10 @@
           // Show/hide event cards based on filter
           eventCards.forEach(card => {
             if (filterValue === 'all') {
-              card.style.display = 'flex';
+              card.style.display = 'block';
             } else {
               if (card.getAttribute('data-category').includes(filterValue)) {
-                card.style.display = 'flex';
+                card.style.display = 'block';
               } else {
                 card.style.display = 'none';
               }
@@ -411,21 +418,6 @@
         });
       });
     });
-  </script>
-  
-  <!-- PWA Service Worker -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('js/service-worker.js')
-          .then(registration => {
-            console.log('Service Worker registrado com sucesso:', registration);
-          })
-          .catch(error => {
-            console.log('Falha ao registrar o Service Worker:', error);
-          });
-      });
-    }
   </script>
 </body>
 </html>
