@@ -1,4 +1,4 @@
-// MEI em Foco - JavaScript Principal
+// Funções principais do site MEI em Foco
 // Projeto de extensão da Universidade de Vassouras - Campus Maricá
 // Desenvolvido por: Diogo Santana Cardoso
 
@@ -155,6 +155,19 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Contador de estatísticas
+  const meiBrasilCounter = document.getElementById('mei-brasil-counter');
+  const meiMaricaCounter = document.getElementById('mei-marica-counter');
+
+  // Atualiza os data-targets com os valores do arquivo dados-mei.js
+  if (typeof dadosMEI !== 'undefined') {
+    if (meiBrasilCounter) {
+      meiBrasilCounter.setAttribute('data-target', dadosMEI.brasil);
+    }
+    if (meiMaricaCounter) {
+      meiMaricaCounter.setAttribute('data-target', dadosMEI.marica);
+    }
+  }
+
   const statCounters = document.querySelectorAll('.stat-counter');
   
   if (statCounters.length > 0) {
